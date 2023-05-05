@@ -7,7 +7,10 @@ public
 .env*
 .DS_Store
 yarn-error.log
+.idea/
+# Local Netlify folder
+.netlify
 
 # this data should be empty due is calculted on SSR time at gatsby-node.js
-src/content/*
+src/data/*
 src/styles/colors.scss

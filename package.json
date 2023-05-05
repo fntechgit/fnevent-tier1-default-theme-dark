@@ -1,5 +1,5 @@
 {
-  "name": "roblox-fnvirtual-theme",
+  "name": "fnevent-roblox-theme",
   "version": "1.0.0",
   "private": true,
   "description": "Roblox theme for fnVirtual app",
@@ -8,18 +8,27 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -S -H 0.0.0.0",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "gatsby-clean": "gatsby clean",
+    "clean": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + && yarn && yarn gatsby-clean"
   },
   "dependencies": {
-    "gatsby": "^5.8.1",
-    "gatsby-source-filesystem": "^5.8.0",
-    "gatsby-transformer-remark": "^6.8.0",
+    "@emotion/cache": "^11.10.8",
+    "@emotion/react": "^11.10.8",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.8",
+    "@mui/base": "^5.0.0-alpha.128",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.3",
+    "@openeventkit/event-site": "1.0.2",
+    "gatsby": "^5.9.0",
+    "gatsby-source-filesystem": "^5.9.0",
+    "gatsby-transformer-json": "^5.9.0",
+    "markdown-to-jsx": "^7.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "virtualevent": "1.0.0"
+    "react-dom": "^18.2.0"
   }
 }

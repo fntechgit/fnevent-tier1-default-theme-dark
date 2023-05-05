@@ -1,20 +1,27 @@
+const {
+  STATIC_CONTENT_DIR_PATH
+} = require("./src/utils/filePath");
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  /*flags: {
+    DEV_SSR: true
+  },*/
   siteMetadata: {
     title: "Roblox fnVirtual theme",
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://rdc23.fnvirtual.app",
   },
   plugins: [
-    "virtualevent",
+    "gatsby-transformer-json",
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "pages",
-        path: `${__dirname}/src/pages`,
-      },
+        path: `${__dirname}/${STATIC_CONTENT_DIR_PATH}`,
+        name: "content",
+      }
     },
-    "gatsby-transformer-remark",
-  ],
-}
+    "@openeventkit/event-site"
+  ]
+};

@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "title": "What Will You Create?",
+    "leadTitle": "When And Where",
+    "lead": "September 9-10\nFort Mason Center & Online",
+    "buttons": {
+      "registerButton": {
+        "display": true,
+        "text": "Register Now"
+      },
+      "loginButton": {
+        "display": true,
+        "text": "Login"
+      }
+    },
+    "backgroundVideo": "animation.mp4"
+  },
+  "featuring": {
+    "content": "Featuring a mix of groundbreaking keynote presentations, in-depth breakout sessions, and professional networking opportunities, RDC is designed to empower you with the knowledge you need to reach your full creative potential.",
+    "title": "More than just a conference",
+    "image": {
+      "src": "keynote.png",
+      "alt": "Keynote Presentation Image"
+    }
+  },
+  "attend": {
+    "title": "Why you should attend",
+    "benefits": [
+      {
+        "concept": "Meet",
+        "description": "Meet and network with other experienced creators from around the world",
+        "backgroundImage": {
+          "src": "meet-background.png"
+        },
+        "foregroundImage": {
+          "src": "meet-foreground.png"
+        }
+      },
+      {
+        "concept": "Gain",
+        "description": "Gain insights into our latest product developments and roadmap",
+        "backgroundImage": {
+          "src": "gain-background.png"
+        },
+        "foregroundImage": {
+          "src": "gain-foreground.png"
+        }
+      },
+      {
+        "concept": "Share",
+        "description": "Share feedback and ideas directly with Roblox technology leaders",
+        "backgroundImage": {
+          "src": "share-background.png"
+        },
+        "foregroundImage": {
+          "src": "share-foreground.png"
+        }
+      }
+    ]
+  },
+  "celebrate": {
+    "title": "Innovation Awards & After Party",
+    "content": "#### What better way to celebrate?\nJoin us as we honor the best and brightest in the community at our first-ever in-person awards ceremony. As the stars of this event, you’ll be treated to a sit-down dinner, plus a special after-party where you can mingle with your fellow nominees and winners.",
+    "image": {
+      "src": "awards.png",
+      "alt": "Innovation Awards & After Party Image"
+    }
+  }
+}

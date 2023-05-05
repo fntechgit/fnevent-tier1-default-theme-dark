@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "FAQ",
+    "lead": "Get all the information vou need on topics such as health and safety, registration, accessibility, and much more. Make sure to follow our Twitter for the latest news and updates."
+  },
+  "categories": [
+    {
+      "title": "Registration",
+      "questionsAndAnswers": [
+        {
+          "question": "When and where will RDC 2022 take place?",
+          "answer": "The conference will take place on September 9-10 at the Fort Mason Center, 2 Marina Blvd., San Francisco, CA 94123."
+        },
+        {
+          "question": "What is included in the conference in-person pass?",
+          "answer": "The in-person pass is your ticket to the full RDC experience. This includes the keynotes, breakout sessions, Game Jam, Roblox Innovation Awards, networking events, meals, and virtual access to the conference."
+        },
+        {
+          "question": "What is included in the virtual pass?",
+          "answer": "The virtual pass lets you access the live stream, plus on-demand recordings of all sessions (available within 24 hours following the live premiere)."
+        },
+        {
+          "question": "Is there an age requirement to attend RDC 2022?",
+          "answer": "You must be 16 years of age or older to attend."
+        }
+      ]
+    },
+    {
+      "title": "Health and Safety",
+      "questionsAndAnswers": [
+        {
+          "question": "Will you have security and a bag check?",
+          "answer": "We take your safety and security very seriously. RDC is a private event in a public space. A security perimeter will be in place for the safety of all attendees both days, so arrive early to allow time for security screenings and bag checks."
+        },
+        {
+          "answer": "Yes, breakfast and lunch will be provided both days, and we’ll have snacks and beverages available throughout the conference.",
+          "question": "Will meals be provided?"
+        }
+      ],
+      "description": "At a minimum, we will be following all mandated venue, municipality, and CDC guidelines. This list and all protocols are subject to change as the COVID-19 situation changes. Anyone experiencing cold or flu-like symptoms should stay home and get well. "
+    }
+  ]
+}

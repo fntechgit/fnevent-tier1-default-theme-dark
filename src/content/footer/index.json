@@ -1,0 +1,51 @@
+{
+  "social": [
+    {
+      "link": "https://www.roblox.com",
+      "src": "twitter.png"
+    },
+    {
+      "link": "https://www.roblox.com",
+      "src": "facebook.png"
+    },
+    {
+      "link": "https://www.roblox.com",
+      "src": "linkedin.png"
+    },
+    {
+      "link": "https://www.roblox.com",
+      "src": "instagram.png"
+    },
+    {
+      "link": "https://www.roblox.com",
+      "src": "youtube.png"
+    },
+    {
+      "link": "https://www.roblox.com",
+      "src": "twitch.png"
+    }
+  ],
+  "links": [
+    {
+      "text": "Terms",
+      "link": "/terms"
+    },
+    {
+      "text": "Privacy",
+      "link": "https://www.roblox.com"
+    },
+    {
+      "text": "Accessibility",
+      "link": "https://www.roblox.com"
+    },
+    {
+      "text": "roblox.com",
+      "link": "https://www.roblox.com"
+    }
+  ],
+  "logo": {
+    "src": "roblox-logo.png",
+    "alt": "ROBLOX Logo",
+    "link": "https://www.roblox.com"
+  }
+}

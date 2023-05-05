@@ -1,0 +1,63 @@
+{
+  "ads": [
+    {
+      "section": "lobby",
+      "columnAds": [
+        {
+          "image": {
+            "src": "dc22-fnv-lobby-button-sched.png"
+          },
+          "column": "left",
+          "button": {
+            "link": "/a/schedule"
+          }
+        },
+        {
+          "image": {
+            "src": "rdc22-fnv-lobby-button-guildbutton.png"
+          },
+          "column": "left",
+          "button": {
+            "link": "https://www.guilded.gg/"
+          }
+        },
+        {
+          "image": {
+            "src": "rdc22-fnv-lobby-button-map.png"
+          },
+          "button": {
+            "link": "/map"
+          },
+          "column": "left"
+        },
+        {
+          "image": {
+            "src": "rdc22-fnv-lobby-button-robloxexperience.png"
+          },
+          "column": "left",
+          "button": {
+            "link": "https://www.roblox.com/games/10767940743/RDC-2022"
+          }
+        },
+        {
+          "image": {
+            "src": "rdc22-fnv-lobby-space-booth.png"
+          },
+          "column": "left"
+        },
+        {
+          "image": {
+            "src": "rdc22-fnv-lobby-space-ria.png"
+          },
+          "column": "left"
+        },
+        {
+          "image": {
+            "src": "rdc22-fnv-lobby-space-photo.png"
+          },
+          "column": "right"
+        }
+      ]
+    }
+  ]
+}
