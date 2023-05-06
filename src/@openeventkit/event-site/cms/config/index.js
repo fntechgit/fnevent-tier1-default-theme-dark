@@ -6,7 +6,7 @@ export const collections = defaultCollections.concat([
   pagesCollection
 ]);
 
-const config = structuredClone(defaultConfig);
+const config = { ...defaultConfig };
 // TODO: move to env var
 config.backend.repo = "fntechgit/fnevent-roblox-theme";
 config.collections = collections;
