@@ -5,10 +5,30 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(typeDefs);
 };
 
-exports.onCreateWebpackConfig = ({ actions }) => {  
-  actions.setWebpackConfig({
-    resolve: {
-      modules: ["node_modules"]
-    }
-  });
+exports.onCreateWebpackConfig = ({
+  actions,
+  loaders,
+  getConfig
+}) => {
+  /**
+   * Forces transpilation of @openeventkit/event-site
+   * @see https://github.com/gatsbyjs/gatsby/issues/14053#issuecomment-493401486
+   */
+  const webpackConfig = getConfig();
+  const jsTest = /\.(js|mjs|jsx|ts|tsx)$/;
+  const jsRule = webpackConfig.module.rules.find(
+    (rule) => String(rule.test) === String(jsTest)
+  );
+  const jsRuleInclude = jsRule.include;
+  jsRule.include = (modulePath) => {
+    if (/node_modules\/@openeventkit\/event-site/.test(modulePath)) return true;
+    return jsRuleInclude(modulePath);
+  }
+  webpackConfig.module.rules = [
+    ...webpackConfig.module.rules.filter(
+      (rule) => String(rule.test) !== String(jsTest)
+    ),
+    jsRule
+  ];
+  actions.replaceWebpackConfig(webpackConfig);
 };
