@@ -168,7 +168,7 @@ const MarketingPageTemplate = ({
         </RegistrationLiteComponent>
         }
         { loginButton.display && !isLoggedUser &&
-        <RegistrationLoginComponent>
+        <RegistrationLoginComponent location={location}>
           <LoginButton>
             {loginButton.text}
           </LoginButton>
