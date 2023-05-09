@@ -163,7 +163,7 @@ const MarketingPageTemplate = ({
         { registerButton.display &&
         <RegistrationLiteComponent>
           <RegisterNowButton>
-            <b>{registerButton.text}</b>
+            {registerButton.text}
           </RegisterNowButton>
         </RegistrationLiteComponent>
         }
