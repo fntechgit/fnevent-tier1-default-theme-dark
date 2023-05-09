@@ -15,6 +15,7 @@ import useBoundingClientRect from "../../../../src/utils/hooks/useBoundingClient
 import Link from "@openeventkit/event-site/src/components/Link";
 import AttendanceTrackerComponent from "@openeventkit/event-site/src/components/AttendanceTrackerComponent";
 import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
+import RegistrationLoginComponent from "@openeventkit/event-site/src/components/LoginButton";
 
 import { PHASES } from "@openeventkit/event-site/src/utils/phasesUtils";
 
@@ -157,29 +158,21 @@ const MarketingPageTemplate = ({
         loginButton
       }
     } = hero;
-    const onRegisterClick = () => {
-      alert("present registration lite");
-    };
-    const onLoginClick = () => {
-      const backUrl = location.state?.backUrl ?? defaultPath;
-      console.log(encodeURIComponent(backUrl));
-      doLogin(encodeURIComponent(backUrl));
-    };
     return (
       <>
         { registerButton.display &&
-        <RegisterNowButton
-          onClick={onRegisterClick}
-        >
-          {registerButton.text}
-        </RegisterNowButton>
+        <RegistrationLiteComponent>
+          <RegisterNowButton>
+            <b>{registerButton.text}</b>
+          </RegisterNowButton>
+        </RegistrationLiteComponent>
         }
         { loginButton.display && !isLoggedUser &&
-        <LoginButton
-          onClick={onLoginClick}
-        >
-          {loginButton.text}
-        </LoginButton>
+        <RegistrationLoginComponent>
+          <LoginButton>
+            {loginButton.text}
+          </LoginButton>
+        </RegistrationLoginComponent>
         }
         { /* only show enter button if during summit and has virtual access */
         // TODO: remove underline from link text
