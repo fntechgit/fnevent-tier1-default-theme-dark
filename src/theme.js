@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 
 import RobloxRegular from "../static/fonts/Roblox/RobloxBETA-Regular.woff";
-import RobloxBold from "../static/fonts/Roblox/RobloxBETA-Bold.woff";
+import RobloxBoldExtended from "../static/fonts/Roblox/RobloxDisplayBETA-BoldExtended.woff";
 
 // create breakpoints in intermediate theme
 let theme = createTheme({
@@ -25,7 +25,7 @@ theme = createTheme(theme, {
   },
   typography: {
     display1: {
-      fontFamily: "Roblox-Bold",
+      fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -41,7 +41,7 @@ theme = createTheme(theme, {
       )
     },
     display2: {
-      fontFamily: "Roblox-Bold",
+      fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -53,7 +53,7 @@ theme = createTheme(theme, {
       }
     },
     h1: {
-      fontFamily: "Roblox-Bold",
+      fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -69,7 +69,7 @@ theme = createTheme(theme, {
       )
     },
     h2: {
-      fontFamily: "Roblox-Bold",
+      fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -87,7 +87,7 @@ theme = createTheme(theme, {
       }
     },
     h3: {
-      fontFamily: "Roblox-Bold",
+      fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -105,7 +105,7 @@ theme = createTheme(theme, {
       }
     },
     h4: {
-      fontFamily: "Roblox-Bold",
+      fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -120,7 +120,7 @@ theme = createTheme(theme, {
       )
     },
     h5: {
-      fontFamily: "Roblox-Bold",
+      fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -192,7 +192,7 @@ theme = createTheme(theme, {
       whiteSpace: "pre-line"
     },
     caption1: {
-      fontFamily: "Roblox-Bold",
+      fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       letterSpacing: "0.05em",
       textTransform: "uppercase",
@@ -206,7 +206,7 @@ theme = createTheme(theme, {
       }
     },
     caption2: {
-      fontFamily: "Roblox",
+      fontFamily: "Roblox-BoldExtended",
       fontWeight: 700,
       lineHeight: 1,
       letterSpacing: "0.05em",
@@ -229,8 +229,8 @@ theme = createTheme(theme, {
           src: local("Roblox"), url(${RobloxRegular}) format("woff");
         }
         @font-face {
-          font-family: "Roblox-Bold";
-          src: local("Roblox-Bold"), url(${RobloxBold}) format("woff");
+          font-family: "Roblox-BoldExtended";
+          src: local("Roblox-BoldExtended"), url(${RobloxBoldExtended}) format("woff");
         }
       `,
     },
