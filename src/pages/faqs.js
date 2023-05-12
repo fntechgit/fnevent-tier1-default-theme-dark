@@ -15,10 +15,14 @@ import Grid from "@mui/material/Unstable_Grid2";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
+import JoinCallToAction from "../components/JoinCallToAction";
 import Footer from "../components/Footer";
 
 const pageStyles = {
-  backgroundColor: "#000",
+  backgroundColor: "#000"
+};
+
+const mainStyles = {
   paddingLeft: 40,
   paddingRight: 40
 };
@@ -186,7 +190,8 @@ export const FAQsPageQuery = graphql`
 `;
 
 const FAQsPage = ({
-  data
+  data,
+  location
 }) => {
   const {
     faqsPageJson: {
@@ -195,9 +200,9 @@ const FAQsPage = ({
     }
   } = data;
   return (
-    <>
+    <div style={pageStyles}>
       <Navbar />
-      <main style={pageStyles}>
+      <main style={mainStyles}>
         <Grid
           container
           spacing={2}
@@ -222,9 +227,12 @@ const FAQsPage = ({
             <CategorySections categories={categories} />
           </Grid>
         </Grid>
-        <Footer/>
+        <JoinCallToAction
+          location={location}
+        />
       </main>
-    </>
+      <Footer/>
+    </div>
   );
 };
 

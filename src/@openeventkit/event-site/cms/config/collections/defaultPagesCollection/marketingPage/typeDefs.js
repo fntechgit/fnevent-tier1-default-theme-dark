@@ -8,15 +8,15 @@ module.exports = `
     text: String
     display: Boolean
   }
-  type Buttons {
-    login: Button
-    register: Button
+  type MarketingPageJoinButtons {
+    registerButton: Button
+    loginButtom: Button
   }
   type MarketingPageHero {
     title: String
     leadTitle: String
     lead: String
-    buttons: Buttons
+    buttons: MarketingPageJoinButtons
     backgroundVideo: File @fileByRelativePath
   }
   type MarkertingPageSection {
@@ -34,10 +34,17 @@ module.exports = `
     title: String
     benefits: [MarkertingPageCarouselItem]
   }
+  type MarkertingPageCallToAction {
+    display: Boolean
+    title: String
+    backgroundImage: ImageWithAlt
+    buttons: MarketingPageJoinButtons
+  }
   type MarketingPageJson implements Node {
     hero: MarketingPageHero
     featuring: MarkertingPageSection
     attend: MarkertingPageCarouselSection
     celebrate: MarkertingPageSection
+    callToAction: MarkertingPageCallToAction
   }
 `;

@@ -62,8 +62,7 @@ const marketingPage = {
                 }),
                 booleanField({
                   label: "Display",
-                  name: "display",
-                  required: false
+                  name: "display"
                 })
               ]
             }),
@@ -77,8 +76,7 @@ const marketingPage = {
                 }),
                 booleanField({
                   label: "Display",
-                  name: "display",
-                  required: false
+                  name: "display"
                 })
               ]
             })
@@ -159,6 +157,59 @@ const marketingPage = {
           name: "content",
           buttons: markdownFieldButtons,
           editor_components: []
+        })
+      ]
+    }),
+    objectField({
+      label: "Call To Action",
+      name: "callToAction",
+      fields: [
+        booleanField({
+          label: "Display",
+          name: "display",
+          default: true
+        }),
+        stringField({
+          label: "Title",
+          name: "title"
+        }),
+        imageWithAltField({
+          label: "Background Image",
+          name: "backgroundImage"
+        }),
+        objectField({
+          label: "Buttons",
+          name: "buttons",
+          fields: [
+            objectField({
+              label: "Register Button",
+              name: "registerButton",
+              fields: [
+                stringField({
+                  label: "Text",
+                  name: "text"
+                }),
+                booleanField({
+                  label: "Display",
+                  name: "display"
+                })
+              ]
+            }),
+            objectField({
+              label: "Login or Enter Button",
+              name: "loginOrEnterButton",
+              fields: [
+                stringField({
+                  label: "Text",
+                  name: "text"
+                }),
+                booleanField({
+                  label: "Display",
+                  name: "display"
+                })
+              ]
+            })
+          ]
         })
       ]
     })

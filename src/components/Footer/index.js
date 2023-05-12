@@ -45,22 +45,18 @@ const SocialNetworks = styled(GridContainer)(({ theme }) => ({
   justifyContent: "center",
   [theme.breakpoints.down("md")]: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, auto)",
-    // 32 - 4 ((rowSpacing 1)/2)
-    marginTop: 28
+    gridTemplateColumns: "repeat(3, auto)"
   },
-  [theme.breakpoints.down("lg")]: {
-    // 48 - 4 ((rowSpacing 1)/2)
-    marginTop: 44
-  },
-  [theme.breakpoints.down("xl")]: {
-    // 64 - 4 ((rowSpacing 1)/2)
-    marginTop: 60
-  },
-  [theme.breakpoints.up("xl")]: {
-    // 80 - 4 ((rowSpacing 1)/2)
-    marginTop: 76
-  }
+  ...(
+    theme.unstable_sx({
+      pt: {
+        xs: 3.5,
+        md: 5.5,
+        lg: 7.5,
+        xl: 9.5
+      }
+    })
+  )
 }));
 
 const NetworkLinkItem = styled(Grid)(({ theme }) => ({
@@ -163,7 +159,9 @@ const Footer = () => {
     }
   } = useStaticQuery(footerQuery);
   return (
-    <div style={{backgroundColor: "#000"}}>
+    <div
+      style={{backgroundColor: "#000"}}
+    >
       <SocialNetworks
         container
         rowSpacing={1}

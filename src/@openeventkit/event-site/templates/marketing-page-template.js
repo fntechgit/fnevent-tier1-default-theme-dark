@@ -2,14 +2,14 @@ import * as React from "react";
 import { useState } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Markdown from "markdown-to-jsx";
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography"
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import { Section } from "../../../../src/components/Grid";
-import Button from "../../../../src/components/Button";
+import { RegisterButton, LoginButton } from "../../../../src/components/Button";
+import JoinCallToAction from "../../../../src/components/JoinCallToAction";
 import Footer from "../../../../src/components/Footer";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import useBoundingClientRect from "../../../../src/utils/hooks/useBoundingClientRect";
 
 import Link from "@openeventkit/event-site/src/components/Link";
@@ -73,59 +73,6 @@ const markdownOptions = {
   }
 };
 
-export const RegisterNowButton = ({
-  onClick = () => {},
-  children
-}) => (
-  <Button
-    onClick={onClick}
-  >
-    <Stack
-      direction="row"
-      spacing={0}
-      sx={{
-        width: "100%",
-        alignItems: "flex-end",
-        justifyContent: "space-between"
-      }}
-    >
-      <Typography
-        variant="caption2"
-        sx={{
-          width: "50%",
-          textAlign: "left"
-        }}
-      >
-        {children}
-      </Typography>
-      <ArrowOutwardIcon
-        sx={{
-          fontSize: {
-            xs: 18,
-            lg: 27
-          }
-        }}
-      />
-    </Stack>
-  </Button>
-);
-
-export const LoginButton = ({
-  onClick = () => {},
-  children
-}) => (
-  <Button
-    onClick={onClick}
-    variant="invert"
-  >
-    <Typography
-        variant="caption2"
-      >
-      {children}
-    </Typography>
-  </Button>
-);
-
 const MarketingPageTemplate = ({
   location,
   data,
@@ -161,14 +108,14 @@ const MarketingPageTemplate = ({
     } = hero;
     return (
       <>
-        { registerButton.display &&
+        {registerButton.display &&
         <RegistrationLiteComponent>
-          <RegisterNowButton>
+          <RegisterButton>
             {registerButton.text}
-          </RegisterNowButton>
+          </RegisterButton>
         </RegistrationLiteComponent>
         }
-        { loginButton.display && !isLoggedUser &&
+        {loginButton.display && !isLoggedUser &&
         <RegistrationLoginComponent location={location}>
           <LoginButton>
             {loginButton.text}
@@ -177,7 +124,6 @@ const MarketingPageTemplate = ({
         }
         { /* only show enter button if during summit and has virtual access */
         // TODO: remove underline from link text
-        // TODO: remove comment
          summitPhase >= PHASES.DURING && isLoggedUser && hasVirtualBadge &&
         <Link
           to={defaultPath}
@@ -191,9 +137,9 @@ const MarketingPageTemplate = ({
     );
   };
   return (
-    <>
+    <div style={pageStyles}>
       <Navbar />
-      <main style={pageStyles}>
+      <main>
         {
           // TODO: remove comment
           //<AttendanceTrackerComponent/>
@@ -241,10 +187,8 @@ const MarketingPageTemplate = ({
           >
             <Typography
               variant="display1"
-              align= "center"
-              style={{
-                textTransform: "uppercase"
-              }}
+              align="center"
+              textTransform="uppercase"
             >
               {hero.title}
             </Typography>
@@ -313,11 +257,10 @@ const MarketingPageTemplate = ({
                 xs: 2,
                 md: 3,
                 lg: 4,
-                // TODO: check if value in figma is correct
-                //xl: 3
+                xl: 5
               }}
             >
-              { getButtons() }
+              {getButtons()}
             </Stack>
           </Grid>
         </Section>
@@ -441,9 +384,12 @@ const MarketingPageTemplate = ({
             </Markdown>
           </Grid>
         </Section>
-        <Footer/>
+        <JoinCallToAction
+          location={location}
+        />
       </main>
-    </>
+      <Footer/>
+    </div>
   );
 };
 

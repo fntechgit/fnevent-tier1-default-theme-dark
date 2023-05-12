@@ -3,6 +3,9 @@ import BaseButton from "@mui/base/Button";
 import { styled } from "@mui/system";
 import useBoundingClientRect from "../../../src/utils/hooks/useBoundingClientRect";
 
+import LoginButton from "./Login";
+import RegisterButton from "./Register";
+
 const StyledButton = styled(BaseButton)(({
   theme,
   height,
@@ -38,13 +41,19 @@ const StyledButton = styled(BaseButton)(({
           lg: 216
         }
       })
-    )
+    ),
+    svg: {
+      stroke: colorInvert
+    }
   };
   const hoverStyles = {
     color: color,
     ...(height && {
       boxShadow: `inset 0 -${height}px 0 0 ${colorInvert} !important`
-    })
+    }),
+    svg: {
+      stroke: color
+    }
   };
   return ({
     ...(defaultStyles),
@@ -73,6 +82,11 @@ const Button = ({
       {children}
     </StyledButton>
   );
+};
+
+export {
+  LoginButton,
+  RegisterButton
 };
 
 export default Button;

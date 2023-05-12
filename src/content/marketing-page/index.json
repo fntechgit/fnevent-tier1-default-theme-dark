@@ -65,5 +65,22 @@
       "src": "awards.png",
       "alt": "Innovation Awards & After Party Image"
     }
+  },
+  "callToAction": {
+    "buttons": {
+      "loginButton": {
+        "display": true,
+        "text": "Login"
+      },
+      "registerButton": {
+        "display": true,
+        "text": "Register Now"
+      }
+    },
+    "display": true,
+    "title": "What Will You Create?",
+    "backgroundImage": {
+      "src": "cta_background.png"
+    }
   }
 }
