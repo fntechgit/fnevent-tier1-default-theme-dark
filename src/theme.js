@@ -233,6 +233,22 @@ theme = createTheme(theme, {
           src: local("Roblox-Bold"), url(${RobloxBold}) format("woff");
         }
       `,
+    },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          fontFamily: "Roblox",
+          ...(
+            theme.unstable_sx({
+              fontSize: {
+                xs: 12,
+                xl: 14
+              }
+            })
+          ),
+          borderRadius: 0
+        }
+      }
     }
   }
 });

@@ -1,6 +1,6 @@
 const {
   STATIC_CONTENT_DIR_PATH
-} = require("./src/utils/filePath");
+} = require("@openeventkit/event-site/src/utils/filePath");
 
 /**
  * @type {import('gatsby').GatsbyConfig}

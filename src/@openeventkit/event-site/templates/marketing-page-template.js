@@ -210,8 +210,7 @@ const MarketingPageTemplate = ({
               lg: 8,
               xl: 10
             },
-            position: "relative",
-            overflow: "hidden"
+            position: "relative"
           }}
         >
           { hero.backgroundVideo &&
@@ -302,6 +301,8 @@ const MarketingPageTemplate = ({
                 lg: 16,
                 xl: 20
               },
+              // one above navbar
+              //zIndex: 1101
               zIndex: 1
             }}
           >
