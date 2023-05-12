@@ -5,11 +5,14 @@ import useBoundingClientRect from "../../../src/utils/hooks/useBoundingClientRec
 
 const StyledButton = styled(BaseButton)(({
   theme,
-  height
+  height,
+  variant = "default"
 }) => {
+  const color = variant === "default" ? "white" : "black";
+  const colorInvert = variant ===  "default" ? "black" : "white";
   const defaultStyles = {
-    color: "black",
-    backgroundColor: "white",
+    color: colorInvert,
+    backgroundColor: color,
     border: "2px solid white",
     borderRadius: 0,
     textTransform: "uppercase",
@@ -38,9 +41,9 @@ const StyledButton = styled(BaseButton)(({
     )
   };
   const hoverStyles = {
-    color: "white",
+    color: color,
     ...(height && {
-      boxShadow: `inset 0 -${height}px 0 0 black !important`
+      boxShadow: `inset 0 -${height}px 0 0 ${colorInvert} !important`
     })
   };
   return ({

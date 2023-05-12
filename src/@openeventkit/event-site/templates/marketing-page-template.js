@@ -116,6 +116,7 @@ export const LoginButton = ({
 }) => (
   <Button
     onClick={onClick}
+    variant="invert"
   >
     <Typography
         variant="caption2"
