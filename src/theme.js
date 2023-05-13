@@ -32,25 +32,13 @@ theme = createTheme(theme, {
       ...(
         theme.unstable_sx({
           fontSize: {
-            xs: 48,
+            xs: 52,
             md: 76,
             lg: 92,
             xl: 120
           }
         })
       )
-    },
-    display2: {
-      fontFamily: "Roblox-BoldExtended",
-      color: "#fff",
-      lineHeight: 1,
-      letterSpacing: "-0.02em",
-      [theme.breakpoints.down("lg")]: {
-        fontSize: 52
-      },
-      [theme.breakpoints.up("lg")]: {
-        fontSize: 92
-      }
     },
     h1: {
       fontFamily: "Roblox-BoldExtended",
@@ -73,36 +61,32 @@ theme = createTheme(theme, {
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
-      [theme.breakpoints.up("xs")]: {
-        fontSize: 24
-      },
-      [theme.breakpoints.up("md")]: {
-        fontSize: 32
-      },
-      [theme.breakpoints.up("lg")]: {
-        fontSize: 48
-      },
-      [theme.breakpoints.up("xl")]: {
-        fontSize: 60
-      }
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 24,
+            md: 32,
+            lg: 48,
+            xl: 60
+          }
+        })
+      )
     },
     h3: {
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
-      [theme.breakpoints.up("xs")]: {
-        fontSize: 20
-      },
-      [theme.breakpoints.up("md")]: {
-        fontSize: 24
-      },
-      [theme.breakpoints.up("lg")]: {
-        fontSize: 32
-      },
-      [theme.breakpoints.up("xl")]: {
-        fontSize: 48
-      }
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 20,
+            md: 24,
+            lg: 32,
+            xl: 48
+          }
+        })
+      )
     },
     h4: {
       fontFamily: "Roblox-BoldExtended",
@@ -112,7 +96,8 @@ theme = createTheme(theme, {
       ...(
         theme.unstable_sx({
           fontSize: {
-            xs: 20,
+            xs: 16,
+            md: 20,
             lg: 24,
             xl: 32
           }
@@ -124,37 +109,31 @@ theme = createTheme(theme, {
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
-      [theme.breakpoints.up("xs")]: {
-        fontSize: 12
-      },
-      [theme.breakpoints.up("md")]: {
-        fontSize: 16
-      },
-      [theme.breakpoints.up("lg")]: {
-        fontSize: 20
-      },
-      [theme.breakpoints.up("xl")]: {
-        fontSize: 24
-      }
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 12,
+            md: 16,
+            lg: 20,
+            xl: 24
+          }
+        })
+      )
     },
     p1: {
       fontFamily: "Roblox",
       color: "#fff",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
-      [theme.breakpoints.up("xs")]: {
-        fontSize: 16
-      },
-      [theme.breakpoints.up("md")]: {
-        fontSize: 20
-      },
-      [theme.breakpoints.up("lg")]: {
-        fontSize: 24
-      },
-      [theme.breakpoints.up("xl")]: {
-        fontSize: 32
-      },
-      whiteSpace: "pre-line"
+      whiteSpace: "pre-line",
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 20,
+            lg: 32
+          }
+        })
+      )
     },
     p2: {
       fontFamily: "Roblox",
@@ -166,8 +145,7 @@ theme = createTheme(theme, {
         theme.unstable_sx({
           fontSize: {
             xs: 16,
-            lg: 20,
-            xl: 24
+            lg: 24
           }
         })
       )
@@ -177,30 +155,30 @@ theme = createTheme(theme, {
       color: "#fff",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
+      whiteSpace: "pre-line",
       ...(
         theme.unstable_sx({
           fontSize: {
             xs: 14,
-            lg: 16,
-            xl: 20
+            lg: 20
           }
         })
-      ),
-      whiteSpace: "pre-line"
+      )
     },
     caption1: {
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
+      lineHeight: 1,
       letterSpacing: "0.05em",
       textTransform: "uppercase",
-      [theme.breakpoints.down("lg")]: {
-        lineHeight: 1,
-        fontSize: 14
-      },
-      [theme.breakpoints.up("lg")]: {
-        lineHeight: 1.25,
-        fontSize: 16
-      }
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 14,
+            lg: 16
+          }
+        })
+      )
     },
     caption2: {
       fontFamily: "Roblox-BoldExtended",
@@ -208,14 +186,14 @@ theme = createTheme(theme, {
       lineHeight: 1,
       letterSpacing: "0.05em",
       textTransform: "uppercase",
-      [theme.breakpoints.down("lg")]: {
-        lineHeight: 1,
-        fontSize: 12
-      },
-      [theme.breakpoints.up("lg")]: {
-        lineHeight: 1.25,
-        fontSize: 14
-      }
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 12,
+            lg: 14
+          }
+        })
+      )
     }
   },
   components: {

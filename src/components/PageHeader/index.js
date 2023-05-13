@@ -60,7 +60,7 @@ const PageHeader = ({
       }}
     >
       <Typography
-        variant="display2"
+        variant="display1"
         whiteSpace="pre-line"
       >
         {title}
