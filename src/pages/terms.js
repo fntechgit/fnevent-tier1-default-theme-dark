@@ -26,7 +26,7 @@ const LinkWrapper = ({ href, ...props }) => (
 const ListWrapper = ({ children }) => (
   <li>
     <Typography
-      variant="p2"
+      variant="pTerms"
     >
       {children}
     </Typography>
@@ -39,7 +39,7 @@ const markdownOptions = {
     p: {
       component: Typography,
       props: {
-        variant: "p2",
+        variant: "pTerms",
         paragraph: true
       }
     },
@@ -61,7 +61,7 @@ const TermSection = ({
       xs={12}
     >
       <Typography
-        variant="h2"
+        variant="hSection"
         whiteSpace="pre-line"
       >
         {title}

@@ -32,7 +32,9 @@ theme = createTheme(theme, {
       ...(
         theme.unstable_sx({
           fontSize: {
-            xs: 52,
+            // 52 on foundations definition
+            // 48 on pages
+            xs: 48,
             md: 76,
             lg: 92,
             xl: 120
@@ -68,6 +70,24 @@ theme = createTheme(theme, {
             md: 32,
             lg: 48,
             xl: 60
+          }
+        })
+      )
+    },
+    // custom to set specific size in sections header
+    // since proposal has different tags for each breakpoint
+    hSection: {
+      fontFamily: "Roblox-BoldExtended",
+      color: "#fff",
+      lineHeight: 1,
+      letterSpacing: "-0.02em",
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 32,
+            md: 48,
+            lg: 60,
+            xl: 76
           }
         })
       )
@@ -145,7 +165,9 @@ theme = createTheme(theme, {
         theme.unstable_sx({
           fontSize: {
             xs: 16,
-            lg: 24
+            // lg value in figma is actually 24
+            lg: 20,
+            xl: 24
           }
         })
       )
@@ -161,6 +183,59 @@ theme = createTheme(theme, {
           fontSize: {
             xs: 14,
             lg: 20
+          }
+        })
+      )
+    },
+    // custom to set specific size in terms page
+    // since proposal has different tags for each breakpoint
+    pMarketingPageHero: {
+      fontFamily: "Roblox",
+      color: "#fff",
+      lineHeight: 1.25,
+      letterSpacing: "-0.01em",
+      whiteSpace: "pre-line",
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 16,
+            lg: 24,
+            xl: 32
+          }
+        })
+      )
+    },
+    // custom to set specific size in terms page
+    // since proposal has different tags for each breakpoint
+    pMarketingPageContent: {
+      fontFamily: "Roblox",
+      color: "#fff",
+      lineHeight: 1.25,
+      letterSpacing: "-0.01em",
+      whiteSpace: "pre-line",
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 14,
+            lg: 16,
+            xl: 20
+          }
+        })
+      )
+    },
+    // custom to set specific size in terms page
+    // since proposal has different tags for each breakpoint
+    pTerms: {
+      fontFamily: "Roblox",
+      color: "#fff",
+      lineHeight: 1.25,
+      letterSpacing: "-0.01em",
+      whiteSpace: "pre-line",
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 16,
+            xl: 20
           }
         })
       )
