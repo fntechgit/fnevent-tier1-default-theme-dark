@@ -2,17 +2,25 @@ import {
   textField,
   markdownField,
   imageWithAltField,
-  objectField
+  objectField,
+  listField
 } from "@openeventkit/event-site/src/cms/config/fields";
 
 import {
   TERMS_PAGE_FILE_PATH
 } from "utils/filePath";
 
-const markdownFieldButtons = [
+const leadMarkdownFieldButtons = [
   "bold",
   "italic",
   "link"
+];
+
+const termContentMarkdownFieldButtons = [
+  "bold",
+  "italic",
+  "link",
+  "bulleted-list"
 ];
 
 const termsPage = {
@@ -32,7 +40,7 @@ const termsPage = {
           label: "Lead",
           name: "lead",
           required: false,
-          buttons: markdownFieldButtons,
+          buttons: leadMarkdownFieldButtons,
           editor_components: []
         }),
         imageWithAltField({
@@ -41,6 +49,23 @@ const termsPage = {
         })
       ]
     }),
+    listField({
+      label: "Terms",
+      name: "terms",
+      fields: [
+        textField({
+          label: "Title",
+          name: "title"
+        }),
+        markdownField({
+          label: "Content",
+          name: "content",
+          required: false,
+          buttons: termContentMarkdownFieldButtons,
+          editor_components: []
+        })
+      ]
+    })
   ]
 };
 

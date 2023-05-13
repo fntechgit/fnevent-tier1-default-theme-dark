@@ -140,7 +140,6 @@ const QuestionsAndAnswer = ({
   );
 };
 
-
 const CategoryQuestionsAndAnswers = ({
   questionsAndAnswers
 }) => questionsAndAnswers.map((questionAndAnswer) => <QuestionsAndAnswer questionsAndAnswer={questionAndAnswer} />);

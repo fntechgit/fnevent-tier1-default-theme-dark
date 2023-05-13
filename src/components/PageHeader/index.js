@@ -56,7 +56,6 @@ const PageHeader = ({
     <Grid
       xs={12}
       sx={{
-        display: "flex",
         zIndex: 1
       }}
     >
@@ -74,14 +73,13 @@ const PageHeader = ({
       lg={4}
       lgOffset={7}
       sx={{
-        display: "flex",
-        zIndex: 1,
         mt: {
         	xs: 5,
         	md: 6,
         	lg: 8,
         	xl: 10
-        }
+        },
+        zIndex: 1
       }}
     >
       <Markdown

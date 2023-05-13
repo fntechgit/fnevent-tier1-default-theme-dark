@@ -1,5 +1,10 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+import { Section } from "../components/Grid";
+import Grid from "@mui/material/Unstable_Grid2";
+import Typography from "@mui/material/Typography";
+import Markdown from "markdown-to-jsx";
+import Link from "@openeventkit/event-site/src/components/Link";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import PageHeader from "../components/PageHeader";
 import JoinCallToAction from "../components/JoinCallToAction";
@@ -9,13 +14,110 @@ const pageStyles = {
   backgroundColor: "#000"
 };
 
+// trails 'href' prop to 'to' prop
+const LinkWrapper = ({ href, ...props }) => (
+  <Link
+    to={href}
+    {...props}
+  />
+);
+
+// trails 'href' prop to 'to' prop
+const ListWrapper = ({ children }) => (
+  <li>
+    <Typography
+      variant="p2"
+    >
+      {children}
+    </Typography>
+  </li>
+);
+
+const markdownOptions = {
+  forceBlock: true,
+  overrides: {
+    p: {
+      component: Typography,
+      props: {
+        variant: "p2",
+        paragraph: true
+      }
+    },
+    a: {
+      component: LinkWrapper
+    },
+    li: {
+      component: ListWrapper
+    }
+  }
+};
+
+const TermSection = ({
+  title,
+  contentMarkdown
+}) => (
+  <Section>
+    <Grid
+      xs={12}
+    >
+      <Typography
+        variant="h2"
+        whiteSpace="pre-line"
+      >
+        {title}
+      </Typography>
+    </Grid>
+    <Grid
+      xs={12}
+      md={8}
+      mdOffset={2}
+      lg={6}
+      lgOffset={3}
+      sx={{
+        mt: {
+          xs: 5,
+          md: 6,
+          lg: 8,
+          xl: 10
+        },
+        ul: {
+          mb: 2,
+          pl: 4,
+          listStyleType: "square",
+          listStylePosition: "outside",
+          color: "white",
+          li: {
+            pl: 1
+          }
+        }
+      }}
+    >
+      <Markdown
+        options={markdownOptions}
+      >
+        {contentMarkdown}
+      </Markdown>
+    </Grid>
+  </Section>
+);
+
+const TermsSections = ({
+  terms
+}) => terms.map((term) => (
+  <TermSection
+    title={term.title}
+    contentMarkdown={term.content}
+  />
+));
+
 const TermsPage = ({
   data,
   location
 }) => {
   const {
     termsPageJson: {
-      hero
+      hero,
+      terms
     }
   } = data;
   return (
@@ -27,6 +129,7 @@ const TermsPage = ({
           leadMarkdown={hero.lead}
           backgroundImage={hero.backgroundImage}
         />
+        <TermsSections terms={terms} />
         <JoinCallToAction
           location={location}
         />
@@ -53,6 +156,10 @@ export const TermsPageQuery = graphql`
             }
           }
         }
+      }
+      terms {
+        title
+        content
       }
     }
   }
