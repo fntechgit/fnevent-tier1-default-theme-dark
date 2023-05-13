@@ -1,0 +1,9 @@
+{
+  "hero": {
+    "title": "Code of\nConduct",
+    "lead": "At RDC, we take our code of conduct very seriously. We believe that every member of our community deserves to be treated with respect, fairness, and dignity.",
+    "backgroundImage": {
+      "src": "header_background.png"
+    }
+  }
+}

@@ -1,31 +1,61 @@
 import * as React from "react";
+import { graphql } from "gatsby";
+import Navbar from "@openeventkit/event-site/src/components/Navbar";
+import PageHeader from "../components/PageHeader";
+import JoinCallToAction from "../components/JoinCallToAction";
+import Footer from "../components/Footer";
 
 const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-const headingAccentStyles = {
-  color: "#663399",
+  backgroundColor: "#000"
 };
 
-const TravelPage = () => {
+const TravelPage = ({
+  data,
+  location
+}) => {
+  const {
+    travelPageJson: {
+      hero
+    }
+  } = data;
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-    </main>
+    <div style={pageStyles}>
+      <Navbar/>
+      <main>
+        <PageHeader
+          title={hero.title}
+          leadMarkdown={hero.lead}
+          backgroundImage={hero.backgroundImage}
+        />
+        <JoinCallToAction
+          location={location}
+        />
+      </main>
+      <Footer/>
+    </div>
   );
 };
 
 export default TravelPage;
+
+export const TravelPageQuery = graphql`
+  query {
+    travelPageJson {
+      hero {
+        title
+        lead
+        backgroundImage {
+          src {
+            childImageSharp {
+              gatsbyImageData (
+                quality: 100
+              )
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export const Head = () => <title>Travel Page</title>;

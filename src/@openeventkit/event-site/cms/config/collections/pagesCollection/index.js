@@ -4,6 +4,7 @@ import {
 
 import faqsPage from "./faqsPage";
 import termsPage from "./termsPage";
+import travelPage from "./travelPage";
 
 const pagesCollection = {
   ...collectionDefaults({
@@ -12,7 +13,8 @@ const pagesCollection = {
   }),
   files: [
     faqsPage,
-    termsPage
+    termsPage,
+    travelPage
   ]
 };
 

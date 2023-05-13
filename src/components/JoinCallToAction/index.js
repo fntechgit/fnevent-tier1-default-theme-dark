@@ -115,6 +115,6 @@ const JoinCallToAction = ({
       </Grid>
     </Section>
   );
-}
+};
 
 export default JoinCallToAction;

@@ -1,12 +1,20 @@
 import {
   stringField,
   objectField,
+  imageWithAltField,
+  markdownField,
   listField
 } from "@openeventkit/event-site/src/cms/config/fields";
 
 import {
   FAQS_PAGE_FILE_PATH
 } from "utils/filePath";
+
+const markdownFieldButtons = [
+  "bold",
+  "italic",
+  "link"
+];
 
 const faqsPage = {
   label: "FAQS Page",
@@ -21,10 +29,16 @@ const faqsPage = {
           label: "Title",
           name: "title"
         }),
-        stringField({
+        markdownField({
           label: "Lead",
           name: "lead",
-          required: false
+          required: false,
+          buttons: markdownFieldButtons,
+          editor_components: []
+        }),
+        imageWithAltField({
+          label: "Background Image",
+          name: "backgroundImage"
         })
       ]
     }),

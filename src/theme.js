@@ -161,19 +161,16 @@ theme = createTheme(theme, {
       color: "#fff",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
-      [theme.breakpoints.up("xs")]: {
-        fontSize: 14
-      },
-      [theme.breakpoints.up("md")]: {
-        fontSize: 16
-      },
-      [theme.breakpoints.up("lg")]: {
-        fontSize: 20
-      },
-      [theme.breakpoints.up("xl")]: {
-        fontSize: 24
-      },
-      whiteSpace: "pre-line"
+      whiteSpace: "pre-line",
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 16,
+            lg: 20,
+            xl: 24
+          }
+        })
+      )
     },
     p3: {
       fontFamily: "Roblox",

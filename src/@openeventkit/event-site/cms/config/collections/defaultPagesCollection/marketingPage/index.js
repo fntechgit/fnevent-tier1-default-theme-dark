@@ -196,8 +196,8 @@ const marketingPage = {
               ]
             }),
             objectField({
-              label: "Login or Enter Button",
-              name: "loginOrEnterButton",
+              label: "Login Button",
+              name: "loginButton",
               fields: [
                 stringField({
                   label: "Text",

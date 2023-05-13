@@ -1,11 +1,19 @@
 import {
-  stringField,
+  textField,
+  markdownField,
+  imageWithAltField,
   objectField
 } from "@openeventkit/event-site/src/cms/config/fields";
 
 import {
   TERMS_PAGE_FILE_PATH
 } from "utils/filePath";
+
+const markdownFieldButtons = [
+  "bold",
+  "italic",
+  "link"
+];
 
 const termsPage = {
   label: "Terms Page",
@@ -16,17 +24,23 @@ const termsPage = {
       label: "Hero",
       name: "hero",
       fields: [
-        stringField({
+        textField({
           label: "Title",
           name: "title"
         }),
-        stringField({
+        markdownField({
           label: "Lead",
           name: "lead",
-          required: false
+          required: false,
+          buttons: markdownFieldButtons,
+          editor_components: []
         }),
+        imageWithAltField({
+          label: "Background Image",
+          name: "backgroundImage"
+        })
       ]
-    })
+    }),
   ]
 };
 

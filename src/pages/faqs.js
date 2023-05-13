@@ -15,16 +15,12 @@ import Grid from "@mui/material/Unstable_Grid2";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
+import PageHeader from "../components/PageHeader";
 import JoinCallToAction from "../components/JoinCallToAction";
 import Footer from "../components/Footer";
 
 const pageStyles = {
   backgroundColor: "#000"
-};
-
-const mainStyles = {
-  paddingLeft: 40,
-  paddingRight: 40
 };
 
 const StyledAccordion = styled(Accordion)(({ theme }) => ({
@@ -170,25 +166,6 @@ const CategorySections = ({
   categories
 }) => categories.map((category) => <CategorySection category={category} />);
 
-export const FAQsPageQuery = graphql`
-  query {
-    faqsPageJson {
-      hero {
-        title
-        lead
-      }
-      categories {
-        title
-        description
-        questionsAndAnswers {
-          question
-          answer
-        }
-      }
-    }
-  }
-`;
-
 const FAQsPage = ({
   data,
   location
@@ -202,23 +179,12 @@ const FAQsPage = ({
   return (
     <div style={pageStyles}>
       <Navbar />
-      <main style={mainStyles}>
-        <Grid
-          container
-          spacing={2}
-          sx={{
-            paddingTop: 14,
-            paddingBottom: 6
-          }}>
-          <Grid xs={12} sm={6}>
-            <Typography variant="h1" gutterBottom>
-              {hero.title}
-            </Typography>
-            <Typography variant="h4">
-              {hero.lead}
-            </Typography>
-          </Grid>
-        </Grid>
+      <main>
+        <PageHeader
+          title={hero.title}
+          leadMarkdown={hero.lead}
+          backgroundImage={hero.backgroundImage}
+        />
         <Grid container spacing={2}>
           <Grid xs={12} sm={4} md={2}>
             <CategoryList categories={categories} />
@@ -237,5 +203,33 @@ const FAQsPage = ({
 };
 
 export default FAQsPage;
+
+export const FAQsPageQuery = graphql`
+  query {
+    faqsPageJson {
+      hero {
+        title
+        lead
+        backgroundImage {
+          src {
+            childImageSharp {
+              gatsbyImageData (
+                quality: 100
+              )
+            }
+          }
+        }
+      }
+      categories {
+        title
+        description
+        questionsAndAnswers {
+          question
+          answer
+        }
+      }
+    }
+  }
+`;
 
 export const Head = () => <title>FAQ Page</title>;
