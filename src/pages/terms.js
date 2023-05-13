@@ -18,6 +18,9 @@ const pageStyles = {
 const LinkWrapper = ({ href, ...props }) => (
   <Link
     to={href}
+    style={{
+      color: "white"
+    }}
     {...props}
   />
 );
@@ -62,7 +65,11 @@ const TermSection = ({
     >
       <Typography
         variant="hSection"
-        whiteSpace="pre-line"
+        sx={{
+          whiteSpace: {
+            md: "pre-line"
+          }
+        }}
       >
         {title}
       </Typography>
