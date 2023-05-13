@@ -51,6 +51,7 @@ const PageHeader = ({
         objectFit: "cover",
         opacity: 0.4
       }}
+      alt={backgroundImage.alt ?? "Page header image"}
     />
   	}
     <Grid
