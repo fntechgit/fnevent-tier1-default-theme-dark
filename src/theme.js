@@ -81,6 +81,7 @@ theme = createTheme(theme, {
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
+      whiteSpace: "pre-line",
       ...(
         theme.unstable_sx({
           fontSize: {
@@ -94,7 +95,8 @@ theme = createTheme(theme, {
     },
     // custom to set specific size in sections header
     // since proposal has different tags for each breakpoint
-    hSectionContent: {
+    hSectionContentMarketingPage: {
+      display: "block",
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
@@ -104,6 +106,24 @@ theme = createTheme(theme, {
           fontSize: {
             xs: 20,
             lg: 24
+          }
+        })
+      )
+    },
+    // custom to set specific size in sections header
+    // since proposal has different tags for each breakpoint
+    hSectionContentTravelPage: {
+      display: "block",
+      fontFamily: "Roblox-BoldExtended",
+      color: "#fff",
+      lineHeight: 1,
+      letterSpacing: "-0.02em",
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 20,
+            lg: 24,
+            xl: 32
           }
         })
       )

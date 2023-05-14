@@ -13,5 +13,14 @@
       "alt": "San Francisco Hallmarks"
     },
     "content": "Looking for adventure, culture, and excitement in one of America's most iconic cities? Look no further than San Francisco! This vibrant city by the bay is home to a wealth of exciting activities and attractions that are sure to delight visitors of all ages and interests."
+  },
+  "venue": {
+    "title": "Where it’s\nhappening",
+    "image": {
+      "src": "fort-mason-center-venue.png",
+      "alt": "Fort Mason Center Venue"
+    },
+    "content": "#### Fort Mason Center\n\nGet ready for an unforgettable experience at Fort Mason, one of San Francisco's most iconic and historic landmarks. This sprawling complex of former military buildings and warehouses is now a hub of cultural and community events, and there's no better time to experience it than during RDC.",
+    "address": "2 Marina Blvd, San Francisco, CA 94109"
   }
 }

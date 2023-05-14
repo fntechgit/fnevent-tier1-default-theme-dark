@@ -9,13 +9,20 @@ module.exports = `
     lead: String
     backgroundImage: ImageWithAlt
   }
-  type OverlappingContentImageSection {
+  type ImageContentSection {
     title: String
     image: ImageWithAlt
     content: String
   }
+  type VenueImageContentSection {
+    title: String
+    image: ImageWithAlt
+    content: String
+    address: String
+  }
   type TravelPageJson implements Node {
     hero: PageHeader
-    thingsToDo: OverlappingContentImageSection
+    venue: VenueImageContentSection
+    thingsToDo: ImageContentSection
   }
 `;

@@ -10,6 +10,10 @@ import {
   TRAVEL_PAGE_FILE_PATH
 } from "utils/filePath";
 
+const markdownFieldButtons = [
+  "heading-four"
+];
+
 const travelPage = {
   label: "Travel Page",
   name: "travel-page",
@@ -31,6 +35,30 @@ const travelPage = {
           label: "Background Image",
           name: "backgroundImage"
         })
+      ]
+    }),
+    objectField({
+      label: "Venue",
+      name: "venue",
+      fields: [
+        textField({
+          label: "Title",
+          name: "title"
+        }),
+        imageWithAltField({
+          label: "Image",
+          name: "image"
+        }),
+        markdownField({
+          label: "Content",
+          name: "content",
+          buttons: markdownFieldButtons,
+          editor_components: []
+        }),
+        stringField({
+          label: "Venue Address",
+          name: "address"
+        }),
       ]
     }),
     objectField({

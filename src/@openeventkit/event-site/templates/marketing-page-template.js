@@ -28,7 +28,7 @@ const markdownOptions = {
     h4: {
       component: Typography,
       props: {
-        variant: "h4",
+        variant: "hSectionContentMarketingPage",
         sx: {
           pb: {
             xs: 2,
