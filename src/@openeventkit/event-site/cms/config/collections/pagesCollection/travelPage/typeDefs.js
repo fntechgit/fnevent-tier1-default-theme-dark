@@ -29,10 +29,20 @@ module.exports = `
     content: String
     hotels: [AccommodationsHotel]
   }
+  type Airport {
+    name: String
+    image: ImageWithAlt
+    distance: String
+  }
+  type AirportsSection {
+    title: String
+    airports: [Airport]
+  }
   type TravelPageJson implements Node {
     hero: PageHeader
     venue: VenueImageContentSection
     thingsToDo: ImageContentSection
     accommodations: AccommodationsSection
+    nearbyAirports: AirportsSection
   }
 `;

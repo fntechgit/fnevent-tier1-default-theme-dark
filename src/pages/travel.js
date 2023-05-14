@@ -2,7 +2,6 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import Markdown from "markdown-to-jsx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Section } from "../components/Grid";
@@ -130,6 +129,104 @@ const Hotels = ({
   </Grid>
 );
 
+const Airport = ({
+  image,
+  name,
+  distance
+}) => {
+  return (
+    <Grid
+      xs={12}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        p: 0
+      }}
+    >
+      <Grid
+        sx={{
+          position: "relative",
+          height: {
+            xs: 220,
+            md: 260,
+            lg: 422
+          }
+        }}
+      >
+        <GatsbyImage
+          image={getImage(image.src)}
+          alt={image.alt ?? ""}
+          style={{
+            top: 0,
+            left: 0,
+            position: "absolute",
+            height: "100%",
+            width: "100%",
+            objectFit: "cover"
+          }}
+        />
+      </Grid>
+      <Typography
+        variant="hTravelVenue"
+        sx={{
+          mt: {
+            xs: 4,
+            md: 5,
+            lg: 6.75
+          }
+        }}
+      >
+        {name}
+      </Typography>
+      <Typography
+        variant="caption2"
+        sx={{
+          flexGrow: 1,
+          color: "white",
+          mt: 2
+        }}
+      >
+        {distance}
+      </Typography>
+    </Grid>
+  );
+};
+
+const Airports = ({
+  airports
+}) => (
+  <Grid 
+    xs={12}
+    gap={{
+      xs: 5,
+      md: 3,
+      lg: 4,
+      xl: 5
+    }}
+    sx={{
+      display: "grid",
+      gridTemplateColumns: {
+        xs: "repeat(1, auto)",
+        md: "repeat(3, 1fr)"
+      },
+      pt: {
+        xs: 5,
+        md: 6,
+        lg: 10
+      }
+    }}
+  >
+  {airports.map((airport) =>
+    <Airport
+      name={airport.name}
+      image={airport.image}
+      distance={airport.distance}
+    />
+  )}
+  </Grid>
+);
+
 const TravelPage = ({
   data,
   location
@@ -139,7 +236,8 @@ const TravelPage = ({
       hero,
       venue,
       thingsToDo,
-      accommodations
+      accommodations,
+      nearbyAirports
     }
   } = data;
   return (
@@ -231,7 +329,6 @@ const TravelPage = ({
         <Section>
           <Grid
             xs={12}
-            md={8}
           >
             <Typography
               variant="hSection"
@@ -267,6 +364,22 @@ const TravelPage = ({
           }
         </Section>
         }
+        <Section>
+          <Grid
+            xs={12}
+          >
+            <Typography
+              variant="hSection"
+            >
+              {nearbyAirports.title}
+            </Typography>
+          </Grid>
+          {nearbyAirports.airports && nearbyAirports.airports.length > 0 &&
+          <Airports
+            airports={nearbyAirports.airports}
+          />
+          }
+        </Section>
         <JoinCallToAction
           location={location}
         />
@@ -329,6 +442,23 @@ export const TravelPageQuery = graphql`
         hotels {
           name
           address
+        }
+      }
+      nearbyAirports {
+        title   
+        airports {
+          name
+          image {
+            src {
+              childImageSharp {
+                gatsbyImageData (
+                  quality: 100
+                )
+              }
+            }
+            alt
+          }
+          distance
         }
       }
     }

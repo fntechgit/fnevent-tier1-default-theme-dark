@@ -36,5 +36,34 @@
         "address": "555 North Point St, San Francisco, CA 94133"
       }
     ]
+  },
+  "nearbyAirports": {
+    "title": "Nearby Airports",
+    "airports": [
+      {
+        "name": "San Francisco International Airport",
+        "image": {
+          "src": "san-francisco-international-airport.png",
+          "alt": "San Francisco International Airport"
+        },
+        "distance": "14.9 Miles | 24.9 KM from venue"
+      },
+      {
+        "name": "Oakland International Airport",
+        "image": {
+          "src": "oakland-international-airport.png",
+          "alt": "Oakland International Airport"
+        },
+        "distance": "21.1 Miles | 33.9 KM from venue"
+      },
+      {
+        "name": "San Jose International Airport",
+        "image": {
+          "src": "san-jose-iternational-airport.png",
+          "alt": "San Jose International Airport"
+        },
+        "distance": "48.5 Miles | 78 KM from venue"
+      }
+    ]
   }
 }

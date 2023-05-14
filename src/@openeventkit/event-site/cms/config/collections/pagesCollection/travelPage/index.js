@@ -107,6 +107,34 @@ const travelPage = {
           ]
         })
       ]
+    }),
+    objectField({
+      label: "Nearby Airports",
+      name: "nearbyAirports",
+      fields: [
+        stringField({
+          label: "Title",
+          name: "title"
+        }),
+        listField({
+          label: "Airports",
+          name: "airports",
+          fields: [
+            stringField({
+              label: "Name",
+              name: "name"
+            }),
+            imageWithAltField({
+              label: "Image",
+              name: "image"
+            }),
+            stringField({
+              label: "Distance",
+              name: "distance"
+            })
+          ]
+        })
+      ]
     })
   ]
 };
