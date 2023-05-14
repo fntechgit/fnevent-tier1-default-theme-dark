@@ -1,16 +1,14 @@
 import * as React from "react";
-import { useState } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Markdown from "markdown-to-jsx";
 import Typography from "@mui/material/Typography"
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import { Section } from "../../../../src/components/Grid";
 import { RegisterButton, LoginButton } from "../../../../src/components/Button";
+import OverlappingContentImageSection from "../../../../src/components/OverlappingContentImageSection";
 import JoinCallToAction from "../../../../src/components/JoinCallToAction";
 import Footer from "../../../../src/components/Footer";
-import useBoundingClientRect from "../../../../src/utils/hooks/useBoundingClientRect";
 
 import Link from "@openeventkit/event-site/src/components/Link";
 import AttendanceTrackerComponent from "@openeventkit/event-site/src/components/AttendanceTrackerComponent";
@@ -27,24 +25,6 @@ const pageStyles = {
 const markdownOptions = {
   forceBlock: true,
   overrides: {
-    h1: {
-      component: Typography,
-      props: {
-        variant: "h1"
-      }
-    },
-    h2: {
-      component: Typography,
-      props: {
-        variant: "h2"
-      }
-    },
-    h3: {
-      component: Typography,
-      props: {
-        variant: "h3"
-      }
-    },
     h4: {
       component: Typography,
       props: {
@@ -58,16 +38,10 @@ const markdownOptions = {
         }
       }
     },
-    h5: {
-      component: Typography,
-      props: {
-        variant: "h5"
-      }
-    },
     p: {
       component: Typography,
       props: {
-        variant: "pMarketingPageContent",
+        variant: "pSection",
       }
     }
   }
@@ -84,19 +58,11 @@ const MarketingPageTemplate = ({
   defaultPath,
   ...rest
 }) => {
-  const [
-    celebrateImageLoading,
-    setCelebrateImageLoading
-  ] = useState(false);
-  const [
-    celebrateImageRef,
-    celebrateImageBoundingClientRect
-  ] = useBoundingClientRect();
   const {
     marketingPageJson: {
       hero,
       featuring,
-      celebrate
+      awards
     }
   } = data;
   const getButtons = () => {
@@ -140,10 +106,7 @@ const MarketingPageTemplate = ({
     <div style={pageStyles}>
       <Navbar />
       <main>
-        {
-          // TODO: remove comment
-          //<AttendanceTrackerComponent/>
-        }
+        <AttendanceTrackerComponent/>
         <Section
           sx={{
             pt: {
@@ -308,82 +271,19 @@ const MarketingPageTemplate = ({
               }
             }}
           >
-            <Markdown
-              options={markdownOptions}
+            <Typography
+              variant="pSection"
             >
               {featuring.content}
-            </Markdown>
-          </Grid>
-        </Section>
-        <Section
-          style={{
-            position: "relative"
-          }}
-        >
-          <Grid
-            xs={12}
-            md={8}
-          >
-            <Typography
-              variant="hSection"
-            >
-              {celebrate.title}
             </Typography>
           </Grid>
-          { celebrate.image &&
-          <Grid
-            xs={12}
-            md={9}
-            mdOffset={3}
-            lg={10}
-            lgOffset={2}
-            sx= {{
-              pt: {
-                xs: 5,
-                md: 6,
-                lg: 10
-              }
-            }}
-            {...(
-              celebrateImageLoading && {
-                ref: celebrateImageRef
-              }
-            )}
-          >
-            <GatsbyImage
-              image={getImage(celebrate.image.src)}
-              alt={celebrate.image.alt ?? ""}
-              onStartLoad={() => setCelebrateImageLoading(true)}
-            />
-          </Grid>
-          }
-          <Grid
-            xs={12}
-            md={6}
-            lg={4}
-            lgOffset={1}
-            sx={{
-              mt: {
-                xs: 5,
-                md: 0
-              },
-              ...(celebrateImageBoundingClientRect && {
-                position: {
-                  md: "absolute"
-                },
-                top: {
-                  md: `${celebrateImageBoundingClientRect.height*.94}px`
-                }
-              })
-            }}
-          >
-            <Markdown
-              options={markdownOptions}
-            >
-              {celebrate.content}
-            </Markdown>
-          </Grid>
         </Section>
+        <OverlappingContentImageSection
+          title={awards.title}
+          image={awards.image}
+          content={awards.content}
+          markdownOptions={markdownOptions}
+        />
         <JoinCallToAction
           location={location}
         />

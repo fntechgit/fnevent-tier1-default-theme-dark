@@ -1,5 +1,6 @@
 import {
   stringField,
+  textField,
   markdownField,
   imageWithAltField,
   objectField
@@ -8,12 +9,6 @@ import {
 import {
   TRAVEL_PAGE_FILE_PATH
 } from "utils/filePath";
-
-const markdownFieldButtons = [
-  "bold",
-  "italic",
-  "link"
-];
 
 const travelPage = {
   label: "Travel Page",
@@ -28,12 +23,9 @@ const travelPage = {
           label: "Title",
           name: "title"
         }),
-        markdownField({
+        textField({
           label: "Lead",
           name: "lead",
-          required: false,
-          buttons: markdownFieldButtons,
-          editor_components: []
         }),
         imageWithAltField({
           label: "Background Image",
@@ -41,6 +33,24 @@ const travelPage = {
         })
       ]
     }),
+    objectField({
+      label: "Things to Do",
+      name: "thingsToDo",
+      fields: [
+        stringField({
+          label: "Title",
+          name: "title"
+        }),
+        imageWithAltField({
+          label: "Image",
+          name: "image"
+        }),
+        textField({
+          label: "Content",
+          name: "content"
+        })
+      ]
+    })
   ]
 };
 

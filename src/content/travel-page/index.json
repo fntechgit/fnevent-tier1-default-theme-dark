@@ -5,5 +5,13 @@
     "backgroundImage": {
       "src": "header_background.png"
     }
+  },
+  "thingsToDo": {
+    "title": "Things to do in San Francisco",
+    "image": {
+      "src": "san-francisco-hallmarks.png",
+      "alt": "San Francisco Hallmarks"
+    },
+    "content": "Looking for adventure, culture, and excitement in one of America's most iconic cities? Look no further than San Francisco! This vibrant city by the bay is home to a wealth of exciting activities and attractions that are sure to delight visitors of all ages and interests."
   }
 }

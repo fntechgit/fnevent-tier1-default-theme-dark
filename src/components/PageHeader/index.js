@@ -31,7 +31,7 @@ const markdownOptions = {
 
 const PageHeader = ({
   title,
-  leadMarkdown,
+  lead,
   backgroundImage
 }) => (
   <Section
@@ -86,7 +86,7 @@ const PageHeader = ({
       <Markdown
         options={markdownOptions}
       >
-        {leadMarkdown}
+        {lead}
       </Markdown>
     </Grid>
   </Section>

@@ -14,15 +14,7 @@ import {
 } from "@openeventkit/event-site/src/utils/filePath";
 
 const markdownFieldButtons = [
-  "bold",
-  "italic",
-  "link",
-  "heading-one",
-  "heading-two",
-  "heading-three",
-  "heading-four",
-  "heading-five",
-  "heading-six"
+  "heading-four"
 ];
 
 const marketingPage = {
@@ -40,13 +32,11 @@ const marketingPage = {
         }),
         stringField({
           label: "Lead Title",
-          name: "leadTitle",
-          required: false
+          name: "leadTitle"
         }),
         textField({
           label: "Lead",
-          name: "lead",
-          required: false
+          name: "lead"
         }),
         objectField({
           label: "Buttons",
@@ -100,11 +90,9 @@ const marketingPage = {
           label: "Image",
           name: "image"
         }),
-        markdownField({
+        textField({
           label: "Content",
-          name: "content",
-          buttons: markdownFieldButtons,
-          editor_components: []
+          name: "content"
         })
       ]
     }),
@@ -141,8 +129,8 @@ const marketingPage = {
       ]
     }),
     objectField({
-      label: "Celebrate",
-      name: "celebrate",
+      label: "Awards",
+      name: "awards",
       fields: [
         stringField({
           label: "Title",

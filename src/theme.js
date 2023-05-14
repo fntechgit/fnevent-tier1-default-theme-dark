@@ -92,6 +92,22 @@ theme = createTheme(theme, {
         })
       )
     },
+    // custom to set specific size in sections header
+    // since proposal has different tags for each breakpoint
+    hSectionContent: {
+      fontFamily: "Roblox-BoldExtended",
+      color: "#fff",
+      lineHeight: 1,
+      letterSpacing: "-0.02em",
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 20,
+            lg: 24
+          }
+        })
+      )
+    },
     h3: {
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
@@ -207,7 +223,7 @@ theme = createTheme(theme, {
     },
     // custom to set specific size in terms page
     // since proposal has different tags for each breakpoint
-    pMarketingPageContent: {
+    pSection: {
       fontFamily: "Roblox",
       color: "#fff",
       lineHeight: 1.25,

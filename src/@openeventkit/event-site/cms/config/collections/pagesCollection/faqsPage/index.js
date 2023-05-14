@@ -32,7 +32,6 @@ const faqsPage = {
         markdownField({
           label: "Lead",
           name: "lead",
-          required: false,
           buttons: markdownFieldButtons,
           editor_components: []
         }),
@@ -52,8 +51,7 @@ const faqsPage = {
         }),
         stringField({
           label: "Description",
-          name: "description",
-          required: false
+          name: "description"
         }),
         listField({
           label: "Questions & Answers",

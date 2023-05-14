@@ -19,7 +19,7 @@ module.exports = `
     buttons: MarketingPageJoinButtons
     backgroundVideo: File @fileByRelativePath
   }
-  type MarkertingPageSection {
+  type OverlappingContentImageSection {
     title: String
     image: ImageWithAlt
     content: String
@@ -42,9 +42,9 @@ module.exports = `
   }
   type MarketingPageJson implements Node {
     hero: MarketingPageHero
-    featuring: MarkertingPageSection
+    featuring: OverlappingContentImageSection
     attend: MarkertingPageCarouselSection
-    celebrate: MarkertingPageSection
+    awards: OverlappingContentImageSection
     callToAction: MarkertingPageCallToAction
   }
 `;

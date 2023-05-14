@@ -181,7 +181,7 @@ const FAQsPage = ({
       <main>
         <PageHeader
           title={hero.title}
-          leadMarkdown={hero.lead}
+          lead={hero.lead}
           backgroundImage={hero.backgroundImage}
         />
         <Grid container spacing={2}>

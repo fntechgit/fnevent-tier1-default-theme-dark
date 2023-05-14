@@ -63,7 +63,7 @@ export const marketingPageQuery = graphql`
           }
         }
       }
-      celebrate {
+      awards {
         title
         image {
           src {

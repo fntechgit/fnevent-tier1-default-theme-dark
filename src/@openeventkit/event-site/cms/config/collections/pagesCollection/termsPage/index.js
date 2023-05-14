@@ -10,12 +10,6 @@ import {
   TERMS_PAGE_FILE_PATH
 } from "utils/filePath";
 
-const leadMarkdownFieldButtons = [
-  "bold",
-  "italic",
-  "link"
-];
-
 const termContentMarkdownFieldButtons = [
   "bold",
   "italic",
@@ -36,12 +30,9 @@ const termsPage = {
           label: "Title",
           name: "title"
         }),
-        markdownField({
+        textField({
           label: "Lead",
-          name: "lead",
-          required: false,
-          buttons: leadMarkdownFieldButtons,
-          editor_components: []
+          name: "lead"
         }),
         imageWithAltField({
           label: "Background Image",
@@ -60,7 +51,6 @@ const termsPage = {
         markdownField({
           label: "Content",
           name: "content",
-          required: false,
           buttons: termContentMarkdownFieldButtons,
           editor_components: []
         })

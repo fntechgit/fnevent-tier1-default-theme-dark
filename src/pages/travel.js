@@ -1,12 +1,26 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+import Typography from "@mui/material/Typography"
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import PageHeader from "../components/PageHeader";
+import OverlappingContentImageSection from "../components/OverlappingContentImageSection";
 import JoinCallToAction from "../components/JoinCallToAction";
 import Footer from "../components/Footer";
 
 const pageStyles = {
   backgroundColor: "#000"
+};
+
+const markdownOptions = {
+  forceBlock: true,
+  overrides: {
+    p: {
+      component: Typography,
+      props: {
+        variant: "pSection"
+      }
+    }
+  }
 };
 
 const TravelPage = ({
@@ -15,7 +29,8 @@ const TravelPage = ({
 }) => {
   const {
     travelPageJson: {
-      hero
+      hero,
+      thingsToDo
     }
   } = data;
   return (
@@ -24,8 +39,14 @@ const TravelPage = ({
       <main>
         <PageHeader
           title={hero.title}
-          leadMarkdown={hero.lead}
+          lead={hero.lead}
           backgroundImage={hero.backgroundImage}
+        />
+        <OverlappingContentImageSection
+          title={thingsToDo.title}
+          image={thingsToDo.image}
+          content={thingsToDo.content}
+          markdownOptions={markdownOptions}
         />
         <JoinCallToAction
           location={location}
@@ -53,6 +74,20 @@ export const TravelPageQuery = graphql`
             }
           }
         }
+      }
+      thingsToDo {
+        title
+        image {
+          src {
+            childImageSharp {
+              gatsbyImageData (
+                quality: 100
+              )
+            }
+          }
+          alt
+        }
+        content
       }
     }
   }
