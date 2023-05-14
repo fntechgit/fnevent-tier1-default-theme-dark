@@ -3,7 +3,8 @@ import {
   textField,
   markdownField,
   imageWithAltField,
-  objectField
+  objectField,
+  listField
 } from "@openeventkit/event-site/src/cms/config/fields";
 
 import {
@@ -76,6 +77,34 @@ const travelPage = {
         textField({
           label: "Content",
           name: "content"
+        })
+      ]
+    }),
+    objectField({
+      label: "Accommodations",
+      name: "accommodations",
+      fields: [
+        stringField({
+          label: "Title",
+          name: "title"
+        }),
+        textField({
+          label: "Content",
+          name: "content"
+        }),
+        listField({
+          label: "Hotels",
+          name: "hotels",
+          fields: [
+            stringField({
+              label: "Name",
+              name: "name"
+            }),
+            stringField({
+              label: "Address",
+              name: "address"
+            })
+          ]
         })
       ]
     })

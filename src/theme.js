@@ -176,6 +176,24 @@ theme = createTheme(theme, {
         })
       )
     },
+    // custom to set specific size in terms page
+    // since proposal has different tags for each breakpoint
+    hTravelVenue: {
+      fontFamily: "Roblox-BoldExtended",
+      color: "#fff",
+      lineHeight: 1.25,
+      letterSpacing: "-0.01em",
+      whiteSpace: "pre-line",
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 16,
+            lg: 24,
+            xl: 32
+          }
+        })
+      )
+    },
     p1: {
       fontFamily: "Roblox",
       color: "#fff",

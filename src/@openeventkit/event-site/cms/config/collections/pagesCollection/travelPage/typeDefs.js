@@ -20,9 +20,19 @@ module.exports = `
     content: String
     address: String
   }
+  type AccommodationsHotel {
+    name: String
+    address: String
+  }
+  type AccommodationsSection {
+    title: String
+    content: String
+    hotels: [AccommodationsHotel]
+  }
   type TravelPageJson implements Node {
     hero: PageHeader
     venue: VenueImageContentSection
     thingsToDo: ImageContentSection
+    accommodations: AccommodationsSection
   }
 `;
