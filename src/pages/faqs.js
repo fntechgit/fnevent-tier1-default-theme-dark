@@ -1,108 +1,88 @@
 import * as React from "react";
-import { useState } from "react";
-import { graphql } from "gatsby";
-import { styled } from "@mui/material/styles";
 import {
-  Box,
-  Link,
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Typography
-} from "@mui/material";
+  useState,
+  useEffect,
+  useCallback
+} from "react";
+import { graphql } from "gatsby";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary, { accordionSummaryClasses } from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
-//import { unstable_extendSxProp as extendSxProp } from "@mui/system";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
+import Stack from "@mui/material/Stack";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
+import { Section } from "../components/Grid";
 import PageHeader from "../components/PageHeader";
 import JoinCallToAction from "../components/JoinCallToAction";
 import Footer from "../components/Footer";
+import Link from "@openeventkit/event-site/src/components/Link";
+import SvgIcon from "@mui/material/SvgIcon";
 
 const pageStyles = {
   backgroundColor: "#000"
 };
 
-const StyledAccordion = styled(Accordion)(({ theme }) => ({
-  backgroundColor: "#000",
-  boxShadow: "none",
-  borderBottom: "1.5px solid white",
-  "&:first-of-type": {
-    borderTop: "1.5px solid white",
-  },
-  borderRight: 0,
-  borderLeft: 0,
-  padding: "10px 0",
-  marginBottom: 0
-}));
-
-const StyledAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
-  paddingLeft: 0,
-  paddingRight: 0,
-  /*expandIconWrapper: {
-    transition: "none!important",
-    "&.MuiSvgIcon-root": {
-      transform: "none!important"
-    }
-  }*/
-}));
-
-const StyledAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
-  padding: "8px 0px 20px"
-}));
-
-// const ExpandIcon = ({
-//   expanded,
-//   fontSize = "large"
-// }) => {
-//   const props = {
-//     fontSize: fontSize
-//   };
-//   return (
-//     <Box sx={{ p: 1, border: "2px solid black", color: "black" }}>
-//       { expanded ? <RemoveIcon {...props} /> : <AddIcon {...props} /> }
-//     </Box>
-//   );
-// };
-
-const ExpandIcon = ({
+const AccordionIcon = ({
   className,
+  hover = true,
   expanded
 }) =>
-  <Box className={className}>
-    { expanded ? <RemoveIcon /> : <AddIcon /> }
-  </Box>
-;
-
-const StyledExpandIcon = styled(ExpandIcon)(({ theme }) => ({
-  padding: 10,
-  paddingBottom: 6,
-  border: "1.5px solid white",
-  "& .MuiSvgIcon-root": {
-    color: "white",
-    fontSize: 20
-  }
-}));
-
-
-const CategoryList = ({
-  categories
-}) =>
-  <ul>
-    {categories.map((category) =>
-    <li>
-        <Link
-          underline="none"
-          href={`#${category.title}`}
-        >
-          <h5>
-            {category.title}
-          </h5>
-        </Link>
-        <br/>
-    </li>
-    )}
-  </ul>
+  <SvgIcon
+    viewBox="0 0 62 62"
+    className={className}
+    sx={{
+      fontSize: {
+        xs: 36,
+        md: 44,
+        lg: 52,
+        xl: 60
+      },
+      svg: {
+        fill: "black",
+        rect: {
+          stroke: "white",
+          strokeWidth: {
+            xs: 60 * 1.5 / 36,
+            md: 60 * 1.5 / 44,
+            lg: 60 * 2.2 / 52,
+            xl: 60 * 2 / 60
+          }
+        },
+        path: {
+          stroke: "white",
+          strokeWidth: {
+            xs: 60 * 1.5 / 36,
+            md: 60 * 1.5 / 44,
+            lg: 60 * 2.2 / 52,
+            xl: 60 * 2 / 60
+          }
+        }
+      },
+      "&:hover": {
+        svg: {
+          fill: "white",
+          path: {
+            stroke: "black"
+          }
+        }
+      }
+    }}
+  >
+    {expanded ?
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="1" width="60" height="60" />
+      <path d="M19 31H43" stroke-linecap="square"/>
+    </svg>
+    :
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="1" width="60" height="60"/>
+      <path d="M31 19V43" stroke-linecap="square"/>
+      <path d="M19 31H43" stroke-linecap="square"/>
+    </svg>
+    }
+  </SvgIcon>
 ;
 
 const QuestionsAndAnswer = ({
@@ -110,33 +90,68 @@ const QuestionsAndAnswer = ({
 }) => {
   const [expanded, setExpanded] = useState(false);
   return (
-    <StyledAccordion
+    <Accordion
       square
       elevation={0}
       disableGutters
       onChange={() => setExpanded(!expanded)}
+      sx={{
+        backgroundColor: "#000",
+        boxShadow: "none",
+        borderBottom: {
+          xs: "1px solid white",
+          lg: "2px solid white"
+        },
+        "&:first-of-type": {
+          borderTop: {
+            xs: "1px solid white",
+            lg: "2px solid white"
+          }
+        },
+        py: {
+          xs: 2,
+          md: 3,
+          lg: 4,
+          xl: 5
+        }
+      }}
     >
-      <StyledAccordionSummary
-        expandIcon={<StyledExpandIcon expanded={expanded} />}
-        // sx={{
-        //   "& .MuiAccordionSummary-expandIconWrapper": {
-        //     transition: "none",
-        //     "&.Mui-expanded": {
-        //       transform: "none",
-        //     }
-        //   }
-        // }}
+      <AccordionSummary
+        expandIcon={<AccordionIcon expanded={expanded} />}
+        sx={{
+          px: 0,
+          [`.${accordionSummaryClasses.root}`]: {
+            m: 0
+          },
+          [`.${accordionSummaryClasses.expandIconWrapper}`]: {
+            transition: "none"
+          }
+        }}
       >
-        <Typography variant="h4">
+        <Typography
+          variant="h4"
+          sx={{
+            mt: expanded ? {
+              xs: -2.1,
+              md: -2.4
+            } : 0,
+            transition: "margin 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms"
+          }}
+        >
           {questionsAndAnswer.question}
         </Typography>
-      </StyledAccordionSummary>
-      <StyledAccordionDetails>
-        <Typography variant="h5">
+      </AccordionSummary>
+      <AccordionDetails
+        sx={{
+          p: 0,
+          width: "88%"
+        }}
+      >
+        <Typography variant="pFaqs">
           {questionsAndAnswer.answer}
         </Typography>
-      </StyledAccordionDetails>
-    </StyledAccordion>
+      </AccordionDetails>
+    </Accordion>
   );
 };
 
@@ -147,23 +162,117 @@ const CategoryQuestionsAndAnswers = ({
 const CategorySection = ({ 
   category 
 }) => (
-  <>
-    <Box sx={{ paddingBottom: 3 }}>
-      <Typography id={category.title} variant="h2" gutterBottom>
-        {category.title}
-      </Typography>
-    </Box>
-    <Box sx={{ paddingBottom: 8 }}>
+  <div
+    id={category.title}
+  >
+    <Typography
+      variant="h1"
+      sx={{
+        pt: {
+          xs: 4,
+          md: 5,
+          lg: 6,
+          xl: 7
+        }
+      }}
+    >
+      {category.title}
+    </Typography>
+    <Box
+      sx={{
+        mt: {
+          xs: 4,
+          md: 6,
+          lg: 8,
+          xl: 10
+        },
+        mb: {
+          lg: 1,
+          xl: 2
+        }
+      }}
+    >
       <CategoryQuestionsAndAnswers
         questionsAndAnswers={category.questionsAndAnswers}
       />
     </Box>
-  </>
+  </div>
 );
 
 const CategorySections = ({
   categories
 }) => categories.map((category) => <CategorySection category={category} />);
+
+const CategoryList = ({
+  categories
+}) => {
+  const [scrollTop, setScrollTop] = useState(0);
+  useEffect(() => {
+    const onScroll = e => {
+      setScrollTop(e.target.documentElement.scrollTop);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const getNavColor = useCallback((categoryTitle, index) => {
+    const offsetY = 20;
+    const fromTop = scrollTop + offsetY;
+    const category = document.getElementById(categoryTitle);
+    if (category === null) return "#666666";
+    if (
+      (index === 0 && category.offsetTop > fromTop) ||
+      (category.offsetTop <= fromTop &&
+      category.offsetTop + category.offsetHeight > fromTop)
+    ) {
+      return "white";
+    } else {
+      return "#666666";
+    }
+  }, [scrollTop]);
+  return (
+    <Stack
+      direction="column"
+      spacing={{
+        lg: 5,
+        xl: 6
+      }}
+      sx={{
+        position: "sticky",
+        top: {
+          lg: 48,
+          xl: 56,
+        },
+        mt: {
+          lg: 6,
+          xl: 7
+        },
+        pb: {
+          lg: 8,
+          xl: 10
+        }
+      }}
+    >
+      {categories.map((category, index) => (
+      <Link
+        onClick={() => {
+          const options = ({ block: "start", behavior: "smooth" });
+          document.getElementById(category.title).scrollIntoView(options);
+        }}
+      >
+        <Typography
+          variant="caption2"
+          sx={{
+            color: {
+              lg: getNavColor(category.title, index)
+            }
+          }}
+        >
+          {category.title}
+        </Typography>
+      </Link>
+      ))}
+    </Stack>
+)};
 
 const FAQsPage = ({
   data,
@@ -184,14 +293,34 @@ const FAQsPage = ({
           lead={hero.lead}
           backgroundImage={hero.backgroundImage}
         />
-        <Grid container spacing={2}>
-          <Grid xs={12} sm={4} md={2}>
+        <Section
+          sx={{
+            pt: {
+              xs: 0,
+              md: 1,
+              lg: 2,
+              xl: 3
+            }
+          }}
+        >
+          <Grid
+            lg={3}
+            sx={{
+              display: {
+                xs: "none",
+                lg: "block",
+              }
+            }}
+          >
             <CategoryList categories={categories} />
           </Grid>
-          <Grid xs={12} sm={8} md={10}>
+          <Grid
+            xs={12}
+            lg={9}
+          >
             <CategorySections categories={categories} />
           </Grid>
-        </Grid>
+        </Section>
         <JoinCallToAction
           location={location}
         />

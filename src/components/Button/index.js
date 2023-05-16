@@ -14,19 +14,22 @@ const StyledButton = styled(BaseButton)(({
   const color = variant === "default" ? "white" : "black";
   const colorInvert = variant ===  "default" ? "black" : "white";
   const defaultStyles = {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-end",
+    justifyContent: "flex-start",
     color: colorInvert,
     backgroundColor: color,
-    border: "2px solid white",
     borderRadius: 0,
     textTransform: "uppercase",
     transition: "box-shadow 150ms ease",
     cursor: "pointer",
     ...(
       theme.unstable_sx({
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "flex-end",
-        justifyContent: "flex-start",
+        border: {
+          xs: "1px solid white",
+          lg: "2px solid white"
+        },
         p: {
           xs: 2
         },

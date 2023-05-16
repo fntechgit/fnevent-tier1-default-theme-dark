@@ -162,7 +162,7 @@ const NavbarTemplate = ({
                 md: "flex"
               }
             }}
-            >
+          >
             {pages.map((page) => (
               <Link key={page.title} to={page.link}>
                 <Typography

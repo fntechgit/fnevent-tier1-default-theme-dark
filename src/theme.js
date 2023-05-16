@@ -32,8 +32,6 @@ theme = createTheme(theme, {
       ...(
         theme.unstable_sx({
           fontSize: {
-            // 52 on foundations definition
-            // 48 on pages
             xs: 48,
             md: 76,
             lg: 92,
