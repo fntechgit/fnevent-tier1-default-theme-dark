@@ -64,7 +64,7 @@ const TermSection = ({
       xs={12}
     >
       <Typography
-        variant="hSection"
+        variant="h1"
         sx={{
           whiteSpace: {
             md: "pre-line"

@@ -23,7 +23,7 @@ const markdownOptions = {
     h4: {
       component: Typography,
       props: {
-        variant: "hSectionContentTravelPage",
+        variant: "hSectionContent",
         sx: {
           pb: {
             xs: 4,
@@ -63,7 +63,7 @@ const Hotel = ({
       }}
     >
       <Typography
-        variant="hTravelVenue"
+        variant="h4"
       >
         {name}
       </Typography>
@@ -168,7 +168,7 @@ const Airport = ({
         />
       </Grid>
       <Typography
-        variant="hTravelVenue"
+        variant="h4"
         sx={{
           mt: {
             xs: 4,
@@ -256,7 +256,7 @@ const TravelPage = ({
             md={8}
           >
             <Typography
-              variant="hSection"
+              variant="h1"
             >
               {venue.title}
             </Typography>
@@ -331,7 +331,7 @@ const TravelPage = ({
             xs={12}
           >
             <Typography
-              variant="hSection"
+              variant="h1"
             >
               {accommodations.title}
             </Typography>
@@ -369,7 +369,7 @@ const TravelPage = ({
             xs={12}
           >
             <Typography
-              variant="hSection"
+              variant="h1"
             >
               {nearbyAirports.title}
             </Typography>

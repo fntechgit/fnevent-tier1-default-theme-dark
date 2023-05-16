@@ -74,7 +74,7 @@ const OverlappingContentImageSection = ({
         md={8}
       >
         <Typography
-          variant="hSection"
+          variant="h1"
         >
           {title}
         </Typography>

@@ -47,6 +47,7 @@ theme = createTheme(theme, {
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
+      whiteSpace: "pre-line",
       ...(
         theme.unstable_sx({
           fontSize: {
@@ -76,26 +77,7 @@ theme = createTheme(theme, {
     },
     // custom to set specific size in sections header
     // since proposal has different tags for each breakpoint
-    hSection: {
-      fontFamily: "Roblox-BoldExtended",
-      color: "#fff",
-      lineHeight: 1,
-      letterSpacing: "-0.02em",
-      whiteSpace: "pre-line",
-      ...(
-        theme.unstable_sx({
-          fontSize: {
-            xs: 32,
-            md: 48,
-            lg: 60,
-            xl: 76
-          }
-        })
-      )
-    },
-    // custom to set specific size in sections header
-    // since proposal has different tags for each breakpoint
-    hSectionContentMarketingPage: {
+    hSectionContent: {
       display: "block",
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
@@ -105,24 +87,7 @@ theme = createTheme(theme, {
         theme.unstable_sx({
           fontSize: {
             xs: 20,
-            lg: 24
-          }
-        })
-      )
-    },
-    // custom to set specific size in sections header
-    // since proposal has different tags for each breakpoint
-    hSectionContentTravelPage: {
-      display: "block",
-      fontFamily: "Roblox-BoldExtended",
-      color: "#fff",
-      lineHeight: 1,
-      letterSpacing: "-0.02em",
-      ...(
-        theme.unstable_sx({
-          fontSize: {
-            xs: 20,
-            lg: 24,
+            md: 24,
             xl: 32
           }
         })
@@ -176,24 +141,6 @@ theme = createTheme(theme, {
         })
       )
     },
-    // custom to set specific size in terms page
-    // since proposal has different tags for each breakpoint
-    hTravelVenue: {
-      fontFamily: "Roblox-BoldExtended",
-      color: "#fff",
-      lineHeight: 1.25,
-      letterSpacing: "-0.01em",
-      whiteSpace: "pre-line",
-      ...(
-        theme.unstable_sx({
-          fontSize: {
-            xs: 16,
-            lg: 24,
-            xl: 32
-          }
-        })
-      )
-    },
     p1: {
       fontFamily: "Roblox",
       color: "#fff",
@@ -203,8 +150,10 @@ theme = createTheme(theme, {
       ...(
         theme.unstable_sx({
           fontSize: {
-            xs: 20,
-            lg: 32
+            xs: 18,
+            md: 20,
+            lg: 24,
+            xl: 32
           }
         })
       )
@@ -243,24 +192,6 @@ theme = createTheme(theme, {
     },
     // custom to set specific size in terms page
     // since proposal has different tags for each breakpoint
-    pMarketingPageHero: {
-      fontFamily: "Roblox",
-      color: "#fff",
-      lineHeight: 1.25,
-      letterSpacing: "-0.01em",
-      whiteSpace: "pre-line",
-      ...(
-        theme.unstable_sx({
-          fontSize: {
-            xs: 16,
-            lg: 24,
-            xl: 32
-          }
-        })
-      )
-    },
-    // custom to set specific size in terms page
-    // since proposal has different tags for each breakpoint
     pSection: {
       fontFamily: "Roblox",
       color: "#fff",
@@ -272,6 +203,24 @@ theme = createTheme(theme, {
           fontSize: {
             xs: 14,
             lg: 16,
+            xl: 20
+          }
+        })
+      )
+    },
+    // custom to set specific size in terms page
+    // since proposal has different tags for each breakpoint
+    pFaqs: {
+      fontFamily: "Roblox",
+      color: "#fff",
+      lineHeight: 1.25,
+      letterSpacing: "-0.01em",
+      whiteSpace: "pre-line",
+      ...(
+        theme.unstable_sx({
+          fontSize: {
+            xs: 14,
+            md: 16,
             xl: 20
           }
         })

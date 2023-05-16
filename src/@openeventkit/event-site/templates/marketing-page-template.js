@@ -28,7 +28,7 @@ const markdownOptions = {
     h4: {
       component: Typography,
       props: {
-        variant: "hSectionContentMarketingPage",
+        variant: "hSectionContent",
         sx: {
           pb: {
             xs: 2,
@@ -180,7 +180,7 @@ const MarketingPageTemplate = ({
               {hero.leadTitle}
             </Typography>
             <Typography
-              variant="pMarketingPageHero"
+              variant="p1"
               sx={{
                 display: "block",
                 mt: {
@@ -233,7 +233,7 @@ const MarketingPageTemplate = ({
             md={8}
           >
             <Typography
-              variant="hSection"
+              variant="h1"
             >
               {featuring.title}
             </Typography>
