@@ -1,10 +1,12 @@
 import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import { Section } from "../../../../src/components/Grid";
+import Carousel from "../../../../src/components/Carousel";
 import { RegisterButton, LoginButton } from "../../../../src/components/Button";
 import OverlappingContentImageSection from "../../../../src/components/OverlappingContentImageSection";
 import JoinCallToAction from "../../../../src/components/JoinCallToAction";
@@ -62,6 +64,7 @@ const MarketingPageTemplate = ({
     marketingPageJson: {
       hero,
       featuring,
+      attend,
       awards
     }
   } = data;
@@ -123,23 +126,26 @@ const MarketingPageTemplate = ({
             position: "relative"
           }}
         >
-          { hero.backgroundVideo &&
-          <video
+          {hero.backgroundVideo &&
+          <Box
+            component="video"
             preload="auto"
             playsInline
             autoPlay
             loop
-            style={{
-              top: 0,
-              left: 0,
+            sx={{
               position: "absolute",
-              height: "100%",
-              width: "100%",
+              margin: "auto",
+              inset: 0,
+              top: {
+                xs: "-50%",
+                md: "-22%"
+              },
               objectFit: "cover"
             }}
           >
             <source src={hero.backgroundVideo.publicURL} type="video/mp4" />
-          </video>
+          </Box>
           }
           <Grid
             xs={12}
@@ -277,6 +283,20 @@ const MarketingPageTemplate = ({
             >
               {featuring.content}
             </Typography>
+          </Grid>
+        </Section>
+        <Section>
+          <Grid
+            xs={12}
+          >
+            <Typography
+              variant="h1"
+            >
+              {attend.title}
+            </Typography>
+            <Carousel
+              data={attend.benefits}
+            />
           </Grid>
         </Section>
         <OverlappingContentImageSection
