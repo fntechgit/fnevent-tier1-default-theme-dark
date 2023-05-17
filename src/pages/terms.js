@@ -29,7 +29,7 @@ const LinkWrapper = ({ href, ...props }) => (
 const ListWrapper = ({ children }) => (
   <li>
     <Typography
-      variant="pTerms"
+      variant="pSection"
     >
       {children}
     </Typography>
@@ -42,7 +42,7 @@ const markdownOptions = {
     p: {
       component: Typography,
       props: {
-        variant: "pTerms",
+        variant: "pSection",
         paragraph: true
       }
     },

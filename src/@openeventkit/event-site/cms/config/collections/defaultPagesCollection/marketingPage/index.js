@@ -100,7 +100,7 @@ const marketingPage = {
       label: "Attend",
       name: "attend",
       fields: [
-        stringField({
+        textField({
           label: "Title",
           name: "title"
         }),

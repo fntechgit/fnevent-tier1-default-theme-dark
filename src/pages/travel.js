@@ -59,7 +59,10 @@ const Hotel = ({
           xl: 270
         },
         p: "10px",
-        border: "1px solid white"
+        border: {
+          sm: "1px solid white",
+          lg: "2px solid white"
+        }
       }}
     >
       <Typography
@@ -106,7 +109,12 @@ const Hotels = ({
 }) => (
   <Grid 
     xs={12}
-    gap={5}
+    gap={{
+      xs: 5,
+      md: 3,
+      lg: 4,
+      xl: 5
+    }}
     sx={{
       display: "grid",
       gridTemplateColumns: {

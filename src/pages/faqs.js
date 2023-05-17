@@ -147,7 +147,7 @@ const QuestionsAndAnswer = ({
           width: "88%"
         }}
       >
-        <Typography variant="pFaqs">
+        <Typography variant="pSection">
           {questionsAndAnswer.answer}
         </Typography>
       </AccordionDetails>

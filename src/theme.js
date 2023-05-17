@@ -199,42 +199,6 @@ theme = createTheme(theme, {
       ...(
         theme.unstable_sx({
           fontSize: {
-            xs: 14,
-            lg: 16,
-            xl: 20
-          }
-        })
-      )
-    },
-    // custom to set specific size in terms page
-    // since proposal has different tags for each breakpoint
-    pFaqs: {
-      fontFamily: "Roblox",
-      color: "#fff",
-      lineHeight: 1.25,
-      letterSpacing: "-0.01em",
-      whiteSpace: "pre-line",
-      ...(
-        theme.unstable_sx({
-          fontSize: {
-            xs: 14,
-            md: 16,
-            xl: 20
-          }
-        })
-      )
-    },
-    // custom to set specific size in terms page
-    // since proposal has different tags for each breakpoint
-    pTerms: {
-      fontFamily: "Roblox",
-      color: "#fff",
-      lineHeight: 1.25,
-      letterSpacing: "-0.01em",
-      whiteSpace: "pre-line",
-      ...(
-        theme.unstable_sx({
-          fontSize: {
             xs: 16,
             xl: 20
           }

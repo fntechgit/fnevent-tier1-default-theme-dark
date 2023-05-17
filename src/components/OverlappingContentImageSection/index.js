@@ -72,6 +72,7 @@ const OverlappingContentImageSection = ({
       <Grid
         xs={12}
         md={8}
+        lg={9}
       >
         <Typography
           variant="h1"
