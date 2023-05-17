@@ -124,6 +124,10 @@ const QuestionsAndAnswer = ({
             m: 0
           },
           [`.${accordionSummaryClasses.expandIconWrapper}`]: {
+            ml: {
+              xs: 1,
+              md: 5
+            },
             transition: "none"
           }
         }}
