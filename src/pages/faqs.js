@@ -218,6 +218,7 @@ const CategoryList = ({
     const offsetY = 20;
     const fromTop = scrollTop + offsetY;
     const category = document.getElementById(categoryTitle);
+    if (category === null && index === 0) return "white";
     if (category === null) return "#666666";
     if (
       (index === 0 && category.offsetTop > fromTop) ||
