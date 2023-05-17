@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 
-import RobloxRegular from "../static/fonts/Roblox/RobloxBETA-Regular.woff";
-import RobloxBoldExtended from "../static/fonts/Roblox/RobloxDisplayBETA-BoldExtended.woff";
+import RobloxRegular from "../static/fonts/Roblox/RobloxBETA-Regular-v1.007.otf";
+import RobloxBoldExtended from "../static/fonts/Roblox/RobloxDisplayBETA-BoldExtended-v1.001.otf";
 
 // create breakpoints in intermediate theme
 let theme = createTheme({
@@ -241,11 +241,11 @@ theme = createTheme(theme, {
       styleOverrides: `
         @font-face {
           font-family: "Roblox";
-          src: local("Roblox"), url(${RobloxRegular}) format("woff");
+          src: local("Roblox"), url(${RobloxRegular});
         }
         @font-face {
           font-family: "Roblox-BoldExtended";
-          src: local("Roblox-BoldExtended"), url(${RobloxBoldExtended}) format("woff");
+          src: local("Roblox-BoldExtended"), url(${RobloxBoldExtended});
         }
       `,
     },
