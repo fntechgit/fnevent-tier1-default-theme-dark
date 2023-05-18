@@ -222,7 +222,6 @@ theme = createTheme(theme, {
     },
     caption2: {
       fontFamily: "Roblox-BoldExtended",
-      fontWeight: 700,
       lineHeight: 1,
       letterSpacing: "0.05em",
       textTransform: "uppercase",
