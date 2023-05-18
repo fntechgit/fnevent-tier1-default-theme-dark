@@ -65,8 +65,7 @@ const Carousel = ({
                     xs: 2,
                     md: 3,
                     xl: 4
-                  },
-                  zIndex: 2
+                  }
                 }}
               >
                 <Box
@@ -100,8 +99,7 @@ const Carousel = ({
                     xs: 2,
                     md: 3,
                     xl: 4
-                  },
-                  zIndex: 2
+                  }
                 }}
               />
               }
@@ -114,8 +112,7 @@ const Carousel = ({
                     xs: 2,
                     md: 3,
                     xl: 4
-                  },
-                  zIndex: 2
+                  }
                 }}
               >
                 <Box

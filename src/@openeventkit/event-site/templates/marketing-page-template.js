@@ -112,6 +112,7 @@ const MarketingPageTemplate = ({
         <AttendanceTrackerComponent/>
         <Section
           sx={{
+            position: "relative",
             pt: {
               xs: 6,
               md: 12,
@@ -122,8 +123,7 @@ const MarketingPageTemplate = ({
               xs: 6,
               lg: 8,
               xl: 10
-            },
-            position: "relative"
+            }
           }}
         >
           {hero.backgroundVideo &&
@@ -150,8 +150,8 @@ const MarketingPageTemplate = ({
           <Grid
             xs={12}
             style={{
-              textAlign: "center",
-              zIndex: 1
+              position: "relative",
+              textAlign: "center"
             }}
           >
             <Typography
@@ -166,13 +166,13 @@ const MarketingPageTemplate = ({
             xs={12}
             md={6}
             sx={{
+              position: "relative",
               mt: {
                 xs: 10.75,
                 md: 12,
                 lg: 16,
                 xl: 20
-              },
-              zIndex: 1
+              }
             }}
           >
             <Typography
@@ -203,6 +203,7 @@ const MarketingPageTemplate = ({
             xs={12}
             md={6}
             sx={{
+              position: "relative",
               display: "flex",
               alignItems: "flex-end",
               justifyContent: {
@@ -214,10 +215,7 @@ const MarketingPageTemplate = ({
                 md: 12,
                 lg: 16,
                 xl: 20
-              },
-              // one above navbar
-              //zIndex: 1101
-              zIndex: 1
+              }
             }}
           >
             <Stack

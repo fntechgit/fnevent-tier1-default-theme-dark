@@ -57,7 +57,7 @@ const PageHeader = ({
     <Grid
       xs={12}
       sx={{
-        zIndex: 1
+        position: "relative"
       }}
     >
       <Typography
@@ -74,13 +74,13 @@ const PageHeader = ({
       lg={4}
       lgOffset={7}
       sx={{
+        position: "relative",
         mt: {
         	xs: 5,
         	md: 6,
         	lg: 8,
         	xl: 10
-        },
-        zIndex: 1
+        }
       }}
     >
       <Markdown

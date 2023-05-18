@@ -62,9 +62,9 @@ const JoinCallToAction = ({
       <Grid
         xs={12}
         sx={{
+          position: "relative",
           display: "flex",
-          justifyContent: "center",
-          zIndex: 1
+          justifyContent: "center"
         }}
       >
         <Typography
@@ -78,14 +78,14 @@ const JoinCallToAction = ({
       <Grid
         xs={12}
         sx={{
+          position: "relative",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           mt: {
             xs: 4,
             lg: 6
-          },
-          zIndex: 1
+          }
         }}
       >
         <Stack

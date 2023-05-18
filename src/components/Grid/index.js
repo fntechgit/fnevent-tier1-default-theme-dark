@@ -8,14 +8,12 @@ export const GridContainer = ({
 }) => (
   <Grid
     container
+    disableEqualOverflow
     columnSpacing={{
       xs: 2,
       md: 3,
       lg: 4,
       xl: 5
-    }}
-    sx={{
-      m: 0
     }}
     {...rest}
   >
@@ -26,9 +24,10 @@ export const GridContainer = ({
 export const Section = styled(GridContainer)(({ theme }) =>
   theme.unstable_sx({
     px: {
-      xs: 1,
-      lg: 2,
-      xl: 3
+      xs: 2,
+      md: 3,
+      lg: 4,
+      xl: 5
     },
     py: {
       xs: 4,
