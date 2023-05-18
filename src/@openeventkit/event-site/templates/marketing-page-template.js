@@ -12,7 +12,7 @@ import OverlappingContentImageSection from "../../../../src/components/Overlappi
 import JoinCallToAction from "../../../../src/components/JoinCallToAction";
 import Footer from "../../../../src/components/Footer";
 
-import Link from "@openeventkit/event-site/src/components/Link";
+import Link from "../../../../src/components/Link";
 import AttendanceTrackerComponent from "@openeventkit/event-site/src/components/AttendanceTrackerComponent";
 import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
 import RegistrationLoginComponent from "@openeventkit/event-site/src/components/LoginButton";

@@ -4,7 +4,7 @@ import { Section } from "../components/Grid";
 import Grid from "@mui/material/Unstable_Grid2";
 import Typography from "@mui/material/Typography";
 import Markdown from "markdown-to-jsx";
-import Link from "@openeventkit/event-site/src/components/Link";
+import { AnimatedLink } from "../components/Link";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import PageHeader from "../components/PageHeader";
 import JoinCallToAction from "../components/JoinCallToAction";
@@ -16,11 +16,10 @@ const pageStyles = {
 
 // trails 'href' prop to 'to' prop
 const LinkWrapper = ({ href, ...props }) => (
-  <Link
+  <AnimatedLink
     to={href}
-    style={{
-      color: "white"
-    }}
+    color="#00A2FF"
+    hoverColor="#00A2FF"
     {...props}
   />
 );

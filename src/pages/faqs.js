@@ -17,7 +17,7 @@ import { Section } from "../components/Grid";
 import PageHeader from "../components/PageHeader";
 import JoinCallToAction from "../components/JoinCallToAction";
 import Footer from "../components/Footer";
-import Link from "@openeventkit/event-site/src/components/Link";
+import { AnimatedLink } from "../components/Link";
 import SvgIcon from "@mui/material/SvgIcon";
 
 const pageStyles = {
@@ -26,7 +26,6 @@ const pageStyles = {
 
 const AccordionIcon = ({
   className,
-  hover = true,
   expanded
 }) =>
   <SvgIcon
@@ -240,6 +239,7 @@ const CategoryList = ({
   return (
     <Stack
       direction="column"
+      alignItems="flex-start"
       spacing={{
         lg: 5,
         xl: 6
@@ -261,7 +261,8 @@ const CategoryList = ({
       }}
     >
       {categories.map((category, index) => (
-      <Link
+      <AnimatedLink
+        color={getNavColor(category.title, index)}
         onClick={() => {
           const options = ({ block: "start", behavior: "smooth" });
           document.getElementById(category.title).scrollIntoView(options);
@@ -269,15 +270,10 @@ const CategoryList = ({
       >
         <Typography
           variant="caption2"
-          sx={{
-            color: {
-              lg: getNavColor(category.title, index)
-            }
-          }}
         >
           {category.title}
         </Typography>
-      </Link>
+      </AnimatedLink>
       ))}
     </Stack>
 )};

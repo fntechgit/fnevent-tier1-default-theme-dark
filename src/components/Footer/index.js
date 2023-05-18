@@ -4,8 +4,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import { GridContainer } from "../../components/Grid";
-import Link from "@openeventkit/event-site/src/components/Link";
+import { GridContainer } from "../Grid";
+import Link, { AnimatedLink } from "../Link";
 
 const footerQuery = graphql`
   query {
@@ -189,7 +189,7 @@ const Footer = () => {
         {links?.map((link, index) => (
         <FooterLinkItem key={index}>
           {link.link ?
-          <Link to={link.link}>
+          <AnimatedLink to={link.link}>
             <Typography
               variant="caption2"
               style={{
@@ -198,7 +198,7 @@ const Footer = () => {
             >
               {link.text}
             </Typography>
-          </Link>
+          </AnimatedLink>
           :
           <Typography
             variant="caption2"

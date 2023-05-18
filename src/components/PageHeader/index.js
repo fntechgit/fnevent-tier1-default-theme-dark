@@ -4,12 +4,14 @@ import { Section } from "../Grid";
 import Grid from "@mui/material/Unstable_Grid2";
 import Typography from "@mui/material/Typography";
 import Markdown from "markdown-to-jsx";
-import Link from "@openeventkit/event-site/src/components/Link";
+import { AnimatedLink } from "../Link";
 
 // trails 'href' prop to 'to' prop
 const LinkWrapper = ({ href, ...props }) => (
-  <Link
+  <AnimatedLink
     to={href}
+    color="#00A2FF"
+    hoverColor="#00A2FF"
     {...props}
   />
 );

@@ -10,7 +10,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import SvgIcon from "@mui/material/SvgIcon";
 import Avatar from "@mui/material/Avatar";
-import Link from "@openeventkit/event-site/src/components/Link";
+import Link, { AnimatedLink } from "../../../../components/Link";
 import ProfilePopupComponent from "@openeventkit/event-site/src/components/ProfilePopupComponent";
 import LogoutButton from "../LogoutButton";
 
@@ -164,18 +164,16 @@ const NavbarTemplate = ({
             }}
           >
             {pages.map((page) => (
-              <Link key={page.title} to={page.link}>
+              <AnimatedLink
+                key={page.title}
+                to={page.link}
+              >
                 <Typography
-                  key={page.title}
-                  sx={{
-                    color: "white",
-                    display: "block",
-                  }}
                   variant="caption2"
                 >
                   {page.title}
                 </Typography>
-              </Link>
+              </AnimatedLink>
             ))}
           </Stack>
           {isLoggedUser &&
@@ -271,22 +269,18 @@ const NavbarTemplate = ({
         }}
       >
         {pages.map((page) => (
-        <Link
+        <AnimatedLink
           to={page.link}
           style={{
             width: "fit-content"
           }}
         >
           <Typography
-            sx={{
-              color: "white",
-              display: "block",
-            }}
             variant="caption1"
           >
             {page.title}
           </Typography>
-        </Link>
+        </AnimatedLink>
         ))}
       </Stack>
     </Drawer>
