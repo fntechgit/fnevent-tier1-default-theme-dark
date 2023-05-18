@@ -43,13 +43,11 @@ const PageHeader = ({
     <GatsbyImage
       image={getImage(backgroundImage.src)}
       style={{
-        top: 0,
-        left: 0,
         position: "absolute",
-        height: "100%",
-        width: "100%",
+        inset: 0,
         objectFit: "cover",
-        opacity: 0.4
+        opacity: 0.4,
+        pointerEvents: "none"
       }}
       alt={backgroundImage.alt ?? "Page header image"}
     />

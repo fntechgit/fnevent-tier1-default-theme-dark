@@ -123,6 +123,9 @@ const QuestionsAndAnswer = ({
           [`.${accordionSummaryClasses.root}`]: {
             m: 0
           },
+          [`.${accordionSummaryClasses.content}`]: {
+            m: 0
+          },
           [`.${accordionSummaryClasses.expandIconWrapper}`]: {
             ml: {
               xs: 1,

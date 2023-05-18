@@ -47,18 +47,18 @@ const JoinCallToAction = ({
         }
       }}
     >
+      {backgroundImage &&
       <GatsbyImage
         image={getImage(backgroundImage.src)}
         style={{
-          top: 0,
-          left: 0,
           position: "absolute",
-          height: "100%",
-          width: "100%",
+          inset: 0,
           objectFit: "cover",
-          opacity: 0.8
+          opacity: 0.8,
+          pointerEvents: "none"
         }}
       />
+      }
       <Grid
         xs={12}
         sx={{

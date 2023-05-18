@@ -163,7 +163,6 @@ const Footer = () => {
       style={{backgroundColor: "#000"}}
     >
       <SocialNetworks
-        container
         rowSpacing={1}
       >
         {social?.map((network, index) => (

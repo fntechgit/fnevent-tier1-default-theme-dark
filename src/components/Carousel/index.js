@@ -50,9 +50,10 @@ const Carousel = ({
               style={{
                 display: "flex",
                 flexDirection: "column",
-                position: "relative",
-                backgroundImage: `url("${getSrc(item.backgroundImage.src)}")`,
-                backgroundSize: "cover"
+                ...(item.backgroundImage && {
+                  backgroundImage: `url("${getSrc(item.backgroundImage.src)}")`,
+                  backgroundSize: "cover"
+                })
               }}
             >
               <Stack
@@ -89,6 +90,7 @@ const Carousel = ({
                   {item.concept}
                 </Typography>
               </Stack>
+              {item.foregroundImage &&
               <Box
                 component={GatsbyImage}
                 image={getImage(item.foregroundImage.src)}
@@ -102,6 +104,7 @@ const Carousel = ({
                   zIndex: 2
                 }}
               />
+              }
               <Stack
                 direction="row"
                 justifyContent="space-between"

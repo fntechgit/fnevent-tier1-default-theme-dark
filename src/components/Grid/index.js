@@ -14,6 +14,9 @@ export const GridContainer = ({
       lg: 4,
       xl: 5
     }}
+    sx={{
+      m: 0
+    }}
     {...rest}
   >
     {children}
@@ -23,10 +26,9 @@ export const GridContainer = ({
 export const Section = styled(GridContainer)(({ theme }) =>
   theme.unstable_sx({
     px: {
-      xs: 2,
-      md: 3,
-      lg: 4,
-      xl: 5
+      xs: 1,
+      lg: 2,
+      xl: 3
     },
     py: {
       xs: 4,
