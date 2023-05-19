@@ -1,5 +1,7 @@
 import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/Typography";
 import AnimatedTypography from "../../../../src/components/AnimatedTypography";
 import Box from "@mui/material/Box";
@@ -121,6 +123,9 @@ const MarketingPageTemplate = ({
       </>
     );
   };
+  const theme = useTheme();
+  const matchesMobile = useMediaQuery(theme.breakpoints.down("lg"));
+  const matchesDesktop = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <div style={pageStyles}>
       <Navbar />
@@ -142,7 +147,7 @@ const MarketingPageTemplate = ({
             }
           }}
         >
-          {hero.backgroundVideo &&
+          {hero.backgroundVideo.mobile && matchesMobile &&
           <Box
             component="video"
             preload="auto"
@@ -150,17 +155,40 @@ const MarketingPageTemplate = ({
             autoPlay
             loop
             sx={{
+              display: {
+                xs: "block",
+                lg: "none",
+              },
+              position: "absolute",
+              inset: 0,
+              objectFit: "none"
+            }}
+          >
+            <source src={hero.backgroundVideo.mobile.publicURL} type="video/mp4" />
+          </Box>
+          }
+          {hero.backgroundVideo.desktop && matchesDesktop &&
+          <Box
+            component="video"
+            preload="auto"
+            playsInline
+            autoPlay
+            loop
+            sx={{
+              display: {
+                xs: "none",
+                lg: "block",
+              },
               position: "absolute",
               margin: "auto",
               inset: 0,
               top: {
-                xs: "-50%",
                 md: "-22%"
               },
               objectFit: "cover"
             }}
           >
-            <source src={hero.backgroundVideo.publicURL} type="video/mp4" />
+            <source src={hero.backgroundVideo.desktop.publicURL} type="video/mp4" />
           </Box>
           }
           <Grid

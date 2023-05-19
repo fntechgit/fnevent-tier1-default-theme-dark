@@ -12,12 +12,16 @@ module.exports = `
     registerButton: Button
     loginButtom: Button
   }
+  type BackgroundVideoVersions {
+    mobile: File @fileByRelativePath
+    desktop: File @fileByRelativePath
+  }
   type MarketingPageHero {
     title: String
     leadTitle: String
     lead: String
     buttons: MarketingPageJoinButtons
-    backgroundVideo: File @fileByRelativePath
+    backgroundVideo: BackgroundVideoVersions
   }
   type ImageContentSection {
     title: String

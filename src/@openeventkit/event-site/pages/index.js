@@ -9,7 +9,12 @@ export const marketingPageQuery = graphql`
         leadTitle
         lead
         backgroundVideo {
-          publicURL
+          mobile {
+            publicURL
+          }
+          desktop {
+            publicURL
+          }
         }
         buttons {
           registerButton {

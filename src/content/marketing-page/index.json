@@ -13,7 +13,10 @@
         "text": "Login"
       }
     },
-    "backgroundVideo": "animation.mp4"
+    "backgroundVideo": {
+      "mobile": "animation720x720.mp4",
+      "desktop": "animation1280x720.mp4"
+    }
   },
   "featuring": {
     "content": "Featuring a mix of groundbreaking keynote presentations, in-depth breakout sessions, and professional networking opportunities, RDC is designed to empower you with the knowledge you need to reach your full creative potential.",

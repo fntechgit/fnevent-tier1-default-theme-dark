@@ -72,9 +72,19 @@ const marketingPage = {
             })
           ]
         }),
-        fileField({
+        objectField({
           label: "Background Video",
-          name: "backgroundVideo"
+          name: "backgroundVideo",
+          fields: [
+            fileField({
+              label: "Mobile Version",
+              name: "mobile"
+            }),
+            fileField({
+              label: "Desktop Version",
+              name: "desktop"
+            })
+          ]
         })
       ]
     }),
