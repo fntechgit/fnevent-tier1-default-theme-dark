@@ -14,6 +14,10 @@ import Link, { AnimatedLink } from "../../../../components/Link";
 import ProfilePopupComponent from "@openeventkit/event-site/src/components/ProfilePopupComponent";
 import LogoutButton from "../LogoutButton";
 
+// needed to identify schedule page, to change sticky breakpoint for fnevent stock breakpoints handling 
+import { useLocation } from "@reach/router";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 const MenuIcon = () =>
   <SvgIcon viewBox="0 0 17 14">
     <svg fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,15 +57,24 @@ const NavbarTemplate = ({
   const toggleMenu = (open) => (event) => {
     setMenuOpen(open);
   };
+  
+  // needed to identify schedule page, to change sticky breakpoint for fnevent stock breakpoints handling 
+  const location = useLocation();
+  const isSchedulePage = location.pathname.startsWith("/a/schedule") || location.pathname.startsWith("/a/my-schedule");
+  const matchesStockEventSiteDesktopBreakpoint = useMediaQuery("(min-width: 991px)");
+  const navbarPosition = matchesStockEventSiteDesktopBreakpoint ? "relative" : "sticky";
   return (
     <>
     <AppBar
       sx={{
         zIndex: (theme) => theme.zIndex.drawer + 1,
-        position: {
-          xs: "sticky",
-          md: "relative"
-        }
+        position: isSchedulePage ?
+          navbarPosition
+          :
+          {
+            xs: "sticky",
+            md: "relative"
+          }
       }}
     >
       <Container
