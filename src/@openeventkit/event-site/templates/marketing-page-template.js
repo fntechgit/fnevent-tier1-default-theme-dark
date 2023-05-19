@@ -6,7 +6,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import { Section } from "../../../../src/components/Grid";
-import Carousel from "../../../../src/components/Carousel";
+import AttendCarousel from "../../../../src/components/AttendCarousel";
 import { RegisterButton, LoginButton } from "../../../../src/components/Button";
 import OverlappingContentImageSection from "../../../../src/components/OverlappingContentImageSection";
 import JoinCallToAction from "../../../../src/components/JoinCallToAction";
@@ -292,7 +292,7 @@ const MarketingPageTemplate = ({
             >
               {attend.title}
             </Typography>
-            <Carousel
+            <AttendCarousel
               data={attend.benefits}
             />
           </Grid>

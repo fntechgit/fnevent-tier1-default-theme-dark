@@ -8,11 +8,13 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import Navigation from "./Navigation";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 
-const Carousel = ({
+const AttendCarousel = ({
   data
 }) => {
   const theme = useTheme();
@@ -61,10 +63,19 @@ const Carousel = ({
                 justifyContent="space-between"
                 sx={{
                   width: "100%",
-                  p: {
+                  pt: {
+                    xs: 2.5,
+                    md: 3,
+                    xl: 3.5
+                  },
+                  px: {
                     xs: 2,
                     md: 3,
                     xl: 4
+                  },
+                  pb: {
+                    xs: 2,
+                    lg: 2.5
                   }
                 }}
               >
@@ -108,10 +119,19 @@ const Carousel = ({
                 justifyContent="space-between"
                 sx={{
                   width: "100%",
-                  p: {
+                  pb: {
+                    xs: 2.5,
+                    md: 3,
+                    xl: 3.5
+                  },
+                  px: {
                     xs: 2,
                     md: 3,
                     xl: 4
+                  },
+                  pt: {
+                    xs: 2,
+                    lg: 2.5
                   }
                 }}
               >
@@ -151,9 +171,11 @@ const Carousel = ({
           </Box>
         </SwiperSlide>
       ))}
+      <Navigation/>
     </Box>
   )
 };
 
-export default Carousel;
+export { Navigation };
 
+export default AttendCarousel;
