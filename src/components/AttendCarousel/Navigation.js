@@ -26,19 +26,19 @@ const NextCarouselIcon = ({
           fill: "black",
           stroke: disabled ? "#666666" : "white",
           strokeWidth: {
-            xs: 60 * 1.5 / 36,
-            md: 60 * 1.5 / 44,
-            lg: 60 * 2.2 / 52,
-            xl: 2
+            xs: 60 * 1.2 / 36,
+            md: 60 * 1.2 / 44,
+            lg: 60 * 2 / 52,
+            xl: 60 * 2 / 60
           }
         },
         path: {
           stroke: disabled ? "#666666" : "white",
           strokeWidth: {
-            xs: 60 * 1.5 / 36,
-            md: 60 * 1.5 / 44,
-            lg: 60 * 2.2 / 52,
-            xl: 2
+            xs: 60 * 1.2 / 36,
+            md: 60 * 1.2 / 44,
+            lg: 60 * 2 / 52,
+            xl: 60 * 2 / 60
           }
         }
       },
