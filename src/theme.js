@@ -140,6 +140,7 @@ theme = createTheme(theme, {
       )
     },
     p1: {
+      display: "inline-block",
       fontFamily: "Roblox",
       color: "#fff",
       lineHeight: 1.25,
@@ -157,6 +158,7 @@ theme = createTheme(theme, {
       )
     },
     p2: {
+      display: "inline-block",
       fontFamily: "Roblox",
       color: "#fff",
       lineHeight: 1.25,
@@ -174,6 +176,7 @@ theme = createTheme(theme, {
       )
     },
     p3: {
+      display: "inline-block",
       fontFamily: "Roblox",
       color: "#fff",
       lineHeight: 1.25,
@@ -191,6 +194,7 @@ theme = createTheme(theme, {
     // custom to set specific size in terms page
     // since proposal has different tags for each breakpoint
     pSection: {
+      display: "inline-block",
       fontFamily: "Roblox",
       color: "#fff",
       lineHeight: 1.25,
@@ -206,6 +210,7 @@ theme = createTheme(theme, {
       )
     },
     caption1: {
+      display: "inline-block",
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
@@ -221,6 +226,7 @@ theme = createTheme(theme, {
       )
     },
     caption2: {
+      display: "inline-block",
       fontFamily: "Roblox-BoldExtended",
       lineHeight: 1,
       letterSpacing: "0.05em",

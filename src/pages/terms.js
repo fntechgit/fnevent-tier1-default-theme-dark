@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { Section } from "../components/Grid";
 import Grid from "@mui/material/Unstable_Grid2";
-import Typography from "@mui/material/Typography";
+import AnimatedTypography from "../components/AnimatedTypography";
 import Markdown from "markdown-to-jsx";
 import { AnimatedLink } from "../components/Link";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
@@ -27,11 +27,11 @@ const LinkWrapper = ({ href, ...props }) => (
 // trails 'href' prop to 'to' prop
 const ListWrapper = ({ children }) => (
   <li>
-    <Typography
+    <AnimatedTypography
       variant="pSection"
     >
       {children}
-    </Typography>
+    </AnimatedTypography>
   </li>
 );
 
@@ -39,7 +39,7 @@ const markdownOptions = {
   forceBlock: true,
   overrides: {
     p: {
-      component: Typography,
+      component: AnimatedTypography,
       props: {
         variant: "pSection",
         paragraph: true
@@ -62,7 +62,7 @@ const TermSection = ({
     <Grid
       xs={12}
     >
-      <Typography
+      <AnimatedTypography
         variant="h1"
         sx={{
           whiteSpace: {
@@ -71,7 +71,7 @@ const TermSection = ({
         }}
       >
         {title}
-      </Typography>
+      </AnimatedTypography>
     </Grid>
     <Grid
       xs={12}

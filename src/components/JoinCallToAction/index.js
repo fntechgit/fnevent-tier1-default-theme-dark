@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Section } from "../Grid";
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import AnimatedTypography from "../AnimatedTypography";
 import { RegisterButton, LoginButton } from "../Button";
 import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
 import RegistrationLoginComponent from "@openeventkit/event-site/src/components/LoginButton";
@@ -67,13 +67,13 @@ const JoinCallToAction = ({
           justifyContent: "center"
         }}
       >
-        <Typography
+        <AnimatedTypography
           variant="h1"
           align="center"
           textTransform="uppercase"
         >
           {title}
-        </Typography>
+        </AnimatedTypography>
       </Grid>
       <Grid
         xs={12}

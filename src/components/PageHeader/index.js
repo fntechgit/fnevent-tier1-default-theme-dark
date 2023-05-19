@@ -2,7 +2,7 @@ import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Section } from "../Grid";
 import Grid from "@mui/material/Unstable_Grid2";
-import Typography from "@mui/material/Typography";
+import AnimatedTypography from "../AnimatedTypography";
 import Markdown from "markdown-to-jsx";
 import { AnimatedLink } from "../Link";
 
@@ -20,7 +20,7 @@ const markdownOptions = {
   forceBlock: true,
   overrides: {
     p: {
-      component: Typography,
+      component: AnimatedTypography,
       props: {
         variant: "p2"
       }
@@ -60,12 +60,12 @@ const PageHeader = ({
         position: "relative"
       }}
     >
-      <Typography
+      <AnimatedTypography
         variant="display1"
         whiteSpace="pre-line"
       >
         {title}
-      </Typography>
+      </AnimatedTypography>
     </Grid>
     <Grid
       xs={12}

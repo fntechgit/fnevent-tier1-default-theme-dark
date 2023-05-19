@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Markdown from "markdown-to-jsx";
-import Typography from "@mui/material/Typography";
+import AnimatedTypography from "../AnimatedTypography";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Section } from "../Grid";
 import useBoundingClientRect from "../../utils/hooks/useBoundingClientRect";
@@ -11,37 +11,37 @@ const defaultMarkdownOptions = {
   forceBlock: true,
   overrides: {
     h1: {
-      component: Typography,
+      component: AnimatedTypography,
       props: {
         variant: "h1"
       }
     },
     h2: {
-      component: Typography,
+      component: AnimatedTypography,
       props: {
         variant: "h2"
       }
     },
     h3: {
-      component: Typography,
+      component: AnimatedTypography,
       props: {
         variant: "h3"
       }
     },
     h4: {
-      component: Typography,
+      component: AnimatedTypography,
       props: {
         variant: "h4"
       }
     },
     h5: {
-      component: Typography,
+      component: AnimatedTypography,
       props: {
         variant: "h5"
       }
     },
     p: {
-      component: Typography,
+      component: AnimatedTypography,
       props: {
         variant: "p3"
       }
@@ -74,11 +74,11 @@ const OverlappingContentImageSection = ({
         md={8}
         lg={9}
       >
-        <Typography
+        <AnimatedTypography
           variant="h1"
         >
           {title}
-        </Typography>
+        </AnimatedTypography>
       </Grid>
       { image &&
       <Grid

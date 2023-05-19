@@ -1,6 +1,7 @@
 import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Typography from "@mui/material/Typography"
+import Typography from "@mui/material/Typography";
+import AnimatedTypography from "../../../../src/components/AnimatedTypography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
@@ -18,6 +19,21 @@ import RegistrationLiteComponent from "@openeventkit/event-site/src/components/R
 import RegistrationLoginComponent from "@openeventkit/event-site/src/components/LoginButton";
 
 import { PHASES } from "@openeventkit/event-site/src/utils/phasesUtils";
+
+const hConcealAnimation = {
+  clipPath: "inset(100% 0 0 0)",
+  transitionProperty: "clip-path",
+  transitionDuration: ".6s",
+  transitionTimingFunction: "cubic-bezier(0.215, 0.61, 0.355, 1)",
+  transitionDelay: ".3s"
+};
+const hRevealAnimation = {
+  clipPath: "inset(0 0 0 0)",
+  transitionProperty: "clip-path",
+  transitionDuration: ".6s",
+  transitionTimingFunction: "cubic-bezier(0.215, 0.61, 0.355, 1)",
+  transitionDelay: ".3s"
+};
 
 const pageStyles = {
   backgroundColor: "#000",
@@ -41,7 +57,7 @@ const markdownOptions = {
       }
     },
     p: {
-      component: Typography,
+      component: AnimatedTypography,
       props: {
         variant: "pSection",
       }
@@ -154,13 +170,15 @@ const MarketingPageTemplate = ({
               textAlign: "center"
             }}
           >
-            <Typography
+            <AnimatedTypography
               variant="display1"
               align="center"
               textTransform="uppercase"
+              concealAnimation={hConcealAnimation}
+              revealAnimation={hRevealAnimation}
             >
               {hero.title}
-            </Typography>
+            </AnimatedTypography>
           </Grid>
           <Grid
             xs={12}
@@ -175,7 +193,7 @@ const MarketingPageTemplate = ({
               }
             }}
           >
-            <Typography
+            <AnimatedTypography
               variant="caption2"
               style={{
                 display: "block",
@@ -184,8 +202,8 @@ const MarketingPageTemplate = ({
               }}
             >
               {hero.leadTitle}
-            </Typography>
-            <Typography
+            </AnimatedTypography>
+            <AnimatedTypography
               variant="p1"
               sx={{
                 display: "block",
@@ -197,7 +215,7 @@ const MarketingPageTemplate = ({
               }}
             >
               {hero.lead}
-            </Typography>
+            </AnimatedTypography>
           </Grid>
           <Grid
             xs={12}
@@ -237,11 +255,11 @@ const MarketingPageTemplate = ({
             md={8}
             lg={9}
           >
-            <Typography
+            <AnimatedTypography
               variant="h1"
             >
               {featuring.title}
-            </Typography>
+            </AnimatedTypography>
           </Grid>
           { featuring.image &&
           <Grid
@@ -276,22 +294,22 @@ const MarketingPageTemplate = ({
               }
             }}
           >
-            <Typography
+            <AnimatedTypography
               variant="pSection"
             >
               {featuring.content}
-            </Typography>
+            </AnimatedTypography>
           </Grid>
         </Section>
         <Section>
           <Grid
             xs={12}
           >
-            <Typography
+            <AnimatedTypography
               variant="h1"
             >
               {attend.title}
-            </Typography>
+            </AnimatedTypography>
             <AttendCarousel
               data={attend.benefits}
             />

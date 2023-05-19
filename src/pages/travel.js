@@ -6,6 +6,7 @@ import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Section } from "../components/Grid";
 import Typography from "@mui/material/Typography"
+import AnimatedTypography from "../components/AnimatedTypography";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import PageHeader from "../components/PageHeader";
 import OverlappingContentImageSection from "../components/OverlappingContentImageSection";
@@ -33,7 +34,7 @@ const markdownOptions = {
       }
     },
     p: {
-      component: Typography,
+      component: AnimatedTypography,
       props: {
         variant: "pSection",
       }
@@ -79,14 +80,14 @@ const Hotel = ({
           justifyContent: "space-between"
         }}
       >
-        <Typography
+        <AnimatedTypography
           variant="caption2"
           style={{
             color: "white"
           }}
         >
           {address}
-        </Typography>
+        </AnimatedTypography>
         <SvgIcon
           viewBox="0 0 24 24"
           sx={{
@@ -187,7 +188,7 @@ const Airport = ({
       >
         {name}
       </Typography>
-      <Typography
+      <AnimatedTypography
         variant="caption2"
         sx={{
           flexGrow: 1,
@@ -196,7 +197,7 @@ const Airport = ({
         }}
       >
         {distance}
-      </Typography>
+      </AnimatedTypography>
     </Grid>
   );
 };
@@ -310,7 +311,7 @@ const TravelPage = ({
               {venue.content}
             </Markdown>
             {venue.address &&
-            <Typography
+            <AnimatedTypography
               variant="caption2"
               sx= {{
                 display: "block",
@@ -322,7 +323,7 @@ const TravelPage = ({
               }}
             >
               {venue.address}
-            </Typography>
+            </AnimatedTypography>
             }
           </Grid>
         </Section>
@@ -359,11 +360,11 @@ const TravelPage = ({
               }
             }}
           >
-            <Typography
+            <AnimatedTypography
               variant="pSection"
             >
               {accommodations.content}
-            </Typography>
+            </AnimatedTypography>
           </Grid>
           {accommodations.hotels && accommodations.hotels.length > 0 &&
           <Hotels

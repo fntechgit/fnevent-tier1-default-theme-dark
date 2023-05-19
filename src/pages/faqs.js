@@ -9,6 +9,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary, { accordionSummaryClasses } from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import AnimatedTypography from "../components/AnimatedTypography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
@@ -19,6 +20,15 @@ import JoinCallToAction from "../components/JoinCallToAction";
 import Footer from "../components/Footer";
 import { AnimatedLink } from "../components/Link";
 import SvgIcon from "@mui/material/SvgIcon";
+
+const pConcealAnimation = {
+  opacity: 0,
+  transition: "opacity cubic-bezier(0.215, 0.61, 0.355, 1)"
+};
+const pRevealAnimation = {
+  opacity: 1,
+  transition: "opacity .15s cubic-bezier(0.215, 0.61, 0.355, 1)"
+};
 
 const pageStyles = {
   backgroundColor: "#000"
@@ -137,11 +147,8 @@ const QuestionsAndAnswer = ({
         <Typography
           variant="h4"
           sx={{
-            mt: expanded ? {
-              xs: -2.1,
-              md: -2.4
-            } : 0,
-            transition: "margin 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms"
+            transform: expanded ? "translateY(-1rem)" : "translateY(0)",
+            transition: "transform .15s cubic-bezier(0.215, 0.61, 0.355, 1)",
           }}
         >
           {questionsAndAnswer.question}
@@ -153,9 +160,14 @@ const QuestionsAndAnswer = ({
           width: "88%"
         }}
       >
-        <Typography variant="pSection">
+        <AnimatedTypography
+          variant="pSection"
+          concealAnimation={pConcealAnimation}
+          revealAnimation={pRevealAnimation}
+          shouldConceal
+        >
           {questionsAndAnswer.answer}
-        </Typography>
+        </AnimatedTypography>
       </AccordionDetails>
     </Accordion>
   );

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image";
 import Typography from "@mui/material/Typography";
+import AnimatedTypography from "../AnimatedTypography";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
@@ -13,6 +14,15 @@ import Navigation from "./Navigation";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+
+const pConcealAnimation = {
+  opacity: 0,
+  transition: "opacity .15s cubic-bezier(0.215, 0.61, 0.355, 1)"
+};
+const pRevealAnimation = {
+  opacity: 1,
+  transition: "opacity .15s cubic-bezier(0.215, 0.61, 0.355, 1)"
+};
 
 const AttendCarousel = ({
   data
@@ -157,8 +167,11 @@ const AttendCarousel = ({
                 </Typography>
               </Stack>
             </Box>
-            <Typography
+            <AnimatedTypography
               variant="pSection"
+              concealAnimation={pConcealAnimation}
+              revealAnimation={pRevealAnimation}
+              shouldConceal
               sx={{
                 pt: {
                   xs: 4,
@@ -167,7 +180,7 @@ const AttendCarousel = ({
               }}
             >
               {item.description}
-            </Typography>
+            </AnimatedTypography>
           </Box>
         </SwiperSlide>
       ))}
