@@ -119,6 +119,7 @@ const TermsSections = ({
   terms
 }) => terms.map((term) => (
   <TermSection
+    key={term.title}
     title={term.title}
     contentMarkdown={term.content}
   />

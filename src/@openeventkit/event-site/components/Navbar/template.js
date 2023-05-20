@@ -21,17 +21,17 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 const MenuIcon = () =>
   <SvgIcon viewBox="0 0 17 14">
     <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 1H16" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
-      <path d="M1 7H16" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
-      <path d="M1 13H16" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+      <path d="M1 1H16" stroke="white" strokeLinecap="square" strokeLinejoin="round"/>
+      <path d="M1 7H16" stroke="white" strokeLinecap="square" strokeLinejoin="round"/>
+      <path d="M1 13H16" stroke="white" strokeLinecap="square" strokeLinejoin="round"/>
     </svg>
   </SvgIcon>;
 
 const CloseIcon = () =>
   <SvgIcon viewBox="0 0 14 14">
     <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13 1L1 13" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
-      <path d="M1 1L13 13" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+      <path d="M13 1L1 13" stroke="white" strokeLinecap="square" strokeLinejoin="round"/>
+      <path d="M1 1L13 13" stroke="white" strokeLinecap="square" strokeLinejoin="round"/>
     </svg>
   </SvgIcon>;
 
@@ -283,6 +283,7 @@ const NavbarTemplate = ({
       >
         {pages.map((page) => (
         <AnimatedLink
+          key={page.title}
           to={page.link}
           style={{
             width: "fit-content"

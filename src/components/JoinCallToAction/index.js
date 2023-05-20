@@ -57,6 +57,7 @@ const JoinCallToAction = ({
           opacity: 0.8,
           pointerEvents: "none"
         }}
+        alt={backgroundImage.alt ?? ""}
       />
       }
       <Grid

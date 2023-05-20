@@ -39,8 +39,8 @@ const RegisterButton = ({
         }}
       >
         <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 13L13.3208 1.6792" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-          <path d="M2.67969 1H14.0004V12.3208" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+          <path d="M2 13L13.3208 1.6792" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round"/>
+          <path d="M2.67969 1H14.0004V12.3208" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round"/>
         </svg>
       </SvgIcon>
     </Stack>

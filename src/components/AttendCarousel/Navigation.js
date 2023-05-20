@@ -62,14 +62,14 @@ const NextCarouselIcon = ({
     {invert ?
     <svg fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="-1" y="1" width="58" height="58" transform="matrix(-1 0 0 1 58 0)"/>
-      <path d="M30 42L18 30L30 18"stroke-linecap="square"/>
-      <path d="M43 30H19" stroke-linecap="square"/>
+      <path d="M30 42L18 30L30 18"strokeLinecap="square"/>
+      <path d="M43 30H19" strokeLinecap="square"/>
     </svg>
     :
     <svg fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="-1" y="1" width="58" height="58" transform="matrix(-1 0 0 1 58 0)"/>
-      <path d="M30 42L42 30L30 18" stroke-linecap="square"/>
-      <path d="M17 30H41" stroke-linecap="square"/>
+      <path d="M30 42L42 30L30 18" strokeLinecap="square"/>
+      <path d="M17 30H41" strokeLinecap="square"/>
     </svg>
     }
   </SvgIcon>

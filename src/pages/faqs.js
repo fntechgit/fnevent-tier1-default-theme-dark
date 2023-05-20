@@ -82,13 +82,13 @@ const AccordionIcon = ({
     {expanded ?
     <svg fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="1" y="1" width="60" height="60" />
-      <path d="M19 31H43" stroke-linecap="square"/>
+      <path d="M19 31H43" strokeLinecap="square"/>
     </svg>
     :
     <svg fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="1" y="1" width="60" height="60"/>
-      <path d="M31 19V43" stroke-linecap="square"/>
-      <path d="M19 31H43" stroke-linecap="square"/>
+      <path d="M31 19V43" strokeLinecap="square"/>
+      <path d="M19 31H43" strokeLinecap="square"/>
     </svg>
     }
   </SvgIcon>
