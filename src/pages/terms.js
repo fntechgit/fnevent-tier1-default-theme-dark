@@ -32,10 +32,9 @@ const ListWrapper = ({ children }) => (
       sx={{
         "&::before": {
           position: "absolute",
-          content: "'▪'",
-          display: "inline-block",
-          width: "1em",
-          marginLeft: "-1em"
+          content: "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGElEQVR42nXHIQEAAACDsPcvDRbzuY34EbuHI93xCA6eAAAAAElFTkSuQmCC)",
+          marginLeft: "-13px",
+          marginTop: "-4px"
         }
       }}
     >
