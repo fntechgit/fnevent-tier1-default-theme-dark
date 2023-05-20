@@ -29,6 +29,15 @@ const ListWrapper = ({ children }) => (
   <li>
     <AnimatedTypography
       variant="pSection"
+      sx={{
+        "&::before": {
+          position: "absolute",
+          content: "'▪'",
+          display: "inline-block",
+          width: "1em",
+          marginLeft: "-1em"
+        }
+      }}
     >
       {children}
     </AnimatedTypography>
@@ -87,11 +96,10 @@ const TermSection = ({
           xl: 10
         },
         ul: {
+          color: "white",
           mb: 2,
           pl: 4,
-          listStyleType: "square",
-          listStylePosition: "outside",
-          color: "white",
+          listStyleType: "none",
           li: {
             pl: 1
           }
