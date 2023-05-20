@@ -66,11 +66,11 @@ const Hotel = ({
         }
       }}
     >
-      <Typography
+      <AnimatedTypography
         variant="h4"
       >
         {name}
-      </Typography>
+      </AnimatedTypography>
       <Stack
         direction="row"
         spacing={0}
