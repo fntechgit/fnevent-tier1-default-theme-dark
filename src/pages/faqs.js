@@ -164,7 +164,6 @@ const QuestionsAndAnswer = ({
           variant="pSection"
           concealAnimation={pConcealAnimation}
           revealAnimation={pRevealAnimation}
-          shouldConceal
         >
           {questionsAndAnswer.answer}
         </AnimatedTypography>

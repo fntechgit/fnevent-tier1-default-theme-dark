@@ -22,7 +22,7 @@ const markdownOptions = {
   forceBlock: true,
   overrides: {
     h4: {
-      component: Typography,
+      component: AnimatedTypography,
       props: {
         variant: "hSectionContent",
         sx: {
@@ -176,7 +176,7 @@ const Airport = ({
           }}
         />
       </Grid>
-      <Typography
+      <AnimatedTypography
         variant="h4"
         sx={{
           mt: {
@@ -187,7 +187,7 @@ const Airport = ({
         }}
       >
         {name}
-      </Typography>
+      </AnimatedTypography>
       <AnimatedTypography
         variant="caption2"
         sx={{
