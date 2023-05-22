@@ -189,7 +189,7 @@ const NavbarTemplate = ({
               </AnimatedLink>
             ))}
           </Stack>
-          {isLoggedUser &&
+          {isLoggedUser && idpProfile &&
           <Box
             sx={{
               flexGrow: 0,
