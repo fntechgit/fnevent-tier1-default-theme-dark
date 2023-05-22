@@ -110,10 +110,12 @@ const MarketingPageTemplate = ({
         </RegistrationLoginComponent>
         }
         { /* only show enter button if during summit and has virtual access */
-        // TODO: remove underline from link text
          summitPhase >= PHASES.DURING && isLoggedUser && hasVirtualBadge &&
         <Link
           to={defaultPath}
+          style={{
+            textDecoration: "none"
+          }}
         >
           <LoginButton>
             Enter
@@ -147,7 +149,7 @@ const MarketingPageTemplate = ({
             }
           }}
         >
-          {hero.backgroundVideo.mobile && matchesMobile &&
+          {hero.backgroundVideo?.mobile && matchesMobile &&
           <Box
             component="video"
             preload="auto"
@@ -167,7 +169,7 @@ const MarketingPageTemplate = ({
             <source src={hero.backgroundVideo.mobile.publicURL} type="video/mp4" />
           </Box>
           }
-          {hero.backgroundVideo.desktop && matchesDesktop &&
+          {hero.backgroundVideo?.desktop && matchesDesktop &&
           <Box
             component="video"
             preload="auto"
