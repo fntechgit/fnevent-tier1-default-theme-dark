@@ -7,19 +7,22 @@ import {
 import Typography from "@mui/material/Typography";
 
 const useIntersectionObserver = (
-  element,
+  ref,
   options = {
     rootMargin: "0px",
     threshold: "1.0"
   }
 ) => {
   const [intersecting, setIntersecting] = useState(false);
+  const callback = ([entry]) => setIntersecting(entry.isIntersecting);
+  const observer = new IntersectionObserver(callback, options);
   useLayoutEffect(() => {
-    const callback = ([entry]) => setIntersecting(entry.isIntersecting);
-    const observer = new IntersectionObserver(callback, options);
-    element.current && observer.observe(element.current);
-    return () => observer.unobserve(element.current);
-  }, []);
+    const currentRef = ref.current;
+    currentRef && observer.observe(currentRef);
+    return () => {
+      currentRef && observer.unobserve(currentRef);
+    };
+  }, [ref]);
   return intersecting;
 };
 
@@ -68,14 +71,14 @@ const AnimatedTypography = ({
 }) => {
   const [visible, setVisible] = useState(false);
   const ref = useRef();
-  const intersecting = useIntersectionObserver(ref);
+  const intersecting = useIntersectionObserver(ref, { rootMargin: "1px" });
   useLayoutEffect(() => {
     if (shouldConceal) {
       setVisible(intersecting);
       return;
     }
     if (intersecting) setVisible(true);
-  }, [intersecting]);
+  }, [intersecting, shouldConceal]);
   const isHeaderVariant = rest.variant?.startsWith("h") || rest.variant?.startsWith("display");
   const concealAnimation = isHeaderVariant ? hConcealAnimation : defaultConcealAnimation;;
   const revealAnimation = isHeaderVariant ? hRevealAnimation : defaultRevealAnimation;
