@@ -28,7 +28,7 @@
       ]
     },
     {
-      "title": "My Schedule",
+      "title": "MY SCHEDULE",
       "link": "/a/my-schedule",
       "display": false,
       "requiresAuth": true
