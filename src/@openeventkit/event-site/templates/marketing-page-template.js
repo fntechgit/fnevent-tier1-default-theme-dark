@@ -22,21 +22,6 @@ import RegistrationLoginComponent from "@openeventkit/event-site/src/components/
 
 import { PHASES } from "@openeventkit/event-site/src/utils/phasesUtils";
 
-const hConcealAnimation = {
-  clipPath: "inset(100% 0 0 0)",
-  transitionProperty: "clip-path",
-  transitionDuration: ".6s",
-  transitionTimingFunction: "cubic-bezier(0.215, 0.61, 0.355, 1)",
-  transitionDelay: ".3s"
-};
-const hRevealAnimation = {
-  clipPath: "inset(0 0 0 0)",
-  transitionProperty: "clip-path",
-  transitionDuration: ".6s",
-  transitionTimingFunction: "cubic-bezier(0.215, 0.61, 0.355, 1)",
-  transitionDelay: ".3s"
-};
-
 const pageStyles = {
   backgroundColor: "#000",
   color: "#fff"
@@ -204,8 +189,6 @@ const MarketingPageTemplate = ({
               variant="display1"
               align="center"
               textTransform="uppercase"
-              concealAnimation={hConcealAnimation}
-              revealAnimation={hRevealAnimation}
             >
               {hero.title}
             </AnimatedTypography>
