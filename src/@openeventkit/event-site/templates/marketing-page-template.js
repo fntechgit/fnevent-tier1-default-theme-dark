@@ -199,7 +199,7 @@ const MarketingPageTemplate = ({
             sx={{
               position: "relative",
               mt: {
-                xs: 10.75,
+                xs: 4,
                 md: 12,
                 lg: 16,
                 xl: 20
@@ -242,7 +242,7 @@ const MarketingPageTemplate = ({
                 md: "flex-end"
               },
               mt: {
-                xs: 10.75,
+                xs: 5,
                 md: 12,
                 lg: 16,
                 xl: 20
