@@ -18,17 +18,17 @@
     "title": "Where it’s\nhappening",
     "image": {
       "src": "fort-mason-center-venue.png",
-      "alt": "Fort Mason Center Venue"
+      "alt": "Fort Mason Center"
     },
     "content": "#### Fort Mason Center\n\nGet ready for an unforgettable experience at Fort Mason, one of San Francisco's most iconic and historic landmarks. This sprawling complex of former military buildings and warehouses is now a hub of cultural and community events, and there's no better time to experience it than during RDC.",
     "address": "2 Marina Blvd, San Francisco, CA 94109"
   },
   "accommodations": {
     "title": "Places to stay",
-    "content": "Looking for the perfect place to stay during your visit to San Francisco? Look no further than our carefully selected hotels, each offering unique amenities and experiences to suit your every need. ",
+    "content": "Book your reservations in one of our RDC blocks below:",
     "hotels": [
       {
-        "name": "Courtyard San Francisco\n Fisherman's Wharf",
+        "name": "Marriott Fisherman’s Wharf",
         "address": "580 Beach St, San Francisco, CA 94133"
       },
       {
