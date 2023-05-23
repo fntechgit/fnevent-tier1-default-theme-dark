@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 // all styles same as default implementation except the ones overriden below.
 .ticket-popup {
+  // the z-index is different from the original to display the popup over the material ui header
   z-index: 2000;
   position: fixed;
   width: 100%;
