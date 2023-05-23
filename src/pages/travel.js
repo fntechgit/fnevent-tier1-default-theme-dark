@@ -314,7 +314,6 @@ const TravelPage = ({
             <AnimatedTypography
               variant="caption2"
               sx= {{
-                display: "block",
                 color: "white",
                 pt: {
                   xs: 4,

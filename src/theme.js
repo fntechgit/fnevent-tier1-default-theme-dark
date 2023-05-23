@@ -25,6 +25,7 @@ theme = createTheme(theme, {
   },
   typography: {
     display1: {
+      display: "inline-block",
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
@@ -41,6 +42,7 @@ theme = createTheme(theme, {
       )
     },
     h1: {
+      display: "inline-block",
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
@@ -58,6 +60,7 @@ theme = createTheme(theme, {
       )
     },
     h2: {
+      display: "inline-block",
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
@@ -76,7 +79,7 @@ theme = createTheme(theme, {
     // custom to set specific size in sections header
     // since proposal has different tags for each breakpoint
     hSectionContent: {
-      display: "block",
+      display: "inline-block",
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
@@ -92,6 +95,7 @@ theme = createTheme(theme, {
       )
     },
     h3: {
+      display: "inline-block",
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
@@ -108,6 +112,7 @@ theme = createTheme(theme, {
       )
     },
     h4: {
+      display: "inline-block",
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
@@ -124,6 +129,7 @@ theme = createTheme(theme, {
       )
     },
     h5: {
+      display: "inline-block",
       fontFamily: "Roblox-BoldExtended",
       color: "#fff",
       lineHeight: 1,
