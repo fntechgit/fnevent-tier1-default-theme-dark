@@ -79,14 +79,15 @@ const AnimatedTypography = ({
     }
     if (intersecting) setVisible(true);
   }, [intersecting, shouldConceal]);
-  const isHeaderVariant = rest.variant?.startsWith("h") || rest.variant?.startsWith("display");
-  const concealAnimation = isHeaderVariant ? hConcealAnimation : defaultConcealAnimation;;
-  const revealAnimation = isHeaderVariant ? hRevealAnimation : defaultRevealAnimation;
+  //const isHeaderVariant = rest.variant?.startsWith("h") || rest.variant?.startsWith("display");
+  //const concealAnimation = isHeaderVariant ? hConcealAnimation : defaultConcealAnimation;;
+  //const revealAnimation = isHeaderVariant ? hRevealAnimation : defaultRevealAnimation;
   return (
     <Typography
       ref={ref}
       style={{
-        ...(visible ? revealAnimation : concealAnimation),
+        //...(visible ? revealAnimation : concealAnimation),
+        ...(visible ? defaultRevealAnimation : defaultConcealAnimation),
         ...(style ?? {})
       }}
       {...rest}
