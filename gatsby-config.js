@@ -1,7 +1,3 @@
-const {
-  STATIC_CONTENT_DIR_PATH
-} = require("@openeventkit/event-site/src/utils/filePath");
-
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -14,14 +10,6 @@ module.exports = {
     siteUrl: "https://rdc23.fnvirtual.app",
   },
   plugins: [
-    "gatsby-transformer-json",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/${STATIC_CONTENT_DIR_PATH}`,
-        name: "content",
-      }
-    },
     "@openeventkit/event-site"
   ]
 };
