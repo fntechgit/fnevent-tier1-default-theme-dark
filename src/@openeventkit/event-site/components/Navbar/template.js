@@ -19,21 +19,23 @@ import { useLocation } from "@reach/router";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const MenuIcon = () =>
-  <SvgIcon viewBox="0 0 17 14">
-    <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 1H16" stroke="white" strokeLinecap="square" strokeLinejoin="round"/>
-      <path d="M1 7H16" stroke="white" strokeLinecap="square" strokeLinejoin="round"/>
-      <path d="M1 13H16" stroke="white" strokeLinecap="square" strokeLinejoin="round"/>
+  <SvgIcon viewBox="0 0 22 18">
+    <svg width="22" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1H21" stroke="white" strokeWidth="1.33333" strokeLinecap="square" strokeLinejoin="round"/>
+      <path d="M1 9H21" stroke="white" strokeWidth="1.33333" strokeLinecap="square" strokeLinejoin="round"/>
+      <path d="M1 17H21" stroke="white" strokeWidth="1.33333" strokeLinecap="square" strokeLinejoin="round"/>
     </svg>
-  </SvgIcon>;
+  </SvgIcon>
+;
 
 const CloseIcon = () =>
-  <SvgIcon viewBox="0 0 14 14">
-    <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13 1L1 13" stroke="white" strokeLinecap="square" strokeLinejoin="round"/>
-      <path d="M1 1L13 13" stroke="white" strokeLinecap="square" strokeLinejoin="round"/>
+  <SvgIcon viewBox="0 0 18 18">
+    <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17 1L1 17" stroke="white" strokeWidth="1.33333" strokeLinecap="square" strokeLinejoin="round"/>
+      <path d="M1 1L17 17" stroke="white" strokeWidth="1.33333" strokeLinecap="square" strokeLinejoin="round"/>
     </svg>
-  </SvgIcon>;
+  </SvgIcon>
+;
 
 const NavbarTemplate = ({
   data: pages,
@@ -114,13 +116,11 @@ const NavbarTemplate = ({
                 sx={{
                   img: {
                     height: {
-                      xs: 14,
-                      md: 16,
+                      xs: 16,
                       lg: 20
                     },
                     width: {
-                      xs: 62.91,
-                      md: 71.89,
+                      xs: 71.89,
                       lg: 89.87
                     }
                   }
@@ -144,7 +144,7 @@ const NavbarTemplate = ({
             }}
           >
             <IconButton
-              aria-label="account of current user"
+              aria-label="navigation menu"
               aria-controls="menu-navbar"
               aria-haspopup="true"
               onClick={toggleMenu(!menuOpen)}
