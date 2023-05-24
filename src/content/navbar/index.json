@@ -10,13 +10,14 @@
       ]
     },
     {
-      "title": "MY ORDERS / MY TICKETS",
-      "link": "/a/my-tickets",
-      "display": true,
-      "requiresAuth": true,
+      "requiresAuth": false,
+      "showOnlyAtShowTime": false,
       "pageRestriction": [
         "ANY"
-      ]
+      ],
+      "title": "TRAVEL",
+      "link": "/travel",
+      "display": true
     },
     {
       "title": "SCHEDULE",
@@ -30,7 +31,7 @@
     {
       "title": "MY SCHEDULE",
       "link": "/a/my-schedule",
-      "display": false,
+      "display": true,
       "requiresAuth": true
     },
     {
@@ -43,7 +44,26 @@
       ]
     },
     {
-      "title": "My Profile",
+      "requiresAuth": false,
+      "showOnlyAtShowTime": false,
+      "pageRestriction": [
+        "ANY"
+      ],
+      "title": "TERMS",
+      "link": "/terms",
+      "display": true
+    },
+    {
+      "title": "MY ORDERS/MY TICKETS",
+      "link": "/a/my-tickets",
+      "display": true,
+      "requiresAuth": true,
+      "pageRestriction": [
+        "ANY"
+      ]
+    },
+    {
+      "title": "MY PROFILE",
       "link": "/a/profile",
       "display": true,
       "requiresAuth": true,
