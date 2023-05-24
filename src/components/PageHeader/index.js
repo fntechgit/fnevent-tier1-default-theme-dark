@@ -48,7 +48,6 @@ const PageHeader = ({
         position: "absolute",
         inset: 0,
         objectFit: "cover",
-        opacity: 0.4,
         pointerEvents: "none"
       }}
       alt={backgroundImage.alt ?? "Page header image"}
