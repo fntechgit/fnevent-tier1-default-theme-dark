@@ -131,6 +131,7 @@ const Hotels = ({
   >
   {hotels.map((hotel) =>
     <Hotel
+      key={hotel.name}
       name={hotel.name}
       address={hotel.address}
     />
@@ -228,6 +229,7 @@ const Airports = ({
   >
   {airports.map((airport) =>
     <Airport
+      key={airport.name}
       name={airport.name}
       image={airport.image}
       distance={airport.distance}
