@@ -29,11 +29,19 @@
     "hotels": [
       {
         "name": "Marriott Fisherman’s Wharf",
-        "address": "580 Beach St, San Francisco, CA 94133"
+        "address": "580 Beach St, San Francisco, CA 94133",
+        "info": "Rate: $289/night | Deadline to book: August 7th, 2023",
+        "book": {
+          "text": "Click to Book"
+        }
       },
       {
         "name": "Hyatt Centric Fisherman's Wharf San Francisco",
-        "address": "555 North Point St, San Francisco, CA 94133"
+        "address": "555 North Point St, San Francisco, CA 94133",
+        "book": {
+          "text": "Click to Book"
+        },
+        "info": "Rate: $289/night | Deadline to book: July 9th, 2023"
       }
     ]
   },

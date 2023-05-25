@@ -20,9 +20,14 @@ module.exports = `
     content: String
     address: String
   }
+  type BookingLink {
+    text: String
+    link: String
+  }
   type AccommodationsHotel {
     name: String
-    address: String
+    info: String
+    book: BookingLink
   }
   type AccommodationsSection {
     title: String

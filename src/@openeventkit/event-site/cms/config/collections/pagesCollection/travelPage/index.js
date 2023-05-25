@@ -100,9 +100,23 @@ const travelPage = {
               label: "Name",
               name: "name"
             }),
-            stringField({
-              label: "Address",
-              name: "address"
+            textField({
+              label: "Info",
+              name: "info"
+            }),
+            objectField({
+              label: "Book",
+              name: "book",
+              fields: [
+                stringField({
+                  label: "Text",
+                  name: "text"
+                }),
+                stringField({
+                  label: "Link",
+                  name: "link"
+                })
+              ]
             })
           ]
         })

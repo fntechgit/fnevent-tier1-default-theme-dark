@@ -7,6 +7,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { Section } from "../components/Grid";
 import Typography from "@mui/material/Typography"
 import AnimatedTypography from "../components/AnimatedTypography";
+import { AnimatedLink } from "../components/Link";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import PageHeader from "../components/PageHeader";
 import OverlappingContentImageSection from "../components/OverlappingContentImageSection";
@@ -44,7 +45,9 @@ const markdownOptions = {
 
 const Hotel = ({
   name,
-  address
+  //address,
+  info,
+  book
 }) => {
   return (
     <Grid
@@ -68,39 +71,62 @@ const Hotel = ({
     >
       <AnimatedTypography
         variant="h4"
+        sx={{
+          flexGrow: 1
+        }}
       >
         {name}
       </AnimatedTypography>
-      <Stack
-        direction="row"
-        spacing={0}
+      <AnimatedTypography
+        variant="caption2"
         sx={{
-          width: "100%",
-          alignItems: "flex-end",
-          justifyContent: "space-between"
+          color: "white"
         }}
       >
-        <AnimatedTypography
-          variant="caption2"
-          style={{
-            color: "white"
-          }}
+        {info}
+      </AnimatedTypography>
+      {book.link &&
+      <Stack
+        direction="row"
+        spacing={1}
+        sx={{
+          alignItems: "flex-start",
+          mt: 2
+        }}
+      >
+        <AnimatedLink
+          to={book.link}
         >
-          {address}
-        </AnimatedTypography>
+          <AnimatedTypography
+            variant="caption1"
+            style={{
+              color: "white"
+            }}
+          >
+            {book.text}
+          </AnimatedTypography>
+        </AnimatedLink>
         <SvgIcon
-          viewBox="0 0 24 24"
+          viewBox="0 0 15 15"
           sx={{
-            fontSize: 24,
-            ml: 3
+            fontSize: {
+              xs: 12,
+              lg: 14
+            },
+            alignSelf: "center",
+            mt: {
+              xs: "-2px!important",
+              lg: "-3px!important"
+            }
           }}
         >
-          <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 13L13.3208 1.6792" stroke="white" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round"/>
+            <path d="M2.67969 1H14.0004V12.3208" stroke="white" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round"/>
           </svg>
         </SvgIcon>
       </Stack>
+      }
     </Grid>
   );
 };
@@ -133,7 +159,9 @@ const Hotels = ({
     <Hotel
       key={hotel.name}
       name={hotel.name}
-      address={hotel.address}
+      //address={hotel.address}
+      info={hotel.info}
+      book={hotel.book}
     />
   )}
   </Grid>
@@ -451,7 +479,11 @@ export const TravelPageQuery = graphql`
         content
         hotels {
           name
-          address
+          info
+          book {
+            text
+            link
+          }
         }
       }
       nearbyAirports {
