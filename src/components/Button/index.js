@@ -1,14 +1,12 @@
 import * as React from "react";
 import BaseButton from "@mui/base/Button";
 import { styled } from "@mui/system";
-import useBoundingClientRect from "../../../src/utils/hooks/useBoundingClientRect";
 
 import LoginButton from "./Login";
 import RegisterButton from "./Register";
 
 const StyledButton = styled(BaseButton)(({
   theme,
-  height,
   variant = "default"
 }) => {
   const color = variant === "default" ? "white" : "black";
@@ -51,9 +49,14 @@ const StyledButton = styled(BaseButton)(({
   };
   const hoverStyles = {
     color: color,
-    ...(height && {
-      boxShadow: `inset 0 -${height}px 0 0 ${colorInvert} !important`
-    }),
+    ...(
+      theme.unstable_sx({
+        boxShadow: {
+          xs: `inset 0 -56px 0 0 ${colorInvert}`,
+          lg: `inset 0 -92px 0 0 ${colorInvert}`
+        }
+      })
+    ),
     svg: {
       stroke: color
     }
@@ -68,18 +71,8 @@ const Button = ({
   children,
   ...rest
 }) => {
-  const [
-    buttonRef,
-    buttonBoundingClientRect
-  ] = useBoundingClientRect();
   return (
     <StyledButton 
-      ref={buttonRef}
-      {...(
-        buttonBoundingClientRect && {
-          height: buttonBoundingClientRect.height
-        }
-      )}
       {...rest}
     >
       {children}
