@@ -108,13 +108,13 @@ const QuestionsAndAnswer = ({
         backgroundColor: "#000",
         boxShadow: "none",
         borderBottom: {
-          xs: "1px solid white",
-          lg: "2px solid white"
+          xs: "1px solid #666666",
+          lg: "2px solid #666666"
         },
         "&:first-of-type": {
           borderTop: {
-            xs: "1px solid white",
-            lg: "2px solid white"
+            xs: "1px solid #666666",
+            lg: "2px solid #666666"
           }
         },
         py: {
