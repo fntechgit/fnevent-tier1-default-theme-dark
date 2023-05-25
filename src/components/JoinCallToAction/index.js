@@ -1,8 +1,9 @@
 import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { Section } from "../Grid";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import Grid from "@mui/material/Unstable_Grid2";
-import Stack from "@mui/material/Stack";
+import { Section } from "../Grid";
 import AnimatedTypography from "../AnimatedTypography";
 import { RegisterButton, LoginButton } from "../Button";
 import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
@@ -12,6 +13,8 @@ import useMarketingPageData from "../../utils/hooks/useMarketingPageData";
 const JoinCallToAction = ({
   location
 }) => {
+  const theme = useTheme();
+  const matchesXs = useMediaQuery(theme.breakpoints.down("md"));
   const {
     callToAction: {
       display,
@@ -26,6 +29,7 @@ const JoinCallToAction = ({
   if (!display) return null;
   return (
     <Section
+      disableEqualOverflow={false}
       sx={{
         position: "relative",
         py: {
@@ -65,7 +69,8 @@ const JoinCallToAction = ({
         sx={{
           position: "relative",
           display: "flex",
-          justifyContent: "center"
+          justifyContent: "center",
+          p: 0
         }}
       >
         <AnimatedTypography
@@ -83,36 +88,40 @@ const JoinCallToAction = ({
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          gap: "var(--Grid-columnSpacing)",
           mt: {
             xs: 4,
             lg: 6
-          }
+          },
+          p: 0
         }}
       >
-        <Stack
-          direction="row"
-          spacing={{
-            xs: 2,
-            md: 3,
-            lg: 4,
-            xl: 5
+        {registerButton.display &&
+        <RegistrationLiteComponent>
+          <RegisterButton
+            sx={{
+              flexBasis: {
+                xs: "50%",
+                md: "unset"
+              }
+            }}
+          >
+            {registerButton.text}
+          </RegisterButton>
+        </RegistrationLiteComponent>
+        }
+        {loginButton.display &&
+        <RegistrationLoginComponent
+          location={location}
+          style={{
+            flexBasis: matchesXs ? "50%" : "unset"
           }}
         >
-          {registerButton.display &&
-          <RegistrationLiteComponent>
-            <RegisterButton>
-              {registerButton.text}
-            </RegisterButton>
-          </RegistrationLiteComponent>
-          }
-          {loginButton.display &&
-          <RegistrationLoginComponent location={location}>
-            <LoginButton>
-              {loginButton.text}
-            </LoginButton>
-          </RegistrationLoginComponent>
-          }
-        </Stack>
+          <LoginButton>
+            {loginButton.text}
+          </LoginButton>
+        </RegistrationLoginComponent>
+        }
       </Grid>
     </Section>
   );

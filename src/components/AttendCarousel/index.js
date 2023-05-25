@@ -106,6 +106,7 @@ const AttendCarousel = ({
                 />
                 <Typography
                   variant="caption2"
+                  color="white"
                 >
                   {item.concept}
                 </Typography>
@@ -162,6 +163,7 @@ const AttendCarousel = ({
                 />
                 <Typography
                   variant="caption2"
+                  color="white"
                 >
                   {item.concept}
                 </Typography>

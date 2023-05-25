@@ -26,7 +26,7 @@ const marketingPage = {
       label: "Hero",
       name: "hero",
       fields: [
-        stringField({
+        textField({
           label: "Title",
           name: "title"
         }),
@@ -46,7 +46,7 @@ const marketingPage = {
               label: "Register Button",
               name: "registerButton",
               fields: [
-                stringField({
+                textField({
                   label: "Text",
                   name: "text"
                 }),
@@ -60,7 +60,7 @@ const marketingPage = {
               label: "Login Button",
               name: "loginButton",
               fields: [
-                stringField({
+                textField({
                   label: "Text",
                   name: "text"
                 }),
@@ -72,19 +72,9 @@ const marketingPage = {
             })
           ]
         }),
-        objectField({
+        fileField({
           label: "Background Video",
-          name: "backgroundVideo",
-          fields: [
-            fileField({
-              label: "Mobile Version",
-              name: "mobile"
-            }),
-            fileField({
-              label: "Desktop Version",
-              name: "desktop"
-            })
-          ]
+          name: "backgroundVideo"
         })
       ]
     }),
@@ -183,7 +173,7 @@ const marketingPage = {
               label: "Register Button",
               name: "registerButton",
               fields: [
-                stringField({
+                textField({
                   label: "Text",
                   name: "text"
                 }),
@@ -197,7 +187,7 @@ const marketingPage = {
               label: "Login Button",
               name: "loginButton",
               fields: [
-                stringField({
+                textField({
                   label: "Text",
                   name: "text"
                 }),

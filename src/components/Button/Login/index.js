@@ -4,11 +4,13 @@ import Typography from "@mui/material/Typography";
 
 const LoginButton = ({
   onClick = () => {},
-  children
+  children,
+  ...rest
 }) => (
   <Button
     onClick={onClick}
     variant="invert"
+    {...rest}
   >
     <Typography
         variant="caption2"

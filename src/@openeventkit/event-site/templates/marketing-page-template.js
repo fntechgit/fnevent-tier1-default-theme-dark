@@ -23,8 +23,7 @@ import RegistrationLoginComponent from "@openeventkit/event-site/src/components/
 import { PHASES } from "@openeventkit/event-site/src/utils/phasesUtils";
 
 const pageStyles = {
-  backgroundColor: "#000",
-  color: "#fff"
+  backgroundColor: "#000"
 };
 
 const markdownOptions = {
@@ -63,6 +62,8 @@ const MarketingPageTemplate = ({
   defaultPath,
   ...rest
 }) => {
+  const theme = useTheme();
+  const matchesXs = useMediaQuery(theme.breakpoints.down("md"));
   const {
     marketingPageJson: {
       hero,
@@ -82,13 +83,25 @@ const MarketingPageTemplate = ({
       <>
         {registerButton.display &&
         <RegistrationLiteComponent>
-          <RegisterButton>
+          <RegisterButton
+            sx={{
+              flexBasis: {
+                xs: "50%",
+                md: "unset"
+              }
+            }}
+          >
             {registerButton.text}
           </RegisterButton>
         </RegistrationLiteComponent>
         }
         {loginButton.display && !isLoggedUser &&
-        <RegistrationLoginComponent location={location}>
+        <RegistrationLoginComponent
+          location={location}
+          style={{
+            flexBasis: matchesXs ? "50%" : "unset"
+          }}
+        >
           <LoginButton>
             {loginButton.text}
           </LoginButton>
@@ -110,9 +123,6 @@ const MarketingPageTemplate = ({
       </>
     );
   };
-  const theme = useTheme();
-  const matchesMobile = useMediaQuery(theme.breakpoints.down("lg"));
-  const matchesDesktop = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <div style={pageStyles}>
       <Navbar />
@@ -121,6 +131,7 @@ const MarketingPageTemplate = ({
         <Section
           sx={{
             position: "relative",
+            overflow: "hidden",
             pt: {
               xs: 6,
               md: 12,
@@ -134,7 +145,7 @@ const MarketingPageTemplate = ({
             }
           }}
         >
-          {hero.backgroundVideo?.mobile && matchesMobile &&
+          {hero.backgroundVideo &&
           <Box
             component="video"
             preload="auto"
@@ -142,40 +153,23 @@ const MarketingPageTemplate = ({
             autoPlay
             loop
             sx={{
-              display: {
-                xs: "block",
-                lg: "none",
-              },
-              position: "absolute",
-              inset: 0,
-              objectFit: "none"
-            }}
-          >
-            <source src={hero.backgroundVideo.mobile.publicURL} type="video/mp4" />
-          </Box>
-          }
-          {hero.backgroundVideo?.desktop && matchesDesktop &&
-          <Box
-            component="video"
-            preload="auto"
-            playsInline
-            autoPlay
-            loop
-            sx={{
-              display: {
-                xs: "none",
-                lg: "block",
-              },
               position: "absolute",
               margin: "auto",
               inset: 0,
               top: {
-                md: "-22%"
+                xs: "-48%",
+                md: "-22%",
+                xl: "-28%"
               },
-              objectFit: "cover"
+              left: {
+                sm: 16,
+                md: 24,
+                lg: 32,
+                xl: 40
+              }
             }}
           >
-            <source src={hero.backgroundVideo.desktop.publicURL} type="video/mp4" />
+            <source src={hero.backgroundVideo.publicURL} type="video/mp4"/>
           </Box>
           }
           <Grid
@@ -256,6 +250,12 @@ const MarketingPageTemplate = ({
                 md: 3,
                 lg: 4,
                 xl: 5
+              }}
+              sx={{
+                flex: {
+                  xs: 1,
+                  md: "unset"
+                }
               }}
             >
               {getButtons()}

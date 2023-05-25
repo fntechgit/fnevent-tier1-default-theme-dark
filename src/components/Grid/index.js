@@ -1,6 +1,6 @@
 import * as React from "react";
+import Container from "@mui/material/Container";
 import Grid from "@mui/material/Unstable_Grid2";
-import { styled } from "@mui/material/styles";
 
 export const GridContainer = ({
   children,
@@ -21,19 +21,32 @@ export const GridContainer = ({
   </Grid>
 );
 
-export const Section = styled(GridContainer)(({ theme }) =>
-  theme.unstable_sx({
-    px: {
-      xs: 2,
-      md: 3,
-      lg: 4,
-      xl: 5
-    },
-    py: {
-      xs: 4,
-      md: 6,
-      lg: 8,
-      xl: 10
-    }
-  })
+export const Section = ({
+  children,
+  ...rest
+}) => (
+  <Container
+    maxWidth="xl"
+    sx={{
+      position: "relative",
+      px: {
+        xs: 2,
+        md: 3,
+        lg: 4,
+        xl: 5
+      },
+      py: {
+        xs: 4,
+        md: 6,
+        lg: 8,
+        xl: 10
+      }
+    }}
+  >
+    <GridContainer
+      {...rest}
+    >
+      {children}
+    </GridContainer>
+  </Container>
 );

@@ -38,7 +38,7 @@ const StyledButton = styled(BaseButton)(({
           lg: 92
         },
         width: {
-          xs: 137,
+          xs: "max(137px, 100%)",
           md: 162,
           // TODO: check if value in figma is correct
           lg: 216

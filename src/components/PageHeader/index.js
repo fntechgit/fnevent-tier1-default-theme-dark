@@ -36,12 +36,8 @@ const PageHeader = ({
   lead,
   backgroundImage
 }) => (
-  <Section
-    style={{
-      position: "relative"
-    }}
-  >
-  	{backgroundImage &&
+  <Section>
+    {backgroundImage &&
     <GatsbyImage
       image={getImage(backgroundImage.src)}
       style={{
@@ -50,7 +46,7 @@ const PageHeader = ({
         objectFit: "cover",
         pointerEvents: "none"
       }}
-      alt={backgroundImage.alt ?? "Page header image"}
+      alt=""
     />
   	}
     <Grid
