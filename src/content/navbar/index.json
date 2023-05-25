@@ -54,7 +54,7 @@
       "display": true
     },
     {
-      "title": "MY ORDERS/MY TICKETS",
+      "title": "MY ORDER",
       "link": "/a/my-tickets",
       "display": true,
       "requiresAuth": true,
