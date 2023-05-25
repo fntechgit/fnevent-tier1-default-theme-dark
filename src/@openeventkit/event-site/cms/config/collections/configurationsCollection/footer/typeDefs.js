@@ -1,5 +1,11 @@
 
 module.exports = `
+  type LinkImageWithHover {
+    src: File @fileByRelativePath
+    hover: File @fileByRelativePath
+    alt: String
+    link: String
+  }
   type LinkImageWithAlt {
     src: File @fileByRelativePath
     alt: String
@@ -10,7 +16,7 @@ module.exports = `
     link: String
   }
   type FooterJson implements Node {
-    social: [LinkImageWithAlt]
+    social: [LinkImageWithHover]
     links: [FooterLink]
     logo: LinkImageWithAlt
   }

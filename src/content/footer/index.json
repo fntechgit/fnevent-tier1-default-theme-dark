@@ -2,27 +2,33 @@
   "social": [
     {
       "link": "https://twitter.com/InsideRoblox",
-      "src": "twitter.png"
+      "src": "twitter.png",
+      "hover": "twitter-hover.png"
     },
     {
       "link": "https://www.facebook.com/Roblox",
-      "src": "facebook.png"
+      "src": "facebook.png",
+      "hover": "facebook-hover.png"
     },
     {
       "link": "https://www.linkedin.com/company/roblox/",
-      "src": "linkedin.png"
+      "src": "linkedin.png",
+      "hover": "linkedin-hover.png"
     },
     {
       "link": "https://www.instagram.com/Roblox/",
-      "src": "instagram.png"
+      "src": "instagram.png",
+      "hover": "instagram-hover.png"
     },
     {
       "link": "https://www.youtube.com/Roblox",
-      "src": "youtube.png"
+      "src": "youtube.png",
+      "hover": "youtube-hover.png"
     },
     {
       "link": "https://www.twitch.tv/Roblox",
-      "src": "twitch.png"
+      "src": "twitch.png",
+      "hover": "twitch-hover.png"
     }
   ],
   "links": [

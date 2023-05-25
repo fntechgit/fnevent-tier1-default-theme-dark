@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { styled } from "@mui/material/styles";
@@ -15,6 +16,13 @@ const footerQuery = graphql`
           childImageSharp {
             gatsbyImageData (
               quality: 100
+            )
+          }
+        }
+        hover {
+          childImageSharp {
+            gatsbyImageData (
+              placeholder: NONE
             )
           }
         }
@@ -59,11 +67,7 @@ const SocialNetworks = styled(GridContainer)(({ theme }) => ({
   )
 }));
 
-const NetworkLinkItem = styled(Grid)(({ theme }) => ({
-  //backgroundColor: "red"
-}));
-
-const NetworkLink = styled(Link)(({ theme }) => ({
+const StyledLink = styled(Link)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -75,11 +79,39 @@ const NetworkLink = styled(Link)(({ theme }) => ({
   },
   "&:hover": {
     backgroundColor: "white"
-  },
-  "&:hover img": {
-    filter: "invert(1)"
   }
 }));
+
+const NetworkLink = ({
+  to,
+  image,
+  hoverImage,
+  alt,
+  ...rest
+}) => {
+  const [hover, setHover] = useState(false);
+  return (
+    <StyledLink
+      to={to}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      {hover ?
+      <GatsbyImage
+        image={hoverImage}
+        alt={alt ?? ""}
+        {...rest}
+      />
+      :
+      <GatsbyImage
+        image={image}
+        alt={alt ?? ""}
+        {...rest}
+      />
+      }
+    </StyledLink>
+  );
+};
 
 const FooterLinks = styled(GridContainer)(({ theme }) => ({
   justifyContent: "center",
@@ -166,21 +198,14 @@ const Footer = () => {
         rowSpacing={1}
       >
         {social?.map((network, index) => (
-          <NetworkLinkItem key={index}>
-            {network.link ?
-            <NetworkLink to={network.link}>
-              <GatsbyImage
-                image={getImage(network.src)}
-                alt={network.alt ?? ""}
-              />
-            </NetworkLink>
-            :
-            <GatsbyImage
+          <Grid key={index}>
+            <NetworkLink
+              to={network.link}
               image={getImage(network.src)}
+              hoverImage={getImage(network.hover)}
               alt={network.alt ?? ""}
             />
-            }
-          </NetworkLinkItem>
+          </Grid>
         ))}
       </SocialNetworks>
       <FooterLinks
