@@ -6,25 +6,7 @@ import {
 } from "react";
 import Typography from "@mui/material/Typography";
 
-const useIntersectionObserver = (
-  ref,
-  options = {
-    rootMargin: "0px",
-    threshold: "1.0"
-  }
-) => {
-  const [intersecting, setIntersecting] = useState(false);
-  const callback = ([entry]) => setIntersecting(entry.isIntersecting);
-  const observer = new IntersectionObserver(callback, options);
-  useLayoutEffect(() => {
-    const currentRef = ref.current;
-    currentRef && observer.observe(currentRef);
-    return () => {
-      currentRef && observer.unobserve(currentRef);
-    };
-  }, [ref]);
-  return intersecting;
-};
+import useIntersectionObserver from "../../utils/hooks/useIntersectionObserver";
 
 /**
  * using “text reveal” effect
@@ -45,7 +27,7 @@ const pRevealAnimation = {
 /**
  * using “text reveal” effect
  * @see https://conference.awwwards.com/
- */
+
 const hConcealAnimation = {
   clipPath: "inset(100% 0 0 0)",
   transitionProperty: "clip-path",
@@ -60,6 +42,7 @@ const hRevealAnimation = {
   transitionTimingFunction: "cubic-bezier(0.215, 0.61, 0.355, 1)",
   transitionDelay: ".1s"
 };
+*/
 
 const AnimatedTypography = ({
   children,

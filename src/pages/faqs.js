@@ -231,16 +231,17 @@ const CategoryList = ({
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const getNavColor = useCallback((categoryTitle, index) => {
-    const offsetY = 20;
-    const fromTop = scrollTop + offsetY;
+  const getNavColor = useCallback((categoryTitle, index, length) => {
     const category = document.getElementById(categoryTitle);
     if (category === null && index === 0) return "white";
     if (category === null) return "#666666";
+    const offsetY = -window.innerHeight/2;
+    const fromTop = scrollTop + offsetY;
     if (
       (index === 0 && category.offsetTop > fromTop) ||
+      (index === length - 1 && category.offsetTop <= fromTop) ||
       (category.offsetTop <= fromTop &&
-      category.offsetTop + category.offsetHeight > fromTop)
+      category.offsetTop + category.clientHeight > fromTop)
     ) {
       return "white";
     } else {
@@ -273,7 +274,7 @@ const CategoryList = ({
     >
       {categories.map((category, index) => (
       <AnimatedLink
-        color={getNavColor(category.title, index)}
+        color={getNavColor(category.title, index, categories.length)}
         onClick={() => {
           const options = ({ block: "start", behavior: "smooth" });
           document.getElementById(category.title).scrollIntoView(options);
