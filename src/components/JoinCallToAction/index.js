@@ -37,12 +37,7 @@ const JoinCallToAction = ({
           md: 4,
           lg: 10
         },
-        mx: {
-          xs: 2,
-          md: 3,
-          lg: 4,
-          xl: 5
-        },
+        mx: 0,
         my: {
           xs: 4.5,
           md: 6.5,

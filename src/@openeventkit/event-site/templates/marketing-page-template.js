@@ -112,6 +112,7 @@ const MarketingPageTemplate = ({
         <Link
           to={defaultPath}
           style={{
+            flexBasis: matchesXs ? "50%" : "unset",
             textDecoration: "none"
           }}
         >

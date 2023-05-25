@@ -88,7 +88,7 @@ const FooterLinks = styled(GridContainer)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     display: "grid",
     gridTemplateColumns: "repeat(2, auto)",
-    marginTop: 8
+    gridRowGap: 8
   },
   [theme.breakpoints.down("lg")]: {
     marginTop: 32
@@ -108,7 +108,7 @@ const FooterLinkItem = styled(Grid)(({ theme }) => ({
   justifyContent: "center",
   [theme.breakpoints.down("md")]: {
     minHeight: 32,
-    minWidth: 144,
+    minWidth: 144
   },
   [theme.breakpoints.down("lg")]: {
     maxHeight: 14,
