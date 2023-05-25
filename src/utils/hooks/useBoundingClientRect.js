@@ -1,19 +1,10 @@
 import {
   useRef,
   useState,
-  useCallback,
-  useLayoutEffect
+  useCallback
 } from "react";
- 
-export const useLayoutEffectEventListener = (
-  type,
-  listener,
-  useCapture
-) =>
-  useLayoutEffect(() => {
-    window.addEventListener(type, listener, useCapture);
-    return () => window.removeEventListener(type, listener, useCapture);
-  }, [type, listener, useCapture]);
+
+import useResizeObserver from "use-resize-observer";
 
 const useBoundingClientRect = () => {
   const [boundingClientRect, setBoundingClientRect] = useState();
@@ -24,9 +15,10 @@ const useBoundingClientRect = () => {
       setBoundingClientRect(node.getBoundingClientRect());
     };
   }, []);
-  const listener = () => nodeRef && nodeRef.current && setBoundingClientRect(nodeRef.current.getBoundingClientRect());
-  useLayoutEffectEventListener("resize", listener);
-  useLayoutEffectEventListener("scroll", listener, true);
+  useResizeObserver({
+    nodeRef,
+    onResize: ref
+  });
   return [ref, boundingClientRect];
 };
 

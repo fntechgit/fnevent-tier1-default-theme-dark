@@ -1,11 +1,12 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Markdown from "markdown-to-jsx";
 import AnimatedTypography from "../AnimatedTypography";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Section } from "../Grid";
-import useBoundingClientRect from "../../utils/hooks/useBoundingClientRect";
+
+import useResizeObserver from "use-resize-observer";
 
 const defaultMarkdownOptions = {
   forceBlock: true,
@@ -55,14 +56,24 @@ const OverlappingContentImageSection = ({
   content = null,
   markdownOptions = defaultMarkdownOptions
 }) => {
+  const [textBottonFix, setTextBottomFix] = useState(0);
   const [
     imageLoading,
     setImageLoading
   ] = useState(false);
-  const [
-    imageRef,
-    imageBoundingClientRect
-  ] = useBoundingClientRect();
+  const {
+    ref: imageRef,
+    height: imageHeight
+  } = useResizeObserver();
+  const {
+    ref: textRef,
+    height: textHeight
+  } = useResizeObserver();
+  useLayoutEffect(() => {
+    const fortyTwoOfImage = imageHeight * .42;
+    const fix = textHeight >= fortyTwoOfImage ? textHeight - fortyTwoOfImage : 0;
+    setTextBottomFix(-fix);
+  }, [imageHeight, textHeight]);
   return (
     <Section
       style={{
@@ -108,6 +119,7 @@ const OverlappingContentImageSection = ({
       </Grid>
       }
       <Grid
+        ref={textRef}
         xs={12}
         md={6}
         lg={4}
@@ -117,14 +129,12 @@ const OverlappingContentImageSection = ({
             xs: 5,
             md: 0
           },
-          ...(imageBoundingClientRect && {
-            position: {
-              md: "absolute"
-            },
-            top: {
-              md: `${imageBoundingClientRect.height*.94}px`
-            }
-          })
+          position: {
+            md: "absolute"
+          },
+          bottom: {
+            md: `${textBottonFix}px`
+          }
         }}
       >
         <Markdown
