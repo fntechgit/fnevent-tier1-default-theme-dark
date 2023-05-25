@@ -86,7 +86,7 @@ const MarketingPageTemplate = ({
           <RegisterButton
             sx={{
               flexBasis: {
-                xs: "50%",
+                xs: isLoggedUser ? "100%" : "50%",
                 md: "unset"
               }
             }}

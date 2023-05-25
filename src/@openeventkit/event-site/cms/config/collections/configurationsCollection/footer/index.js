@@ -2,7 +2,6 @@ import {
   stringField,
   imageField,
   linkImageField,
-  linkImagesField,
   listField
 } from "@openeventkit/event-site/src/cms/config/fields";
 
