@@ -59,7 +59,6 @@ const NavbarTemplate = ({
   const toggleMenu = (open) => (event) => {
     setMenuOpen(open);
   };
-  
   // needed to identify schedule page, to change sticky breakpoint for fnevent stock breakpoints handling 
   const location = useLocation();
   const isSchedulePage = location.pathname.startsWith("/a/schedule") || location.pathname.startsWith("/a/my-schedule");
@@ -215,14 +214,6 @@ const NavbarTemplate = ({
                 />
               </IconButton>
             </Tooltip>
-            <ProfilePopupComponent
-              userProfile={idpProfile}
-              showProfile={Boolean(anchorElProfile)}
-              idpLoading={idpLoading}
-              changePicture={updateProfilePicture}
-              changeProfile={updateProfile}
-              closePopup={handleCloseProfile}
-            />
           </Box>
           }
           {isLoggedUser &&
@@ -236,11 +227,7 @@ const NavbarTemplate = ({
               ml: 1
             }}
           >
-            <Tooltip
-              title="Logout"
-            >
-              <LogoutButton />
-            </Tooltip>
+            <LogoutButton />
           </Box>
           }
         </Toolbar>
@@ -296,8 +283,45 @@ const NavbarTemplate = ({
           </Typography>
         </AnimatedLink>
         ))}
+        {isLoggedUser && idpProfile &&
+        <Box>
+          <IconButton
+            onClick={handleOpenProfile}
+            sx={{
+              p: 0
+            }}
+          >
+            <Avatar
+              alt={idpProfile?.name}
+              src={idpProfile?.picture}
+            />
+          </IconButton>
+        </Box>
+        }
+        {isLoggedUser &&
+        <Box>
+          <LogoutButton
+            sx={{
+              p: 0
+            }}
+          />
+        </Box>
+        }
       </Stack>
     </Drawer>
+    {isLoggedUser && idpProfile &&
+    <ProfilePopupComponent
+      userProfile={idpProfile}
+      showProfile={Boolean(anchorElProfile)}
+      idpLoading={idpLoading}
+      changePicture={updateProfilePicture}
+      changeProfile={updateProfile}
+      closePopup={handleCloseProfile}
+      style={{
+        zIndex: 10000
+      }}
+    />
+    }
     </>
   );
 }

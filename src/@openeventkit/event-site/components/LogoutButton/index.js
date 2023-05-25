@@ -4,7 +4,9 @@ import { triggerOnInitLogout } from "@openeventkit/event-site/src/utils/customEv
 import IconButton from "@mui/material/IconButton";
 import LogoutIcon from "@mui/icons-material/Logout";
 
-const LogoutButton = () => {
+const LogoutButton = ({
+  ...rest
+}) => {
   const onClickLogout = (event) => {
     triggerOnInitLogout();
     navigate("/auth/logout", {
@@ -17,6 +19,7 @@ const LogoutButton = () => {
     <IconButton
       aria-label="logout"
       onClick={onClickLogout}
+      {...rest}
     >
       <LogoutIcon 
         sx={{
@@ -24,6 +27,9 @@ const LogoutButton = () => {
           fontSize: {
             xs: 18,
             lg: 19
+          },
+          padding: {
+            xs: 0
           }
         }}
       />
