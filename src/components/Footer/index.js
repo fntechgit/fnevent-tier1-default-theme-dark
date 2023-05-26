@@ -99,27 +99,52 @@ const NetworkLink = ({
     >
       {hover ?
       <>
-      {hoverImage &&
-      <GatsbyImage
-        image={image}
-        alt={alt ?? ""}
-        {...rest}
-      />
-      }
-      {hoverImageUrl &&
-      <img
-        src={hoverImageUrl}
-        alt={alt ?? ""}
-        {...rest}
-      />
-      }
+        {hoverImage &&
+        <GatsbyImage
+          image={image}
+          alt={alt ?? ""}
+          {...rest}
+        />
+        }
+        {hoverImageUrl &&
+        <img
+          src={hoverImageUrl}
+          alt={alt ?? ""}
+          {...rest}
+        />
+        }
       </>
       :
-      <GatsbyImage
-        image={image}
-        alt={alt ?? ""}
-        {...rest}
-      />
+      <>
+        {hoverImage &&
+        <GatsbyImage
+          image={image}
+          alt={alt ?? ""}
+          style={{
+            position: "absolute"
+          }}
+          {...rest}
+        />
+        }
+        {hoverImageUrl &&
+        <img
+          src={hoverImageUrl}
+          alt={alt ?? ""}
+          style={{
+            position: "absolute"
+          }}
+          {...rest}
+        />
+        }
+        <GatsbyImage
+          image={image}
+          alt={alt ?? ""}
+          style={{
+            position: "absolute"
+          }}
+          {...rest}
+        />
+      </>
       }
     </StyledLink>
   );
