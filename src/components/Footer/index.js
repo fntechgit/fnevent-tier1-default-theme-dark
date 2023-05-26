@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image";
 import { styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
@@ -86,6 +86,7 @@ const NetworkLink = ({
   to,
   image,
   hoverImage,
+  hoverImageUrl,
   alt,
   ...rest
 }) => {
@@ -97,11 +98,22 @@ const NetworkLink = ({
       onMouseLeave={() => setHover(false)}
     >
       {hover ?
+      <>
+      {hoverImage &&
       <GatsbyImage
-        image={hoverImage}
+        image={image}
         alt={alt ?? ""}
         {...rest}
       />
+      }
+      {hoverImageUrl &&
+      <img
+        src={hoverImageUrl}
+        alt={alt ?? ""}
+        {...rest}
+      />
+      }
+      </>
       :
       <GatsbyImage
         image={image}
@@ -202,7 +214,7 @@ const Footer = () => {
             <NetworkLink
               to={network.link}
               image={getImage(network.src)}
-              hoverImage={getImage(network.hover)}
+              hoverImageUrl={getSrc(network.hover)}
               alt={network.alt ?? ""}
             />
           </Grid>
