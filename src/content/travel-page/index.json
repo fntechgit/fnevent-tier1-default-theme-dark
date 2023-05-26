@@ -25,14 +25,15 @@
   },
   "accommodations": {
     "title": "Places to stay",
-    "content": "Book your reservations in one of our RDC blocks below:",
+    "content": "Check back soon to book your reservations in one of our RDC room blocks.  ",
     "hotels": [
       {
         "name": "Marriott Fisherman’s Wharf",
         "address": "580 Beach St, San Francisco, CA 94133",
         "info": "Rate: $289/night | Deadline to book: August 7th, 2023",
         "book": {
-          "text": "Click to Book"
+          "text": "Click to Book",
+          "link": "https://www.roblox.com"
         }
       },
       {
