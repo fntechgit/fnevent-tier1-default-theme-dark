@@ -25,24 +25,24 @@
   },
   "accommodations": {
     "title": "Places to stay",
-    "content": "Check back soon to book your reservations in one of our RDC room blocks.  ",
+    "content": "Looking for the perfect place to stay during your visit to San Francisco? Look no further than our carefully selected hotels, each offering unique amenities and experiences to suit your every need. Check back soon to book your reservations in one of our RDC room blocks.  ",
     "hotels": [
       {
         "name": "Marriott Fisherman’s Wharf",
         "address": "580 Beach St, San Francisco, CA 94133",
-        "info": "Rate: $289/night | Deadline to book: August 7th, 2023",
+        "info": "Rate: $289/night | Deadline to book: August 7th, 2023\nCheck back soon to book your reservations in one of our RDC hotel room blocks. ",
         "book": {
-          "text": "Click to Book",
-          "link": "https://www.roblox.com"
+          "text": "",
+          "link": ""
         }
       },
       {
         "name": "Hyatt Centric Fisherman's Wharf San Francisco",
         "address": "555 North Point St, San Francisco, CA 94133",
         "book": {
-          "text": "Click to Book"
+          "text": ""
         },
-        "info": "Rate: $289/night | Deadline to book: July 9th, 2023"
+        "info": "Rate: $289/night | Deadline to book: July 9th, 2023\nCheck back soon to book your reservations in one of our RDC hotel room blocks. "
       }
     ]
   },
@@ -55,7 +55,7 @@
           "src": "san-francisco-international-airport.png",
           "alt": "San Francisco International Airport"
         },
-        "distance": "14.9 Miles | 24.9 KM from venue"
+        "distance": "15 Miles | 25 KM from venue"
       },
       {
         "name": "Oakland International Airport",
@@ -63,7 +63,7 @@
           "src": "oakland-international-airport.png",
           "alt": "Oakland International Airport"
         },
-        "distance": "21.1 Miles | 33.9 KM from venue"
+        "distance": "22 Miles | 34 KM from venue"
       },
       {
         "name": "San Jose International Airport",
@@ -71,7 +71,7 @@
           "src": "san-jose-iternational-airport.png",
           "alt": "San Jose International Airport"
         },
-        "distance": "48.5 Miles | 78 KM from venue"
+        "distance": "50 Miles | 78 KM from venue"
       }
     ]
   }
