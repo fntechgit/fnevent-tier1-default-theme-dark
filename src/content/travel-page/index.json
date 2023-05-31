@@ -28,21 +28,21 @@
     "content": "Looking for the perfect place to stay during your visit to San Francisco? Look no further than our carefully selected hotels, each offering unique amenities and experiences to suit your every need. Check back soon to book your reservations in one of our RDC room blocks.  ",
     "hotels": [
       {
-        "name": "Marriott Fisherman’s Wharf",
-        "address": "580 Beach St, San Francisco, CA 94133",
-        "info": "Rate: $289/night | Deadline to book: August 7th, 2023\nCheck back soon to book your reservations in one of our RDC hotel room blocks. ",
-        "book": {
-          "text": "",
-          "link": ""
-        }
-      },
-      {
         "name": "Hyatt Centric Fisherman's Wharf San Francisco",
         "address": "555 North Point St, San Francisco, CA 94133",
         "book": {
           "text": ""
         },
-        "info": "Rate: $289/night | Deadline to book: July 9th, 2023\nCheck back soon to book your reservations in one of our RDC hotel room blocks. "
+        "info": "Check back soon to book your reservations in one of our RDC hotel room blocks. "
+      },
+      {
+        "name": "Marriott Fisherman’s Wharf",
+        "address": "580 Beach St, San Francisco, CA 94133",
+        "info": "Check back soon to book your reservations in one of our RDC hotel room blocks. ",
+        "book": {
+          "text": "",
+          "link": ""
+        }
       }
     ]
   },
