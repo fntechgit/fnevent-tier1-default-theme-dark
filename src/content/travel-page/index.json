@@ -33,16 +33,7 @@
         "book": {
           "text": ""
         },
-        "info": "Check back soon to book your reservations in one of our RDC hotel room blocks. "
-      },
-      {
-        "name": "Marriott Fisherman’s Wharf",
-        "address": "580 Beach St, San Francisco, CA 94133",
-        "info": "Check back soon to book your reservations in one of our RDC hotel room blocks. ",
-        "book": {
-          "text": "",
-          "link": ""
-        }
+        "info": "Check back soon to book your reservation in one of our RDC hotel room blocks. "
       }
     ]
   },
