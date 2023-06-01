@@ -221,6 +221,7 @@ theme = createTheme(theme, {
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "0.05em",
+      whiteSpace: "pre-line",
       textTransform: "uppercase",
       ...(
         theme.unstable_sx({
@@ -236,6 +237,7 @@ theme = createTheme(theme, {
       fontFamily: "Roblox-BoldExtended",
       lineHeight: 1,
       letterSpacing: "0.05em",
+      whiteSpace: "pre-line",
       textTransform: "uppercase",
       ...(
         theme.unstable_sx({
