@@ -31,9 +31,10 @@
         "name": "Hyatt Centric Fisherman's Wharf San Francisco",
         "address": "555 North Point St, San Francisco, CA 94133",
         "book": {
-          "text": ""
+          "text": "Click here to book.",
+          "link": "https://www.hyatt.com/shop/rooms/sfofw?location=Hyatt%20Centric%20Fisherman%27s%20W[…]checkoutDate=2023-09-10&rooms=1&adults=1&kids=0&corp_id=G-ROBL"
         },
-        "info": "Check back soon to book your reservation in one of our RDC hotel room blocks. "
+        "info": "Deadline to book: August 18, 2023\nRate: $289/night plus taxes and fees"
       }
     ]
   },
