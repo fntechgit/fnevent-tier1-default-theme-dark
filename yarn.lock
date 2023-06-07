@@ -2029,10 +2029,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@openeventkit/event-site@^1.0.20":
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-1.0.20.tgz#7d6918bfeee3d7fd08857076d53fbaf3e1afec37"
-  integrity sha512-QOUOE5bpgOBtNKGPEZcMI67XCMLFacq/uEPkuUaXaHyZDseLgihm12Iq1Ujkgmo3QVeyKQBamYBrPItYl82DZw==
+"@openeventkit/event-site@^1.0.21":
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-1.0.21.tgz#ce29e61e020127c0d54fd00927de906f517d4861"
+  integrity sha512-Te4xL38ssE8u6EjUVoCH1YfBWEFtF9hcPw9bv8W3NhxKRWYaAJkvyyBj8yAH2QOqnUr4Jy3RaGh6umV9IpJTMQ==
   dependencies:
     "@mui/base" "^5.0.0-alpha.114"
     "@ncwidgets/file-relation" "^0.8.0"
@@ -2071,7 +2071,7 @@
     font-awesome "^4.7.0"
     formik "^2.2.9"
     fs-extra "^9.0.1"
-    full-schedule-widget "2.0.26"
+    full-schedule-widget "^2.0.28"
     gatsby "^5.8.1"
     gatsby-alias-imports "^1.0.6"
     gatsby-plugin-image "^3.8.0"
@@ -7496,10 +7496,10 @@ fsevents@~2.3.2:
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
-full-schedule-widget@2.0.26:
-  version "2.0.26"
-  resolved "https://registry.yarnpkg.com/full-schedule-widget/-/full-schedule-widget-2.0.26.tgz#98945287d2b6a7da59b7619cd6ce5f63c9f085bf"
-  integrity sha512-J8xLVUPfgaG4TNzR3HvjVWLfGBISDcI2DNge22kYOWMQ7OR4ByrNH7vJPPXhkzvanVRI6eqbauEN7je+pjXsAQ==
+full-schedule-widget@^2.0.28:
+  version "2.0.28"
+  resolved "https://registry.yarnpkg.com/full-schedule-widget/-/full-schedule-widget-2.0.28.tgz#2ba55892f2325f83b3bccf69c2bd406528f6479d"
+  integrity sha512-ydqqlHfhpDFQIbFLO6q3eWvY+CHFymAOlTIJ1O6CZ58EvLTcl9T31M9GvcbxbQIYkC+k90VGSJAZfNxxso+yNQ==
   dependencies:
     "@mui/base" "5.0.0-alpha.127"
     bootstrap "^5.1.3"
