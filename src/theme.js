@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 
 import RobloxRegular from "../static/fonts/Roblox/RobloxBETA-Regular-v1.007.otf";
-import RobloxBoldExtended from "../static/fonts/Roblox/RobloxDisplayBETA-BoldExtended-v1.001.otf";
+import RobloxDisplayBold from "../static/fonts/Roblox/RobloxDisplayBETA-Bold-v1.003.otf";
 
 // create breakpoints in intermediate theme
 let theme = createTheme({
@@ -26,7 +26,7 @@ theme = createTheme(theme, {
   typography: {
     display1: {
       display: "inline-block",
-      fontFamily: "Roblox-BoldExtended",
+      fontFamily: "RobloxDisplay-Bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -43,7 +43,7 @@ theme = createTheme(theme, {
     },
     h1: {
       display: "inline-block",
-      fontFamily: "Roblox-BoldExtended",
+      fontFamily: "RobloxDisplay-Bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -61,7 +61,7 @@ theme = createTheme(theme, {
     },
     h2: {
       display: "inline-block",
-      fontFamily: "Roblox-BoldExtended",
+      fontFamily: "RobloxDisplay-Bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -80,7 +80,7 @@ theme = createTheme(theme, {
     // since proposal has different tags for each breakpoint
     hSectionContent: {
       display: "inline-block",
-      fontFamily: "Roblox-BoldExtended",
+      fontFamily: "RobloxDisplay-Bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -96,7 +96,7 @@ theme = createTheme(theme, {
     },
     h3: {
       display: "inline-block",
-      fontFamily: "Roblox-BoldExtended",
+      fontFamily: "RobloxDisplay-Bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -113,7 +113,7 @@ theme = createTheme(theme, {
     },
     h4: {
       display: "inline-block",
-      fontFamily: "Roblox-BoldExtended",
+      fontFamily: "RobloxDisplay-Bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -130,7 +130,7 @@ theme = createTheme(theme, {
     },
     h5: {
       display: "inline-block",
-      fontFamily: "Roblox-BoldExtended",
+      fontFamily: "RobloxDisplay-Bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -147,7 +147,7 @@ theme = createTheme(theme, {
     },
     p1: {
       display: "inline-block",
-      fontFamily: "Roblox",
+      fontFamily: "RobloxRegular",
       color: "#fff",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
@@ -165,7 +165,7 @@ theme = createTheme(theme, {
     },
     p2: {
       display: "inline-block",
-      fontFamily: "Roblox",
+      fontFamily: "RobloxRegular",
       color: "#fff",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
@@ -183,7 +183,7 @@ theme = createTheme(theme, {
     },
     p3: {
       display: "inline-block",
-      fontFamily: "Roblox",
+      fontFamily: "RobloxRegular",
       color: "#fff",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
@@ -201,7 +201,7 @@ theme = createTheme(theme, {
     // since proposal has different tags for each breakpoint
     pSection: {
       display: "inline-block",
-      fontFamily: "Roblox",
+      fontFamily: "RobloxRegular",
       color: "#fff",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
@@ -217,7 +217,7 @@ theme = createTheme(theme, {
     },
     caption1: {
       display: "inline-block",
-      fontFamily: "Roblox-BoldExtended",
+      fontFamily: "RobloxDisplay-Bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "0.05em",
@@ -234,7 +234,7 @@ theme = createTheme(theme, {
     },
     caption2: {
       display: "inline-block",
-      fontFamily: "Roblox-BoldExtended",
+      fontFamily: "RobloxDisplay-Bold",
       lineHeight: 1,
       letterSpacing: "0.05em",
       whiteSpace: "pre-line",
@@ -253,19 +253,19 @@ theme = createTheme(theme, {
     MuiCssBaseline: {
       styleOverrides: `
         @font-face {
-          font-family: "Roblox";
-          src: local("Roblox"), url(${RobloxRegular});
+          font-family: "RobloxRegular";
+          src: local("RobloxRegular"), url(${RobloxRegular});
         }
         @font-face {
-          font-family: "Roblox-BoldExtended";
-          src: local("Roblox-BoldExtended"), url(${RobloxBoldExtended});
+          font-family: "RobloxDisplay-Bold";
+          src: local("RobloxDisplay-Bold"), url(${RobloxDisplayBold});
         }
       `,
     },
     MuiTooltip: {
       styleOverrides: {
         tooltip: {
-          fontFamily: "Roblox",
+          fontFamily: "RobloxRegular",
           ...(
             theme.unstable_sx({
               fontSize: {
