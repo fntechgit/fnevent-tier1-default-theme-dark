@@ -19,6 +19,11 @@
       "link": "https://www.youtube.com/Roblox",
       "src": "youtube.png",
       "hover": "youtube-hover.png"
+    },
+    {
+      "src": "rdc23_fnv_tiktok-static2.png",
+      "hover": "rdc23_fnv_tiktok-hover2.png",
+      "link": " https://www.tiktok.com/@roblox"
     }
   ],
   "links": [
