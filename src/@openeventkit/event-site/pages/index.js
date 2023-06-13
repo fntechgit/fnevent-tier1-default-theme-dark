@@ -83,6 +83,6 @@ export const marketingPageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo />;
-
 export default MarketingPage;
+
+export const Head = () => <Seo />;
