@@ -6,7 +6,7 @@ module.exports = {
     DEV_SSR: true
   },*/
   siteMetadata: {
-    title: "Roblox fnVirtual theme",
+    title: "RDC 2023",
     siteUrl: "https://rdc23.fnvirtual.app",
   },
   plugins: [

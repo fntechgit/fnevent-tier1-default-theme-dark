@@ -1,4 +1,6 @@
+import * as React from "react";
 import { graphql } from "gatsby";
+import Seo from "@openeventkit/event-site/src/components/Seo";
 import MarketingPage from "@openeventkit/event-site/src/pages/index";
 
 export const marketingPageQuery = graphql`
@@ -80,5 +82,7 @@ export const marketingPageQuery = graphql`
     }
   }
 `;
+
+export const Head = () => <Seo />;
 
 export default MarketingPage;

@@ -345,5 +345,3 @@ const MarketingPageTemplate = ({
 };
 
 export default MarketingPageTemplate;
-
-export const Head = () => <title>Marketing Page</title>;

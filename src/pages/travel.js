@@ -8,6 +8,7 @@ import { Section } from "../components/Grid";
 import Typography from "@mui/material/Typography"
 import AnimatedTypography from "../components/AnimatedTypography";
 import { AnimatedLink } from "../components/Link";
+import Seo from "@openeventkit/event-site/src/components/Seo";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import PageHeader from "../components/PageHeader";
 import OverlappingContentImageSection from "../components/OverlappingContentImageSection";
@@ -507,4 +508,11 @@ export const TravelPageQuery = graphql`
   }
 `;
 
-export const Head = () => <title>Travel Page</title>;
+export const Head = ({
+  location
+}) =>
+  <Seo
+    title={"Travel"}
+    pathname={location.pathname}
+  />
+;

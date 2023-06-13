@@ -13,6 +13,7 @@ import AnimatedTypography from "../components/AnimatedTypography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
+import Seo from "@openeventkit/event-site/src/components/Seo";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import { Section } from "../components/Grid";
 import PageHeader from "../components/PageHeader";
@@ -376,4 +377,11 @@ export const FAQsPageQuery = graphql`
   }
 `;
 
-export const Head = () => <title>FAQ Page</title>;
+export const Head = ({
+  location
+}) =>
+  <Seo
+    title={"Frequently Asked Questions"}
+    pathname={location.pathname}
+  />
+;

@@ -5,6 +5,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import AnimatedTypography from "../components/AnimatedTypography";
 import Markdown from "markdown-to-jsx";
 import { AnimatedLink } from "../components/Link";
+import Seo from "@openeventkit/event-site/src/components/Seo";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import PageHeader from "../components/PageHeader";
 import JoinCallToAction from "../components/JoinCallToAction";
@@ -179,4 +180,11 @@ export const TermsPageQuery = graphql`
   }
 `;
 
-export const Head = () => <title>Terms Page</title>;
+export const Head = ({
+  location
+}) =>
+  <Seo
+    title={"Terms"}
+    pathname={location.pathname}
+  />
+;
