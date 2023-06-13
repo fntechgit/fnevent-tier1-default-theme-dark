@@ -152,6 +152,7 @@ const MarketingPageTemplate = ({
             preload="auto"
             playsInline
             autoPlay
+            muted
             loop
             sx={{
               position: "absolute",
