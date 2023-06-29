@@ -7,11 +7,13 @@ import { Section } from "../Grid";
 import AnimatedTypography from "../AnimatedTypography";
 import { RegisterButton, LoginButton } from "../Button";
 import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
-import RegistrationLoginComponent from "@openeventkit/event-site/src/components/LoginButton";
+import AuthComponent from "@openeventkit/event-site/src/components/AuthComponent";
 import useMarketingPageData from "../../utils/hooks/useMarketingPageData";
+import Link from "../../../src/components/Link";
 
 const JoinCallToAction = ({
-  location
+  location,
+  defaultPath
 }) => {
   const theme = useTheme();
   const matchesXs = useMediaQuery(theme.breakpoints.down("md"));
@@ -106,16 +108,33 @@ const JoinCallToAction = ({
         </RegistrationLiteComponent>
         }
         {loginButton.display &&
-        <RegistrationLoginComponent
+        <AuthComponent
           location={location}
           style={{
             flexBasis: matchesXs ? "50%" : "unset"
           }}
-        >
-          <LoginButton>
-            {loginButton.text}
-          </LoginButton>
-        </RegistrationLoginComponent>
+          renderLoginButton={(onClick) => (
+              <LoginButton onClick={onClick}>
+                {loginButton.text}
+              </LoginButton>
+            )
+          }
+          renderEnterButton={(onClick) => (
+              <Link
+                to={defaultPath}
+                style={{
+                  flexBasis: matchesXs ? "50%" : "unset",
+                  textDecoration: "none"
+                }}
+                onClick={onClick}
+              >
+                <LoginButton>
+                  Enter
+                </LoginButton>
+              </Link>
+            )
+          }
+        />
         }
       </Grid>
     </Section>

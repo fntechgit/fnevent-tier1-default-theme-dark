@@ -18,9 +18,8 @@ import Footer from "../../../../src/components/Footer";
 import Link from "../../../../src/components/Link";
 import AttendanceTrackerComponent from "@openeventkit/event-site/src/components/AttendanceTrackerComponent";
 import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
-import RegistrationLoginComponent from "@openeventkit/event-site/src/components/LoginButton";
+import AuthComponent from "@openeventkit/event-site/src/components/AuthComponent";
 
-import { PHASES } from "@openeventkit/event-site/src/utils/phasesUtils";
 
 const pageStyles = {
   backgroundColor: "#000"
@@ -95,31 +94,34 @@ const MarketingPageTemplate = ({
           </RegisterButton>
         </RegistrationLiteComponent>
         }
-        {loginButton.display && !isLoggedUser &&
-        <RegistrationLoginComponent
+        {loginButton.display &&
+        <AuthComponent
           location={location}
           style={{
             flexBasis: matchesXs ? "50%" : "unset"
           }}
-        >
-          <LoginButton>
-            {loginButton.text}
-          </LoginButton>
-        </RegistrationLoginComponent>
-        }
-        { /* only show enter button if during summit and has virtual access */
-         summitPhase >= PHASES.DURING && isLoggedUser && hasVirtualBadge &&
-        <Link
-          to={defaultPath}
-          style={{
-            flexBasis: matchesXs ? "50%" : "unset",
-            textDecoration: "none"
-          }}
-        >
-          <LoginButton>
-            Enter
-          </LoginButton>
-        </Link>
+          renderLoginButton={(onClick) => (
+              <LoginButton onClick={onClick}>
+                {loginButton.text}
+              </LoginButton>
+            )
+          }
+          renderEnterButton={(onClick) => (
+              <Link
+                to={defaultPath}
+                style={{
+                  flexBasis: matchesXs ? "50%" : "unset",
+                  textDecoration: "none"
+                }}
+                onClick={onClick}
+              >
+                <LoginButton>
+                  Enter
+                </LoginButton>
+              </Link>
+            )
+          }
+        />
         }
       </>
     );
@@ -337,6 +339,7 @@ const MarketingPageTemplate = ({
           markdownOptions={markdownOptions}
         />
         <JoinCallToAction
+          defaultPath={defaultPath}
           location={location}
         />
       </main>
