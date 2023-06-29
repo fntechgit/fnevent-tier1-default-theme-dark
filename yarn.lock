@@ -2029,10 +2029,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@openeventkit/event-site@^1.0.35":
-  version "1.0.35"
-  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-1.0.35.tgz#65457b10a10e9b92e6a0bf9e6b234ed8fbc18514"
-  integrity sha512-ifBrvtxMU7egVIxqMWaDGcTOAs5PEHTvHHcLXNRu2+a4rFIK0ykJ6h+cY6LRd51xklhvrFGrRjT3C1Mx/SMODg==
+"@openeventkit/event-site@^1.0.36":
+  version "1.0.36"
+  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-1.0.36.tgz#aafeeb7ca98f6d8e66f4dc30598b18ecd67c7949"
+  integrity sha512-tgjZHBaHbcNO4YL0VTUxI99jyxbGRNFlXPNLonhpWSfz5evwGFxq01EC8OvkqU/AtBSCMQ0w+JlxWiRloCsnuw==
   dependencies:
     "@mui/base" "^5.0.0-alpha.114"
     "@ncwidgets/file-relation" "^0.8.0"
@@ -2072,7 +2072,7 @@
     font-awesome "^4.7.0"
     formik "^2.2.9"
     fs-extra "^9.0.1"
-    full-schedule-widget "^2.0.28"
+    full-schedule-widget "^2.0.32"
     gatsby "^5.8.1"
     gatsby-alias-imports "^1.0.6"
     gatsby-plugin-image "^3.8.0"
@@ -2626,7 +2626,7 @@
     parse-svg-path "^0.1.2"
     svg-arc-to-cubic-bezier "^3.2.0"
 
-"@react-pdf/renderer@^3.1.12":
+"@react-pdf/renderer@^3.1.11", "@react-pdf/renderer@^3.1.12":
   version "3.1.12"
   resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-3.1.12.tgz#3c208a35662c561712acad1e06ccd0b753b2472a"
   integrity sha512-y4H2ELH0okJP7+ig+uNjFAfuAanWiF3mxsKsE7ZBuhF4tabbMt9fX+pQ7qn4xrzEWX0vlso6s6ebkkeGdSGWzA==
@@ -7679,12 +7679,13 @@ fsevents@~2.3.2:
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
-full-schedule-widget@^2.0.28:
-  version "2.0.28"
-  resolved "https://registry.yarnpkg.com/full-schedule-widget/-/full-schedule-widget-2.0.28.tgz#2ba55892f2325f83b3bccf69c2bd406528f6479d"
-  integrity sha512-ydqqlHfhpDFQIbFLO6q3eWvY+CHFymAOlTIJ1O6CZ58EvLTcl9T31M9GvcbxbQIYkC+k90VGSJAZfNxxso+yNQ==
+full-schedule-widget@^2.0.32:
+  version "2.0.32"
+  resolved "https://registry.yarnpkg.com/full-schedule-widget/-/full-schedule-widget-2.0.32.tgz#281454f0876afe5d34f055747c431f5deb428d34"
+  integrity sha512-A/nlTgOvFKDkMYrrnT+bEsjSQou9gAoMbRd/tZCmB3TLU3tD23Y3B4VjbQ33NdkF8zy/i6Ix0Fpb57K04QYH7A==
   dependencies:
     "@mui/base" "5.0.0-alpha.127"
+    "@react-pdf/renderer" "^3.1.11"
     bootstrap "^5.1.3"
     pure-react-carousel "^1.27.4"
     react-laag "^2.0.4"
@@ -15789,7 +15790,6 @@ sudo-prompt@^8.2.0:
   version "8.2.5"
   resolved "https://registry.yarnpkg.com/sudo-prompt/-/sudo-prompt-8.2.5.tgz#cc5ef3769a134bb94b24a631cc09628d4d53603e"
   integrity sha512-rlBo3HU/1zAJUrkY6jNxDOC9eVYliG6nS4JA8u8KAshITd07tafMc/Br7xQwCSseXwJ2iCcHCE8SNWX3q8Z+kw==
-
 
 summit-registration-lite@^4.0.17:
   version "4.0.17"
