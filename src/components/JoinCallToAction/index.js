@@ -94,7 +94,7 @@ const JoinCallToAction = ({
         }}
       >
         {registerButton.display &&
-        <RegistrationLiteComponent>
+        <RegistrationLiteComponent ignoreAutoOpen={true}>
           <RegisterButton
             sx={{
               flexBasis: {
