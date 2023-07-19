@@ -9,7 +9,8 @@
     "title": "Roblox Developer Conference",
     "subTitle": "September 8–9",
     "background": {
-      "src": "/img/rdc22-fnv-lobby-header1.png"
+      "src": "/img/rdc22-fnv-lobby-header1.png",
+      "alt": "Header Image"
     }
   },
   "liveNowFeaturedEventId": 2952
