@@ -61,6 +61,16 @@ const MarketingPageTemplate = ({
   defaultPath,
   ...rest
 }) => {
+
+  const AuthButtonRef = React.useRef(null);
+  const [authButtonChildren, setAuthButtonChildren] = React.useState(false);
+
+  React.useEffect(() => {
+    if (AuthButtonRef.current) {
+      setAuthButtonChildren(AuthButtonRef.current.childNodes.length > 0);
+    }
+  }, []);
+
   const theme = useTheme();
   const matchesXs = useMediaQuery(theme.breakpoints.down("md"));
   const {
@@ -97,8 +107,10 @@ const MarketingPageTemplate = ({
         {loginButton.display &&
         <AuthComponent
           location={location}
+          ref={AuthButtonRef}
           style={{
-            flexBasis: matchesXs ? "50%" : "unset"
+            flexBasis: matchesXs ? "50%" : "unset",
+            display: authButtonChildren ? "flex" : "none"
           }}
           renderLoginButton={(onClick) => (
               <LoginButton onClick={onClick}>
@@ -339,6 +351,7 @@ const MarketingPageTemplate = ({
           markdownOptions={markdownOptions}
         />
         <JoinCallToAction
+          isLoggedUser={isLoggedUser}
           defaultPath={defaultPath}
           location={location}
         />

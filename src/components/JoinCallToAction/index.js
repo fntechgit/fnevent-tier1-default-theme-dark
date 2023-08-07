@@ -12,9 +12,20 @@ import useMarketingPageData from "../../utils/hooks/useMarketingPageData";
 import Link from "../../../src/components/Link";
 
 const JoinCallToAction = ({
+  isLoggedUser,
   location,
   defaultPath
 }) => {
+
+  const AuthButtonRef = React.useRef(null);
+  const [authButtonChildren, setAuthButtonChildren] = React.useState(false);
+
+  React.useEffect(() => {
+    if (AuthButtonRef.current) {
+      setAuthButtonChildren(AuthButtonRef.current.childNodes.length > 0);
+    }
+  }, []);
+
   const theme = useTheme();
   const matchesXs = useMediaQuery(theme.breakpoints.down("md"));
   const {
@@ -98,7 +109,7 @@ const JoinCallToAction = ({
           <RegisterButton
             sx={{
               flexBasis: {
-                xs: "50%",
+                xs: isLoggedUser ? "100%" : "50%",
                 md: "unset"
               }
             }}
@@ -109,9 +120,11 @@ const JoinCallToAction = ({
         }
         {loginButton.display &&
         <AuthComponent
+          ref={AuthButtonRef}
           location={location}
           style={{
-            flexBasis: matchesXs ? "50%" : "unset"
+            flexBasis: matchesXs ? "50%" : "unset",
+            display: authButtonChildren ? "flex" : "none"
           }}
           renderLoginButton={(onClick) => (
               <LoginButton onClick={onClick}>
