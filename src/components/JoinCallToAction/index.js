@@ -109,10 +109,11 @@ const JoinCallToAction = ({
         }
         {loginButton.display &&
         <AuthComponent
-          location={location}
-          style={{
+            ignoreAutoOpen={true}
+            location={location}
+            style={{
             flexBasis: matchesXs ? "50%" : "unset"
-          }}
+            }}
           renderLoginButton={(onClick) => (
               <LoginButton onClick={onClick}>
                 {loginButton.text}
