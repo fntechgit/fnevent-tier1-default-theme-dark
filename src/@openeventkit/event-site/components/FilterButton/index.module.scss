@@ -4,8 +4,9 @@
   // no top value needed since navbar implementation is actually sticky
   //top: 7.25rem;
   left: -15px;
-  background-color: #f6f6f6;
-  color: #6c6c6c;
+  color: var(--color_input_text_color);
+  background-color: var(--color_input_background_color);
+  border-color: var(--color_input_border_color);
   border: none;
   height: 50px;
   width: calc(100% + 30px);
@@ -22,7 +23,7 @@
   }
 
   &.open {
-    background-color: white;
+    background-color: var(--color_background_light);
     text-align: left;
     padding-left: 15px;
     left: 0;

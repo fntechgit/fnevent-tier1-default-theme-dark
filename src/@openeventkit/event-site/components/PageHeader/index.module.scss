@@ -1,7 +1,7 @@
 .page-header {
   display: flex;
   max-height: 365px;
-  min-height: 300px;
+  min-height: 325px;
   background-color: var(--color_secondary_contrast);
   color: white;
   flex-basis: 100%;
@@ -11,28 +11,29 @@
 
   .titles {
     flex-basis: 100%;
-    margin-top: 50px;
+    margin-top: 75px;
     text-align: center;
     padding-left: 5px;
     padding-right: 5px;
 
     h1 {
-      font-size: 4em;
-      font-weight: bold;
-      margin-top: 0px;
+      font-size: 6em;
+      margin: 0px;
+      font-family: "Builder Extended Bold";
+      color: rgb(255, 255, 255);
+      line-height: 1;
+      letter-spacing: -0.02em;
       text-align: center;
       text-transform: uppercase;
-    }
 
-    span {
-      margin-top: 0px;
-      font-size: 1.5em;
-      color: var(--color_text_light);
+      @media screen and (max-width: 420px) {
+        font-size: 4em;
+      }
     }
 
     @media screen and (max-width: 420px) {
       align-self: center;
-      margin-top: 0px;
+      margin-top: 50px;
     }
   }
 }

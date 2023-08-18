@@ -1,5 +1,5 @@
 // this file is copied from event-site counter part to implement component css shadowing
-@import "../../styles/variables";
+@import '@openeventkit/event-site/src/components/summit-my-orders-tickets/styles/_variables.scss';
 // all styles same as default implementation except the ones overriden below.
 .ticket-popup {
   // the z-index is different from the original to display the popup over the material ui header
@@ -17,6 +17,11 @@
 
 .ticket-popup-form-body {
   position: relative;
+  button {
+    background-color: var(--color_input_background_color) !important;;
+    color: var(--color_input_text_color) !important;
+    border-color: var(--color_input_border_color) !important;
+  }
 }
 
 .ticket-popup-form-alert {
@@ -45,12 +50,12 @@
   top: 0%;
   bottom: 0%;
   margin: auto;
-  background: $color-white;
+  background-color: var(--color_background_light) !important;
   z-index: 15;
 }
 
 .ticket-popup-header {
-  background-color: $color-primary;
+  background-color: var(--color_background_light) !important;
   font-weight: bold;
   padding: 15px;
   display: flex;
@@ -202,11 +207,11 @@
     .form-control {
       width: 60%;
       margin: 25px auto 5px auto;
-      background-color: $color-gray-lighter;
-      border-color: $color-primary;
+      background-color:  var(--color_input_background_color) !important;
+      border-color: var(--color_input_border_color) !important;
 
       &::placeholder {
-        color: $color-text-input-hints;
+        color:var(--color_input_text_color) !important;
       }
     }
 
@@ -257,11 +262,11 @@
     .form-control {
       width: 60%;
       margin: 25px auto 5px auto;
-      background-color: $color-gray-lighter;
-      border-color: $color-primary;
+      background-color:  var(--color_input_background_color) !important;
+      border-color: var(--color_input_border_color) !important;
 
       &::placeholder {
-        color: $color-text-input-hints;
+        color: var(--color_input_text_color) !important;
       }
     }
 
@@ -284,13 +289,16 @@
       position: absolute;
       text-align: center;
       width: 100%;
-      background-color: $color-white;
+      background-color: var(--color_background_light);
       z-index: 25;
 
       button {
         padding: 8px 26px;
         line-height: 22px;
         font-size: 16px;
+        color: var(--color_input_text_color) !important;
+        background-color: var(--color_input_background_color) !important;
+        border-color: var(--color_input_border_color) !important;
       }
     }
 

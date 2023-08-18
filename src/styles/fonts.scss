@@ -1,0 +1,33 @@
+$font-family: 'Builder Sans', sans-serif;
+
+:root {
+  --font_family: #{$font-family} !important;
+}
+
+// Adding these new fonts for this theme
+@font-face {
+  font-family: 'Builder Sans', sans-serif;
+  src: url("../../static/fonts/Roblox/RobloxBETA-Regular-v1.007.otf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Builder Sans', sans-serif;
+  src: url("../../static/fonts/Roblox/RobloxDisplayBETA-Bold-v1.003.otf") format("opentype");
+  font-weight: bold;
+}
+
+%font-regular {
+  font-family: 'Builder Sans', sans-serif;
+  font-weight: 400;
+}
+
+%font-semi {
+  font-family: 'Builder Sans', sans-serif;
+  font-weight: 600;
+}
+
+%font-bold {
+  font-family: 'Builder Sans', sans-serif;
+  font-weight: 700;
+}
