@@ -2029,10 +2029,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@openeventkit/event-site@2.0.40":
-  version "2.0.40"
-  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.0.40.tgz#f65269de26bd812e162f94d79c7d1c4012a60ffc"
-  integrity sha512-s54NsaA99gf97PAFUHqIXC6W2N96dbzPkyukBsl8Mjw46NkRPPTf+h19YPwBXPQn9EKX+OUEky8fFJouW5syHg==
+"@openeventkit/event-site@2.0.41":
+  version "2.0.41"
+  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.0.41.tgz#c6c2def9fc090db4079ad014e520b5f0507a3e11"
+  integrity sha512-NqgSWzOZ1wbkVsJSYJyi03ks1tVvwD2FBMAG53pICdkPzLcV918hi5qw/ZaYFLi4+2r3EMTqwrsZAuxE8br3sQ==
   dependencies:
     "@mui/base" "^5.0.0-alpha.114"
     "@ncwidgets/file-relation" "^0.8.0"
@@ -2051,7 +2051,7 @@
     "@types/react" "^16.9.42"
     "@vimeo/player" "^2.16.3"
     ably "^1.2.34"
-    attendee-to-attendee-widget "3.0.3"
+    attendee-to-attendee-widget "3.0.4"
     awesome-bootstrap-checkbox "^1.0.1"
     axios "^0.19.2"
     babel-preset-gatsby "^3.9.0"
@@ -2095,7 +2095,7 @@
     immutability-helper "2.9.1"
     immutable "^3.7.6"
     jsdom "^16.2.2"
-    lite-schedule-widget "3.0.1"
+    lite-schedule-widget "3.0.2"
     live-event-widget "4.0.1"
     lodash "^4.17.19"
     lz-string "^1.4.4"
@@ -4329,10 +4329,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-attendee-to-attendee-widget@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/attendee-to-attendee-widget/-/attendee-to-attendee-widget-3.0.3.tgz#d42a28d3d352ee09bddee8f71fc2a0425dfeb5cc"
-  integrity sha512-2UJiQ1OKT9U/6gNgbq7GEQQfwjxIRG0N7Fx8sPSiHzfTjV4kbZgPo81wMZ3RsaV+deWIFKHFtrDsNroGeh/IqA==
+attendee-to-attendee-widget@3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/attendee-to-attendee-widget/-/attendee-to-attendee-widget-3.0.4.tgz#88b6773fe24bf37f791adc361226bd2911d3298a"
+  integrity sha512-Hhkp/c4BYJ/sTWRMHXuV84sQKf8Yyw8zMFKYXenWMQqyLU2a1lOYYj26NtxwD/B+hPzQ/0GZx6Asz7Qbq4Mzsw==
   dependencies:
     "@babel/helper-string-parser" "^7.19.4"
     "@supabase/supabase-js" "^1.35.6"
@@ -10153,10 +10153,10 @@ linkifyjs@^2.1.9:
   resolved "https://registry.yarnpkg.com/linkifyjs/-/linkifyjs-2.1.9.tgz#af06e45a2866ff06c4766582590d098a4d584702"
   integrity sha512-74ivurkK6WHvHFozVaGtQWV38FzBwSTGNmJolEgFp7QgR2bl6ArUWlvT4GcHKbPe1z3nWYi+VUdDZk16zDOVug==
 
-lite-schedule-widget@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/lite-schedule-widget/-/lite-schedule-widget-3.0.1.tgz#b3cb583d62fc00e253d87b432e767cf68348fb84"
-  integrity sha512-JjpE5c84lVrwJ91myz4Go0JxyVTOpkte5Un7t/qIAX5oZ3ONoSg6HTIp+HSnQ5+pbyxElYCogOPlrcHyDHUDLQ==
+lite-schedule-widget@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/lite-schedule-widget/-/lite-schedule-widget-3.0.2.tgz#9a015815589c88a1b8ed998fc826bbca10532db0"
+  integrity sha512-ZGuoPBEpeZFqZ1VoHNfC+PKxbYPR5o7t8CeK0FOw3locJMQ2YzigazInaOwgQoy2b95A8+h7J7uWFbCGscGorg==
   dependencies:
     pure-react-carousel "^1.27.4"
     use-fit-text "^2.4.0"
