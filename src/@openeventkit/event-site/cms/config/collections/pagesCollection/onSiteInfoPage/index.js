@@ -1,4 +1,5 @@
 import {
+  stringField,
   textField,
   markdownField,
   imageWithAltField,
