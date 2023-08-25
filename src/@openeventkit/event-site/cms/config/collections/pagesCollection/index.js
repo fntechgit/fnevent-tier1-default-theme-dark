@@ -5,6 +5,7 @@ import {
 import faqsPage from "./faqsPage";
 import termsPage from "./termsPage";
 import travelPage from "./travelPage";
+import onSiteInfoPage from "./onSiteInfoPage";
 
 const pagesCollection = {
   ...collectionDefaults({
@@ -14,7 +15,8 @@ const pagesCollection = {
   files: [
     faqsPage,
     termsPage,
-    travelPage
+    travelPage,
+    onSiteInfoPage
   ]
 };
 

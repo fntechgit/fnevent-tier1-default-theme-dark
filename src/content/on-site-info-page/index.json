@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "title": "On-Site Info",
+    "lead": "Blurb",
+    "backgroundImage": {
+      "src": "header_background.png"
+    }
+  },
+  "map": {
+    "content": "",
+    "title": "Map",
+    "image": {
+      "src": "map.png",
+      "alt": "On-Site Map"
+    }
+  },
+  "info": [
+    {
+      "title": "Headline",
+      "content": "Content goes here"
+    },
+    {
+      "title": "Headline",
+      "content": "Content goes here"
+    },
+    {
+      "title": "Headline",
+      "content": "Content goes here"
+    }
+  ]
+}
