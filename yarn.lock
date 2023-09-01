@@ -2029,10 +2029,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@openeventkit/event-site@2.0.54":
-  version "2.0.54"
-  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.0.54.tgz#5df67dfd2d7a487c84434c6c83b2c43606c2d84a"
-  integrity sha512-2X4fqFPp0a1xJe5MjOCdWq1mzANVuvZybS/foh+CZigDhXAb4/UCqGGwSFiY/dy5LIOfl8mIv+uQ/D8YEXbdZw==
+"@openeventkit/event-site@2.0.55":
+  version "2.0.55"
+  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.0.55.tgz#45deff5db709a3f854697516db8e8b9cda37422d"
+  integrity sha512-B3HGL8xJfzgO6ytPP7Vc3Og8xHVZQLtIyd06UuzvcE6iab8jRmdV3ja6bzJeGJhpestjowDjU5U72HsN8dDoxw==
   dependencies:
     "@mui/base" "^5.0.0-alpha.114"
     "@ncwidgets/file-relation" "^0.8.0"
@@ -2147,7 +2147,7 @@
     stream-browserify "^3.0.0"
     stream-chat "^2.7.2"
     stream-chat-react "3.1.7"
-    summit-registration-lite "5.0.6"
+    summit-registration-lite "5.0.8"
     superagent "8.0.9"
     sweetalert2 "^9.17.0"
     upcoming-events-widget "3.0.4"
@@ -15791,11 +15791,12 @@ sudo-prompt@^8.2.0:
   resolved "https://registry.yarnpkg.com/sudo-prompt/-/sudo-prompt-8.2.5.tgz#cc5ef3769a134bb94b24a631cc09628d4d53603e"
   integrity sha512-rlBo3HU/1zAJUrkY6jNxDOC9eVYliG6nS4JA8u8KAshITd07tafMc/Br7xQwCSseXwJ2iCcHCE8SNWX3q8Z+kw==
 
-summit-registration-lite@5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/summit-registration-lite/-/summit-registration-lite-5.0.6.tgz#7536830b0fac6ce74b9fb08cf3e0e73026b22e5b"
-  integrity sha512-yC+4LTMXh5HzvUEVDwvbAHXlpmQNqPyKzhlbEtCoRdgqpXxfGO3LN79pgk8oXrrrCynRuMXRkeybAn9apDqlyA==
+summit-registration-lite@5.0.8:
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/summit-registration-lite/-/summit-registration-lite-5.0.8.tgz#d36ad05ab91d32d388c7328ec430191ca6ea9ee9"
+  integrity sha512-WfpLBe7vEfKJwGJbVBovObXujlQ0U7nMXmg7NOgX7X5jnlI8q7TJJi//A3sYrmVHDoutN7lezdNzDFLveX+k+w==
   dependencies:
+    "@react-pdf/renderer" "^3.1.12"
     "@stripe/react-stripe-js" "^1.4.1"
     "@stripe/stripe-js" "^1.15.0"
     i18n-react "^0.6.4"
