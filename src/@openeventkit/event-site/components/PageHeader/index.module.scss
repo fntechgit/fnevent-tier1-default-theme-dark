@@ -17,7 +17,7 @@
     padding-right: 5px;
 
     h1 {
-      font-size: 6em;
+      font-size: 76px;
       margin: 0px;
       font-family: "Builder Extended Bold";
       color: rgb(255, 255, 255);
@@ -26,12 +26,12 @@
       text-align: center;
       text-transform: uppercase;
 
-      @media screen and (max-width: 420px) {
-        font-size: 4em;
+      @media screen and (max-width: 768px) {
+        font-size: 48px;
       }
     }
 
-    @media screen and (max-width: 420px) {
+    @media screen and (max-width: 768px) {
       align-self: center;
       margin-top: 50px;
     }
