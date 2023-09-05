@@ -2029,10 +2029,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@openeventkit/event-site@2.0.55":
-  version "2.0.55"
-  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.0.55.tgz#45deff5db709a3f854697516db8e8b9cda37422d"
-  integrity sha512-B3HGL8xJfzgO6ytPP7Vc3Og8xHVZQLtIyd06UuzvcE6iab8jRmdV3ja6bzJeGJhpestjowDjU5U72HsN8dDoxw==
+"@openeventkit/event-site@2.0.56":
+  version "2.0.56"
+  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.0.56.tgz#0bdf4025caaa8640246ca0845110a27f9f361a20"
+  integrity sha512-wjAgy0ooVzqbnYW8sx0SoH3aOMYj7AeHPRZ1j1TTXu+ylwDXU6XpXeyy/Mj/tCn1o2pbMnXsCvB5DpHzo7guMA==
   dependencies:
     "@mui/base" "^5.0.0-alpha.114"
     "@ncwidgets/file-relation" "^0.8.0"
@@ -2051,7 +2051,7 @@
     "@types/react" "^16.9.42"
     "@vimeo/player" "^2.16.3"
     ably "^1.2.34"
-    attendee-to-attendee-widget "3.0.5"
+    attendee-to-attendee-widget "3.0.6"
     awesome-bootstrap-checkbox "^1.0.1"
     axios "^0.19.2"
     babel-preset-gatsby "^3.9.0"
@@ -4329,10 +4329,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-attendee-to-attendee-widget@3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/attendee-to-attendee-widget/-/attendee-to-attendee-widget-3.0.5.tgz#2aa928d6c521df98f321ffef5842079522ce0387"
-  integrity sha512-UJYajshGxcsjz12ABxQrb/KOBXmZbCjY+rFMUVbEXwOb4ZLWhJ/EqTjavC45OS0BxKYtUlLIi2KhyvPGhtU72g==
+attendee-to-attendee-widget@3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/attendee-to-attendee-widget/-/attendee-to-attendee-widget-3.0.6.tgz#835267851077b8a7e6c8099234dd582670d70fab"
+  integrity sha512-aAE2Z5ZKaioJV0ENAlb7WrZoAiqNtyk5lLRyOG90ETKTH1Gu8dObASvjKaDtJw/Nc+CPQLEsaVmCgYNKlsspNQ==
   dependencies:
     "@babel/helper-string-parser" "^7.19.4"
     "@supabase/supabase-js" "^1.35.6"
