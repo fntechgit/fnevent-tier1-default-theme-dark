@@ -2,6 +2,7 @@
   "ACTIVITY_CTA_TEXT": "CTA version 4",
   "widgets": {
     "chat": {
+      "enabled": true,
       "showQA": false,
       "showHelp": false,
       "defaultScope": "page"
