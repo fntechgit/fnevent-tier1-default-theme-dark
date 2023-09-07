@@ -20,6 +20,15 @@
       "display": true
     },
     {
+      "requiresAuth": true,
+      "showOnlyAtShowTime": false,
+      "pageRestriction": [
+        "ANY"
+      ],
+      "title": "ONSITE INFO",
+      "link": "/onsite-info"
+    },
+    {
       "title": "SCHEDULE",
       "link": "/a/schedule",
       "display": true,
@@ -32,7 +41,10 @@
       "title": "MY SCHEDULE",
       "link": "/a/my-schedule",
       "display": true,
-      "requiresAuth": true
+      "requiresAuth": true,
+      "pageRestriction": [
+        "ANY"
+      ]
     },
     {
       "title": "FAQ",
