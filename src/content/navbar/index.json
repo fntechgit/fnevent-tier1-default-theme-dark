@@ -26,7 +26,8 @@
         "ANY"
       ],
       "title": "ONSITE INFO",
-      "link": "/onsite-info"
+      "link": "/onsite-info",
+      "display": true
     },
     {
       "title": "SCHEDULE",
