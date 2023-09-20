@@ -5,7 +5,7 @@
     "lead": "September 8–9\nFort Mason Center\nSan Francisco, CA",
     "buttons": {
       "registerButton": {
-        "display": false,
+        "display": true,
         "text": "Register\nNow"
       },
       "loginButton": {
