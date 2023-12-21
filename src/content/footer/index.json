@@ -1,27 +1,27 @@
 {
   "social": [
     {
-      "link": "https://twitter.com/roblox",
+      "link": "https://twitter.com/",
       "src": "twitter.png",
       "hover": "twitter-hover.png"
     },
     {
-      "link": "https://www.linkedin.com/company/roblox/",
+      "link": "https://www.linkedin.com/",
       "src": "linkedin.png",
       "hover": "linkedin-hover.png"
     },
     {
-      "link": "https://www.instagram.com/Roblox/",
+      "link": "https://www.instagram.com/strava/?utm_source=fn-tech&utm_medium=email&utm_campaign=camp%20strava%20invite",
       "src": "instagram.png",
       "hover": "instagram-hover.png"
     },
     {
       "src": "tiktok.png",
       "hover": "tiktok-hover.png",
-      "link": " https://www.tiktok.com/@roblox"
+      "link": " https://www.tiktok.com/"
     },
     {
-      "link": "https://www.youtube.com/Roblox",
+      "link": "https://www.youtube.com/",
       "src": "youtube.png",
       "hover": "youtube-hover.png"
     }
