@@ -382,6 +382,6 @@ export const Head = ({
 }) =>
   <Seo
     title={"Frequently Asked Questions"}
-    pathname={location.pathname}
+    location={location}
   />
 ;

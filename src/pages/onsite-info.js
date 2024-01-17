@@ -230,6 +230,6 @@ export const Head = ({
 }) =>
   <Seo
     title={"On-Site Info"}
-    pathname={location.pathname}
+    location={location}
   />
 ;

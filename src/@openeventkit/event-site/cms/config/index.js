@@ -7,8 +7,6 @@ export const collections = defaultCollections.concat([
 ]);
 
 const config = { ...defaultConfig };
-// TODO: move to env var
-config.backend.repo = "fntechgit/fnevent-roblox-theme";
 config.collections = collections;
 
 export default config;
