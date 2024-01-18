@@ -1,6 +1,6 @@
 import * as React from "react";
-import BaseButton from "@mui/base/Button";
-import { styled } from "@mui/system";
+import { Button as BaseButton } from "@mui/base";
+import { styled } from "@mui/material/styles";
 
 import LoginButton from "./Login";
 import RegisterButton from "./Register";
