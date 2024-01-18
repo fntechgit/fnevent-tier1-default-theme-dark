@@ -1,6 +1,6 @@
 import {
   useState,
-  useLayoutEffect
+  useEffect
 } from "react";
 
 const useIntersectionObserver = (
@@ -12,14 +12,15 @@ const useIntersectionObserver = (
 ) => {
   const [intersecting, setIntersecting] = useState(false);
   const callback = ([entry]) => setIntersecting(entry.isIntersecting);
-  const observer = new IntersectionObserver(callback, options);
-  useLayoutEffect(() => {
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(callback, options);
     const currentRef = ref.current;
     currentRef && observer.observe(currentRef);
     return () => {
       currentRef && observer.unobserve(currentRef);
     };
-  }, [ref]);
+  }, [ref, options]);
   return intersecting;
 };
 
