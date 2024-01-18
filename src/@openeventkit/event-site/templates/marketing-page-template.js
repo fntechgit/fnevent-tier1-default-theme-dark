@@ -1,4 +1,5 @@
 import * as React from "react";
+import loadable from "@loadable/component";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -9,7 +10,6 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import { Section } from "../../../../src/components/Grid";
-import AttendCarousel from "../../../../src/components/AttendCarousel";
 import { RegisterButton, LoginButton } from "../../../../src/components/Button";
 import OverlappingContentImageSection from "../../../../src/components/OverlappingContentImageSection";
 import JoinCallToAction from "../../../../src/components/JoinCallToAction";
@@ -20,6 +20,7 @@ import AttendanceTrackerComponent from "@openeventkit/event-site/src/components/
 import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
 import AuthComponent from "@openeventkit/event-site/src/components/AuthComponent";
 
+const AttendCarousel = loadable(() => import("../../../../src/components/AttendCarousel"), { ssr: false });
 
 const pageStyles = {
   backgroundColor: "#000"
