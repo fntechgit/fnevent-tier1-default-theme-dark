@@ -1,7 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
-import BuilderSansRegular from "../static/fonts/Roblox/RobloxBETA-Regular-v1.007.otf";
-import BuilderExtendedBold from "../static/fonts/Roblox/RobloxDisplayBETA-Bold-v1.003.otf";
+const fontFamily = "var(--font_family)";
 
 // create breakpoints in intermediate theme
 let theme = createTheme({
@@ -26,7 +25,8 @@ theme = createTheme(theme, {
   typography: {
     display1: {
       display: "inline-block",
-      fontFamily: "Builder Extended Bold",
+      fontFamily,
+      fontWeight: "bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -43,7 +43,8 @@ theme = createTheme(theme, {
     },
     h1: {
       display: "inline-block",
-      fontFamily: "Builder Extended Bold",
+      fontFamily,
+      fontWeight: "bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -61,7 +62,8 @@ theme = createTheme(theme, {
     },
     h2: {
       display: "inline-block",
-      fontFamily: "Builder Extended Bold",
+      fontFamily,
+      fontWeight: "bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -80,7 +82,8 @@ theme = createTheme(theme, {
     // since proposal has different tags for each breakpoint
     hSectionContent: {
       display: "inline-block",
-      fontFamily: "Builder Extended Bold",
+      fontFamily,
+      fontWeight: "bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -96,7 +99,8 @@ theme = createTheme(theme, {
     },
     h3: {
       display: "inline-block",
-      fontFamily: "Builder Extended Bold",
+      fontFamily,
+      fontWeight: "bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -113,7 +117,8 @@ theme = createTheme(theme, {
     },
     h4: {
       display: "inline-block",
-      fontFamily: "Builder Extended Bold",
+      fontFamily,
+      fontWeight: "bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -130,7 +135,8 @@ theme = createTheme(theme, {
     },
     h5: {
       display: "inline-block",
-      fontFamily: "Builder Extended Bold",
+      fontFamily,
+      fontWeight: "bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "-0.02em",
@@ -147,7 +153,7 @@ theme = createTheme(theme, {
     },
     p1: {
       display: "inline-block",
-      fontFamily: "Builder Sans Regular",
+      fontFamily,
       color: "#fff",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
@@ -165,7 +171,7 @@ theme = createTheme(theme, {
     },
     p2: {
       display: "inline-block",
-      fontFamily: "Builder Sans Regular",
+      fontFamily,
       color: "#fff",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
@@ -183,7 +189,7 @@ theme = createTheme(theme, {
     },
     p3: {
       display: "inline-block",
-      fontFamily: "Builder Sans Regular",
+      fontFamily,
       color: "#fff",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
@@ -201,7 +207,7 @@ theme = createTheme(theme, {
     // since proposal has different tags for each breakpoint
     pSection: {
       display: "inline-block",
-      fontFamily: "Builder Sans Regular",
+      fontFamily,
       color: "#fff",
       lineHeight: 1.25,
       letterSpacing: "-0.01em",
@@ -217,7 +223,8 @@ theme = createTheme(theme, {
     },
     caption1: {
       display: "inline-block",
-      fontFamily: "Builder Extended Bold",
+      fontFamily,
+      fontWeight: "bold",
       color: "#fff",
       lineHeight: 1,
       letterSpacing: "0.05em",
@@ -234,7 +241,8 @@ theme = createTheme(theme, {
     },
     caption2: {
       display: "inline-block",
-      fontFamily: "Builder Extended Bold",
+      fontFamily,
+      fontWeight: "bold",
       lineHeight: 1,
       letterSpacing: "0.05em",
       whiteSpace: "pre-line",
@@ -250,22 +258,10 @@ theme = createTheme(theme, {
     }
   },
   components: {
-    MuiCssBaseline: {
-      styleOverrides: `
-        @font-face {
-          font-family: "Builder Sans Regular";
-          src: local("Builder Sans Regular"), url(${BuilderSansRegular});
-        }
-        @font-face {
-          font-family: "Builder Extended Bold";
-          src: local("Builder Extended Bold"), url(${BuilderExtendedBold});
-        }
-      `,
-    },
     MuiTooltip: {
       styleOverrides: {
         tooltip: {
-          fontFamily: "Builder Sans Regular",
+          fontFamily,
           ...(
             theme.unstable_sx({
               fontSize: {
