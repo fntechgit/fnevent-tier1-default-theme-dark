@@ -74,7 +74,8 @@ const marketingPage = {
         }),
         fileField({
           label: "Background Video",
-          name: "backgroundVideo"
+          name: "backgroundVideo",
+          hint: "1280x720 mp4, around 15mb in size, no sound, moov atom at the begining"
         })
       ]
     }),
