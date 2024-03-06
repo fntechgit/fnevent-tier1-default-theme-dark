@@ -1,8 +1,8 @@
 {
-  "name": "fnevent-roblox-theme",
+  "name": "fnevent-tier1-default-theme-dark",
   "version": "1.0.0",
   "private": true,
-  "description": "Roblox fnEvent theme",
+  "description": "fnEvent tier1 dark theme template",
   "author": "FNTech",
   "keywords": [
     "gatsby"
