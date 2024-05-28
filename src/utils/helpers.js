@@ -4,24 +4,24 @@ export const MEDIA_TYPES = Object.freeze({
 });
 
 export const types = new Map([
-    ["jpg", "image"], 
-    ["gif", "image"], 
-    ["png", "image"], 
-    ["svg", "image"], 
-    ["bmp", "image"],
-    ["tiff", "image"],
-    ["pdf", "image"],
-    ["raw", "image"],  
-    ["eps", "image"], 
-    ["mp4", "video"], 
-    ["3gp", "video"],
-    ["mov", "video"],
-    ["mp3", "video"],
-    ["wmv", "video"],
-    ["mpg", "video"],
-    ["mpeg", "video"],
-    ["mp3", "video"],
-    ["avi", "video"]
+    ["jpg", MEDIA_TYPES.IMAGE], 
+    ["gif", MEDIA_TYPES.IMAGE], 
+    ["png", MEDIA_TYPES.IMAGE], 
+    ["svg", MEDIA_TYPES.IMAGE], 
+    ["bmp", MEDIA_TYPES.IMAGE],
+    ["tiff", MEDIA_TYPES.IMAGE],
+    ["pdf", MEDIA_TYPES.IMAGE],
+    ["raw", MEDIA_TYPES.IMAGE],  
+    ["eps", MEDIA_TYPES.IMAGE], 
+    ["mp4", MEDIA_TYPES.VIDEO], 
+    ["3gp", MEDIA_TYPES.VIDEO],
+    ["mov", MEDIA_TYPES.VIDEO],
+    ["mp3", MEDIA_TYPES.VIDEO],
+    ["wmv", MEDIA_TYPES.VIDEO],
+    ["mpg", MEDIA_TYPES.VIDEO],
+    ["mpeg", MEDIA_TYPES.VIDEO],
+    ["mp3", MEDIA_TYPES.VIDEO],
+    ["avi", MEDIA_TYPES.VIDEO]
 ])
 
 export const getMediaFileType = (stringFile) => {
