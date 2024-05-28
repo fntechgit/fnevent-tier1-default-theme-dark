@@ -17,7 +17,7 @@ module.exports = `
     leadTitle: String
     lead: String
     buttons: MarketingPageJoinButtons
-    backgroundVideo: File @fileByRelativePath
+    backgroundMedia: File @fileByRelativePath
   }
   type ImageContentSection {
     title: String

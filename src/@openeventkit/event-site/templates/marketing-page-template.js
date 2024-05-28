@@ -19,6 +19,7 @@ import Link from "../../../../src/components/Link";
 import AttendanceTrackerComponent from "@openeventkit/event-site/src/components/AttendanceTrackerComponent";
 import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
 import AuthComponent from "@openeventkit/event-site/src/components/AuthComponent";
+import { getMediaFileType, MEDIA_TYPES } from "../../../utils/helpers";
 
 const AttendCarousel = loadable(() => import("../../../../src/components/AttendCarousel"), { ssr: false });
 
@@ -149,33 +150,53 @@ const MarketingPageTemplate = ({
             }
           }}
         >
-          {hero.backgroundVideo &&
-          <Box
-            component="video"
-            preload="auto"
-            playsInline
-            autoPlay
-            muted
-            loop
-            sx={{
-              position: "absolute",
-              margin: "auto",
-              inset: 0,
-              top: {
-                xs: "-48%",
-                md: "-22%",
-                xl: "-28%"
-              },
-              left: {
-                sm: 16,
-                md: 24,
-                lg: 32,
-                xl: 40
-              }
-            }}
-          >
-            <source src={hero.backgroundVideo.publicURL} type="video/mp4"/>
-          </Box>
+          {hero.backgroundMedia &&
+          <>
+            {getMediaFileType(hero.backgroundMedia.publicURL) === MEDIA_TYPES.VIDEO ?
+              <Box
+                component="video"
+                preload="auto"
+                playsInline
+                autoPlay
+                muted
+                loop
+                sx={{
+                  position: "absolute",
+                  margin: "auto",
+                  inset: 0,
+                  top: {
+                    xs: "-48%",
+                    md: "-22%",
+                    xl: "-28%"
+                  },
+                  left: {
+                    sm: 16,
+                    md: 24,
+                    lg: 32,
+                    xl: 40
+                  }
+                }}
+              >
+                <source src={hero.backgroundMedia.publicURL} type="video/mp4"/>
+              </Box>
+            :
+              <Box
+                component={GatsbyImage}
+                image={getImage(hero.backgroundMedia.childImageSharp)}
+                alt={""}
+                sx={{
+                  my: {
+                    xs: "-22%",
+                    md: "-25%"
+                  },
+                  mx: {
+                    xs: "-8%",
+                    md: 0,
+                  }
+                }}
+              />
+            }
+          </>
           }
           <Grid
             xs={12}
