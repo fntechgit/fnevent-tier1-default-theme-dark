@@ -19,7 +19,7 @@ import Link from "../../../../src/components/Link";
 import AttendanceTrackerComponent from "@openeventkit/event-site/src/components/AttendanceTrackerComponent";
 import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
 import AuthComponent from "@openeventkit/event-site/src/components/AuthComponent";
-import { getMediaFileType } from "../../../utils/helpers";
+import { getMediaFileType, MEDIA_TYPES } from "../../../utils/helpers";
 
 const AttendCarousel = loadable(() => import("../../../../src/components/AttendCarousel"), { ssr: false });
 
@@ -152,7 +152,7 @@ const MarketingPageTemplate = ({
         >
           {hero.backgroundMedia &&
           <>
-            {getMediaFileType(hero.backgroundMedia.publicURL) === "video" ?
+            {getMediaFileType(hero.backgroundMedia.publicURL) === MEDIA_TYPES.VIDEO ?
               <Box
                 component="video"
                 preload="auto"
