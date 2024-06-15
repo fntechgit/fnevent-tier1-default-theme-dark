@@ -57,39 +57,13 @@
       "providerLogoSize": 20
     }
   ],
+  "maintenanceMode:": {
+    "enabled": false,
+    "title": "Site under maintenance",
+    "subtitle": "Please reload page shortly"
+  },
   "ACTIVITY_CTA_TEXT": "CTA version 4",
   "REG_LITE_COMPANY_INPUT_PLACEHOLDER": "Company Name",
   "REG_LITE_COMPANY_DDL_PLACEHOLDER": "-- Select company --",
-  "REG_LITE_ALLOW_PROMO_CODES": true,
-  "staticJsonFilesBuildTime": [
-    {
-      "file": "src/data/summit.json",
-      "build_time": 1709754358710
-    },
-    {
-      "file": "src/data/events.json",
-      "build_time": 1709754368145
-    },
-    {
-      "file": "src/data/events.idx.json",
-      "build_time": 1709754368151
-    },
-    {
-      "file": "src/data/speakers.json",
-      "build_time": 1709754375275
-    },
-    {
-      "file": "src/data/speakers.idx.json",
-      "build_time": 1709754375277
-    },
-    {
-      "file": "src/content/sponsors.json",
-      "build_time": 1709754377527
-    },
-    {
-      "file": "src/data/voteable-presentations.json",
-      "build_time": 1709754377935
-    }
-  ],
-  "lastBuild": 1709754377935
+  "REG_LITE_ALLOW_PROMO_CODES": true
 }

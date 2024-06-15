@@ -1,27 +1,26 @@
 import * as React from "react";
-import loadable from "@loadable/component";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { NoSsr } from "@mui/base/NoSsr";
 import Typography from "@mui/material/Typography";
-import AnimatedTypography from "../../../../src/components/AnimatedTypography";
+import AnimatedTypography from "../../../../../src/components/AnimatedTypography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
-import { Section } from "../../../../src/components/Grid";
-import { RegisterButton, LoginButton } from "../../../../src/components/Button";
-import OverlappingContentImageSection from "../../../../src/components/OverlappingContentImageSection";
-import JoinCallToAction from "../../../../src/components/JoinCallToAction";
-import Footer from "../../../../src/components/Footer";
+import { Section } from "../../../../../src/components/Grid";
+import { RegisterButton, LoginButton } from "../../../../../src/components/Button";
+import AttendCarousel from "../../../../../src/components/AttendCarousel";
+import OverlappingContentImageSection from "../../../../../src/components/OverlappingContentImageSection";
+import JoinCallToAction from "../../../../../src/components/JoinCallToAction";
+import Footer from "../../../../../src/components/Footer";
 
-import Link from "../../../../src/components/Link";
+import Link from "../../../../../src/components/Link";
 import AttendanceTrackerComponent from "@openeventkit/event-site/src/components/AttendanceTrackerComponent";
 import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
 import AuthComponent from "@openeventkit/event-site/src/components/AuthComponent";
 import { getMediaFileType, MEDIA_TYPES } from "../../../utils/helpers";
-
-const AttendCarousel = loadable(() => import("../../../../src/components/AttendCarousel"), { ssr: false });
 
 const pageStyles = {
   backgroundColor: "#000"
@@ -349,9 +348,11 @@ const MarketingPageTemplate = ({
             >
               {attend.title}
             </AnimatedTypography>
-            <AttendCarousel
-              data={attend.benefits}
-            />
+            <NoSsr>
+	            <AttendCarousel
+	              data={attend.benefits}
+	            />
+            </NoSsr>
           </Grid>
         </Section>
         <OverlappingContentImageSection
