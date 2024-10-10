@@ -4,13 +4,13 @@
       "title": "HOME",
       "link": "/a/",
       "display": false,
-      "requiresAuth": true,
+      "userRequirement": "LOGGED_IN",
       "pageRestriction": [
         "ANY"
       ]
     },
     {
-      "requiresAuth": false,
+      "userRequirement": "NONE",
       "showOnlyAtShowTime": false,
       "pageRestriction": [
         "ANY"
@@ -20,7 +20,7 @@
       "display": true
     },
     {
-      "requiresAuth": true,
+      "userRequirement": "LOGGED_IN",
       "showOnlyAtShowTime": false,
       "pageRestriction": [
         "ANY"
@@ -33,7 +33,7 @@
       "title": "SCHEDULE",
       "link": "/a/schedule",
       "display": true,
-      "requiresAuth": false,
+      "userRequirement": "NONE",
       "pageRestriction": [
         "ANY"
       ]
@@ -42,7 +42,7 @@
       "title": "MY SCHEDULE",
       "link": "/a/my-schedule",
       "display": true,
-      "requiresAuth": true,
+      "userRequirement": "LOGGED_IN",
       "pageRestriction": [
         "ANY"
       ]
@@ -51,13 +51,13 @@
       "title": "FAQ",
       "link": "/faqs",
       "display": true,
-      "requiresAuth": false,
+      "userRequirement": "NONE",
       "pageRestriction": [
         "ANY"
       ]
     },
     {
-      "requiresAuth": false,
+      "userRequirement": "NONE",
       "showOnlyAtShowTime": false,
       "pageRestriction": [
         "ANY"
@@ -70,7 +70,7 @@
       "title": "MY ORDER",
       "link": "/a/my-tickets",
       "display": true,
-      "requiresAuth": true,
+      "userRequirement": "LOGGED_IN",
       "pageRestriction": [
         "ANY"
       ]
@@ -79,7 +79,7 @@
       "title": "MY PROFILE",
       "link": "/a/profile",
       "display": true,
-      "requiresAuth": true,
+      "userRequirement": "LOGGED_IN",
       "pageRestriction": [
         "ANY"
       ]
