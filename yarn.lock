@@ -2615,11 +2615,12 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@openeventkit/event-site@2.1.0-beta.0":
-  version "2.1.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.1.0-beta.0.tgz#6c0724265bd2b2e9e00f6074c01487902a29c12c"
-  integrity sha512-M3xv93sCpbNRGopKPO7jr49WPDH0BfxuiAaYguTH6kOJOPzE/bk752OxA2s4MqmmN42vGJNGsbL3QH3EfpT4Wg==
+"@openeventkit/event-site@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.1.0.tgz#878a1fec53875f56a0733f365b773c5a37c0b6e3"
+  integrity sha512-5Xgd6NzAI3ciPd/FJp3hIKNQVtpiJEiR/YC/NhkMV/oIkBt1U31e3nPTzizg9yN7T1Bq1k/UNe70RUBUtzCr0A==
   dependencies:
+    "@emotion/server" "^11.11.0"
     "@fortawesome/fontawesome-svg-core" "^6.5.2"
     "@fortawesome/free-brands-svg-icons" "^6.5.2"
     "@fortawesome/react-fontawesome" "^0.2.2"
@@ -2732,6 +2733,7 @@
     redux "^4.1.2"
     redux-persist "^6.0.0"
     redux-thunk "^2.4.1"
+    rehype-external-links "^3.0.0"
     rehype-mdx-import-media "^1.2.0"
     remark-gfm "^4.0.0"
     sass "^1.49.9"
@@ -2745,7 +2747,7 @@
     stream-browserify "^3.0.0"
     stream-chat "^2.7.2"
     stream-chat-react "3.1.7"
-    summit-registration-lite "5.0.43"
+    summit-registration-lite "5.0.44"
     superagent "8.0.9"
     sweetalert2 "^9.17.0"
     upcoming-events-widget "3.0.7"
@@ -4365,6 +4367,11 @@
   dependencies:
     "@typescript-eslint/types" "5.62.0"
     eslint-visitor-keys "^3.3.0"
+
+"@ungap/structured-clone@^1.0.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.3.0.tgz#d06bbb384ebcf6c505fde1c3d0ed4ddffe0aaff8"
+  integrity sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==
 
 "@vercel/webpack-asset-relocator-loader@1.7.3":
   version "1.7.3"
@@ -10047,6 +10054,13 @@ hast-util-is-element@^2.0.0:
     "@types/hast" "^2.0.0"
     "@types/unist" "^2.0.0"
 
+hast-util-is-element@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/hast-util-is-element/-/hast-util-is-element-3.0.0.tgz#6e31a6532c217e5b533848c7e52c9d9369ca0932"
+  integrity sha512-Val9mnv2IWpLbNPqc/pUem+a7Ipj2aHacCwgNfTiK0vJKl0LF+4Ba4+v1oPHFpf3bLYmreq0/l3Gud9S5OH42g==
+  dependencies:
+    "@types/hast" "^3.0.0"
+
 hast-util-parse-selector@^2.0.0:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/hast-util-parse-selector/-/hast-util-parse-selector-2.2.5.tgz#d57c23f4da16ae3c63b3b6ca4616683313499c3a"
@@ -10783,6 +10797,11 @@ is-absolute-url@^3.0.0:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/is-absolute-url/-/is-absolute-url-3.0.3.tgz#96c6a22b6a23929b11ea0afb1836c36ad4a5d698"
   integrity sha512-opmNIX7uFnS96NtPmhWQgQx6/NYFgsUXYMllcfzwWKUMwfo8kku1TvE6hkNcH+Q1ts5cMVrsY7j0bxXQDciu9Q==
+
+is-absolute-url@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/is-absolute-url/-/is-absolute-url-4.0.1.tgz#16e4d487d4fded05cfe0685e53ec86804a5e94dc"
+  integrity sha512-/51/TKE88Lmm7Gc4/8btclNXWS+g50wXhYJq8HWIBAGUBnoAdRu1aXeh364t/O7wXDAcTJDP8PNuNKWUDWie+A==
 
 is-absolute@^1.0.0:
   version "1.0.0"
@@ -16330,6 +16349,18 @@ regjsparser@^0.9.1:
   dependencies:
     jsesc "~0.5.0"
 
+rehype-external-links@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/rehype-external-links/-/rehype-external-links-3.0.0.tgz#2b28b5cda1932f83f045b6f80a3e1b15f168c6f6"
+  integrity sha512-yp+e5N9V3C6bwBeAC4n796kc86M4gJCdlVhiMTxIrJG5UHDMh+PJANf9heqORJbt1nrCbDwIlAZKjANIaVBbvw==
+  dependencies:
+    "@types/hast" "^3.0.0"
+    "@ungap/structured-clone" "^1.0.0"
+    hast-util-is-element "^3.0.0"
+    is-absolute-url "^4.0.0"
+    space-separated-tokens "^2.0.0"
+    unist-util-visit "^5.0.0"
+
 rehype-infer-description-meta@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/rehype-infer-description-meta/-/rehype-infer-description-meta-1.1.0.tgz#11f76329e524782a53d55b57b150ce9fb042b0d3"
@@ -18099,10 +18130,10 @@ sudo-prompt@^8.2.0:
   resolved "https://registry.yarnpkg.com/sudo-prompt/-/sudo-prompt-8.2.5.tgz#cc5ef3769a134bb94b24a631cc09628d4d53603e"
   integrity sha512-rlBo3HU/1zAJUrkY6jNxDOC9eVYliG6nS4JA8u8KAshITd07tafMc/Br7xQwCSseXwJ2iCcHCE8SNWX3q8Z+kw==
 
-summit-registration-lite@5.0.43:
-  version "5.0.43"
-  resolved "https://registry.yarnpkg.com/summit-registration-lite/-/summit-registration-lite-5.0.43.tgz#53ccc81062299abf1eecb4a3db1d529aff579303"
-  integrity sha512-XBom/BymL9JVp1Mez0HuVof3NPGi+KjeDTbdYPzcnVOwfDUOuTuFECYgd5XWTxolH33nMCy1FB5vTq8LgsPHCg==
+summit-registration-lite@5.0.44:
+  version "5.0.44"
+  resolved "https://registry.yarnpkg.com/summit-registration-lite/-/summit-registration-lite-5.0.44.tgz#0571e4ed3393142b0e20cfe95f5b5d5270a53f3c"
+  integrity sha512-1QQTv1e3jfqST2cwyoXOXctdLimTa7czQuMex1gTsVyvOYIivf/mZmPrOTwp1y481KCoJhMhQcBqHh3wu8Y8qA==
   dependencies:
     "@emotion/react" "^11.11.1"
     "@emotion/styled" "^11.11.0"
