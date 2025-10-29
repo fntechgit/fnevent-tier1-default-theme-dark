@@ -53,6 +53,11 @@ const marketingPage = {
                 booleanField({
                   label: "Display",
                   name: "display"
+                }),
+                stringField({
+                  label: "External Registration Link",
+                  name: "externalRegistrationLink",
+                  required: false,
                 })
               ]
             }),
