@@ -8,8 +8,13 @@ module.exports = `
     text: String
     display: Boolean
   }
+  type MarketingPageRegistrationButton {
+    text: String
+    display: Boolean
+    externalRegistrationLink: String
+  }
   type MarketingPageJoinButtons {
-    registerButton: Button
+    registerButton: MarketingPageRegistrationButton
     loginButtom: Button
   }
   type MarketingPageHero {
