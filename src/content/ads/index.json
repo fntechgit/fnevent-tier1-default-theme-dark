@@ -5,7 +5,7 @@
       "columnAds": [
         {
           "image": {
-            "src": "rdc23_fnv_lobby_space_1_v3.png",
+            "src": "lobby_space_1.png",
             "alt": ""
           },
           "column": "left",
@@ -15,7 +15,7 @@
         },
         {
           "image": {
-            "src": "rdc23_fnv_lobby_space_2.png"
+            "src": "lobby_space_2.png"
           },
           "column": "left",
           "button": {
@@ -24,7 +24,7 @@
         },
         {
           "image": {
-            "src": "rdc23_fnv_lobby_space_3_transparent_v2.png"
+            "src": "lobby_space_3.png"
           },
           "button": {
             "link": "/a/sponsors"

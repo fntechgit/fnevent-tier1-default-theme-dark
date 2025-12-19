@@ -5,13 +5,13 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { NoSsr } from "@mui/base/NoSsr";
 import Typography from "@mui/material/Typography";
 import AnimatedTypography from "../../../../../src/components/AnimatedTypography";
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
 import Navbar from "@openeventkit/event-site/src/components/Navbar";
 import { Section } from "../../../../../src/components/Grid";
+import Hero from "../../../../../src/components/Hero";
 import { RegisterButton, LoginButton } from "../../../../../src/components/Button";
-import AttendCarousel from "../../../../../src/components/AttendCarousel";
+import CardsCarousel from "../../../../../src/components/CardsCarousel";
 import OverlappingContentImageSection from "../../../../../src/components/OverlappingContentImageSection";
 import JoinCallToAction from "../../../../../src/components/JoinCallToAction";
 import Footer from "../../../../../src/components/Footer";
@@ -20,7 +20,6 @@ import Link from "../../../../../src/components/Link";
 import AttendanceTrackerComponent from "@openeventkit/event-site/src/components/AttendanceTrackerComponent";
 import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
 import AuthComponent from "@openeventkit/event-site/src/components/AuthComponent";
-import { getMediaFileType, MEDIA_TYPES } from "../../../../utils/helpers";
 
 const pageStyles = {
   backgroundColor: "#000"
@@ -67,9 +66,9 @@ const MarketingPageTemplate = ({
   const {
     marketingPageJson: {
       hero,
-      featuring,
-      attend,
-      awards
+      featuredImageSection,
+      cardsCarousel,
+      contentImageSection
     }
   } = data;
   const getButtons = () => {
@@ -132,71 +131,7 @@ const MarketingPageTemplate = ({
       <Navbar />
       <main>
         <AttendanceTrackerComponent/>
-        <Section
-          sx={{
-            position: "relative",
-            overflow: "hidden",
-            pt: {
-              xs: 6,
-              md: 12,
-              lg: 16,
-              xl: 20
-            },
-            pb: {
-              xs: 6,
-              lg: 8,
-              xl: 10
-            }
-          }}
-        >
-          {hero.backgroundMedia &&
-          <>
-            {getMediaFileType(hero.backgroundMedia.publicURL) === MEDIA_TYPES.VIDEO ?
-              <Box
-                component="video"
-                preload="auto"
-                playsInline
-                autoPlay
-                muted
-                loop
-                sx={{
-                  position: "absolute",
-                  margin: "auto",
-                  inset: 0,
-                  top: {
-                    xs: "-48%",
-                    md: "-22%",
-                    xl: "-28%"
-                  },
-                  left: {
-                    sm: 16,
-                    md: 24,
-                    lg: 32,
-                    xl: 40
-                  }
-                }}
-              >
-                <source src={hero.backgroundMedia.publicURL} type="video/mp4"/>
-              </Box>
-            :
-              <Box
-                component={GatsbyImage}
-                image={getImage(hero.backgroundMedia.childImageSharp)}
-                alt={""}
-                sx={{
-                  my: {
-                    xs: "-22%",
-                    md: "-25%"
-                  },
-                  mx: {
-                    xs: "-8%",
-                    md: 0,
-                  }
-                }}
-              />
-            }
-          </>
-          }
+        <Hero backgroundMedia={hero.backgroundMedia}>
           <Grid
             xs={12}
             style={{
@@ -286,8 +221,16 @@ const MarketingPageTemplate = ({
               {getButtons()}
             </Stack>
           </Grid>
-        </Section>
-        <Section>
+        </Hero>
+        <Section
+          sx={{
+            pt: {
+              xs: 4,
+              lg: 5,
+              xl: 6
+            }
+          }}
+        >
           <Grid
             xs={12}
             md={8}
@@ -296,10 +239,10 @@ const MarketingPageTemplate = ({
             <AnimatedTypography
               variant="h1"
             >
-              {featuring.title}
+              {featuredImageSection.title}
             </AnimatedTypography>
           </Grid>
-          { featuring.image &&
+          { featuredImageSection.image &&
           <Grid
             xs={12}
             sx={{
@@ -312,8 +255,8 @@ const MarketingPageTemplate = ({
             }}
           >
             <GatsbyImage
-              image={getImage(featuring.image.src)}
-              alt={featuring.image.alt ?? ""}
+              image={getImage(featuredImageSection.image.src)}
+              alt={featuredImageSection.image.alt ?? ""}
             />
           </Grid>
           }
@@ -335,7 +278,7 @@ const MarketingPageTemplate = ({
             <AnimatedTypography
               variant="pSection"
             >
-              {featuring.content}
+              {featuredImageSection.content}
             </AnimatedTypography>
           </Grid>
         </Section>
@@ -346,19 +289,19 @@ const MarketingPageTemplate = ({
             <AnimatedTypography
               variant="h1"
             >
-              {attend.title}
+              {cardsCarousel.title}
             </AnimatedTypography>
             <NoSsr>
-	            <AttendCarousel
-	              data={attend.benefits}
+	            <CardsCarousel
+	              data={cardsCarousel.benefits}
 	            />
             </NoSsr>
           </Grid>
         </Section>
         <OverlappingContentImageSection
-          title={awards.title}
-          image={awards.image}
-          content={awards.content}
+          title={contentImageSection.title}
+          image={contentImageSection.image}
+          content={contentImageSection.content}
           markdownOptions={markdownOptions}
         />
         <JoinCallToAction

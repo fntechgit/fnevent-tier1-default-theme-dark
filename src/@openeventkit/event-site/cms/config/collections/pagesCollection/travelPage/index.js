@@ -63,8 +63,8 @@ const travelPage = {
       ]
     }),
     objectField({
-      label: "Things to Do",
-      name: "thingsToDo",
+      label: "Explore Section",
+      name: "exploreSection",
       fields: [
         stringField({
           label: "Title",

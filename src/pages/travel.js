@@ -275,7 +275,7 @@ const TravelPage = ({
     travelPageJson: {
       hero,
       venue,
-      thingsToDo,
+      exploreSection,
       accommodations,
       nearbyAirports
     }
@@ -359,9 +359,9 @@ const TravelPage = ({
         </Section>
         }
         <OverlappingContentImageSection
-          title={thingsToDo.title}
-          image={thingsToDo.image}
-          content={thingsToDo.content}
+          title={exploreSection.title}
+          image={exploreSection.image}
+          content={exploreSection.content}
           markdownOptions={markdownOptions}
         />
         {accommodations &&
@@ -461,7 +461,7 @@ export const TravelPageQuery = graphql`
         content
         address
       }
-      thingsToDo {
+      exploreSection {
         title
         image {
           src {

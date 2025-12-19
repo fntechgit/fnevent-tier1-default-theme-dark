@@ -9,7 +9,12 @@ module.exports = `
     lead: String
     backgroundImage: ImageWithAlt
   }
+  type FaqsPageJsonCategories {
+    title: String
+    description: String
+  }
   type FaqsPageJson implements Node {
     hero: PageHeader
+    categories: [FaqsPageJsonCategories]
   }
 `;

@@ -1,40 +1,49 @@
 {
   "hero": {
-    "title": "San Francisco’s Calling",
-    "lead": "Don't miss your chance to experience the stunning scenery and vibrant culture of San Francisco during this exciting event at Fort Mason Center. With so much to see and do, you may want to add a few more days to your trip.",
+    "title": "Plan Your\nVisit",
+    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "backgroundImage": {
       "src": "header_background.png"
     }
   },
-  "thingsToDo": {
-    "title": "Things to do in San Francisco",
+  "exploreSection": {
+    "title": "Explore\nThe Area",
     "image": {
-      "src": "san-francisco-hallmarks.png",
-      "alt": "San Francisco Hallmarks"
+      "src": "explore-section.png",
+      "alt": "Explore the area"
     },
-    "content": "Home to iconic landmarks and world-renowned museums, this vibrant city by the bay is home to a wealth of activities and attractions that are sure to delight visitors of all ages and interests."
+    "content": "Local Attractions\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   "venue": {
-    "title": "Where it’s\nhappening",
+    "title": "Event\nVenue",
     "image": {
-      "src": "fort-mason-center-venue.png",
-      "alt": "Fort Mason Center"
+      "src": "venue.png",
+      "alt": "Event Venue"
     },
-    "content": "#### Fort Mason Center\n\nGet ready for an unforgettable experience at Fort Mason Center, one of San Francisco's most iconic and historic landmarks. This sprawling complex of former military buildings and warehouses is now a hub of cultural and community events, and there's no better time to experience it than during RDC.",
-    "address": "2 Marina Blvd, San Francisco, CA 94109"
+    "content": "#### Location Details\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "address": "Venue Address, City, State ZIP"
   },
   "accommodations": {
-    "title": "Places to stay",
-    "content": "Looking for the perfect place to stay during your visit to San Francisco? Look no further than our carefully selected hotels, each offering unique amenities and experiences to suit your every need. Book your reservations in one of our RDC blocks below:\n",
+    "title": "Where To Stay",
+    "content": "Looking for the perfect place to stay during your visit? Look no further than our carefully selected hotels, each offering unique amenities and experiences to suit your every need.\n",
     "hotels": [
       {
-        "name": "Hyatt Centric Fisherman's Wharf San Francisco",
-        "address": "555 North Point St, San Francisco, CA 94133",
+        "name": "Location Name",
+        "address": "Hotel Address, City, State ZIP",
         "book": {
           "text": "Click here to book",
-          "link": "https://www.hyatt.com/shop/sfofw?location=Hyatt%20Centric%20Fisherman%27s%20Wharf%20San%20Francisco&checkinDate=2023-09-07&checkoutDate=2023-09-10&rooms=1&adults=1&kids=0&corp_id=G-ROBL"
+          "link": "#"
         },
-        "info": "Deadline to book: August 25, 2023\nRate: $289/night plus taxes and fees "
+        "info": "Booking details and rate information"
+      },
+      {
+        "name": "Location Name",
+        "address": "Hotel Address, City, State ZIP",
+        "book": {
+          "text": "Click here to book",
+          "link": "#"
+        },
+        "info": "Booking details and rate information"
       }
     ]
   },
@@ -42,28 +51,28 @@
     "title": "Nearby Airports",
     "airports": [
       {
-        "name": "San Francisco International Airport",
+        "name": "Airport Name\n(ABC)",
         "image": {
-          "src": "san-francisco-international-airport.png",
-          "alt": "San Francisco International Airport"
+          "src": "airport-1.png",
+          "alt": "Airport 1"
         },
-        "distance": "15 Miles | 25 KM from venue"
+        "distance": "XX Miles | XX KM from venue"
       },
       {
-        "name": "Oakland International Airport",
+        "name": "Airport Name\n(DEF)",
         "image": {
-          "src": "oakland-international-airport.png",
-          "alt": "Oakland International Airport"
+          "src": "airport-2.png",
+          "alt": "Airport 2"
         },
-        "distance": "22 Miles | 34 KM from venue"
+        "distance": "XX Miles | XX KM from venue"
       },
       {
-        "name": "San Jose International Airport",
+        "name": "Airport Name\n(GHI)",
         "image": {
-          "src": "san-jose-iternational-airport.png",
-          "alt": "San Jose International Airport"
+          "src": "airport-3.png",
+          "alt": "Airport 3"
         },
-        "distance": "50 Miles | 78 KM from venue"
+        "distance": "XX Miles | XX KM from venue"
       }
     ]
   }

@@ -100,6 +100,7 @@ const NavbarTemplate = ({
           >
             <Box
               sx={{
+                cursor: "pointer",
                 img: {
                   height: {
                     xs: 16,

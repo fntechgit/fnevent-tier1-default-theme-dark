@@ -46,7 +46,7 @@ module.exports = `
   type TravelPageJson implements Node {
     hero: PageHeader
     venue: VenueImageContentSection
-    thingsToDo: ImageContentSection
+    exploreSection: ImageContentSection
     accommodations: AccommodationsSection
     nearbyAirports: AirportsSection
   }

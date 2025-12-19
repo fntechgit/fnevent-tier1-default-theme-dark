@@ -85,8 +85,8 @@ const marketingPage = {
       ]
     }),
     objectField({
-      label: "Featuring",
-      name: "featuring",
+      label: "Featured Image Section",
+      name: "featuredImageSection",
       fields: [
         stringField({
           label: "Title",
@@ -103,8 +103,8 @@ const marketingPage = {
       ]
     }),
     objectField({
-      label: "Attend",
-      name: "attend",
+      label: "Cards Carousel",
+      name: "cardsCarousel",
       fields: [
         textField({
           label: "Title",
@@ -135,8 +135,8 @@ const marketingPage = {
       ]
     }),
     objectField({
-      label: "Awards",
-      name: "awards",
+      label: "Content Image Section",
+      name: "contentImageSection",
       fields: [
         stringField({
           label: "Title",

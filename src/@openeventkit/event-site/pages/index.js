@@ -12,6 +12,11 @@ export const marketingPageQuery = graphql`
         lead
         backgroundMedia {
           publicURL
+          childImageSharp {
+            gatsbyImageData (
+              quality: 100
+            )
+          }
         }
         buttons {
           registerButton {
@@ -24,7 +29,7 @@ export const marketingPageQuery = graphql`
           }
         }
       }
-      featuring {
+      featuredImageSection {
         title
         image {
           src {
@@ -38,7 +43,7 @@ export const marketingPageQuery = graphql`
         }
         content
       }
-      attend {
+      cardsCarousel {
         title
         benefits {
           concept
@@ -65,7 +70,7 @@ export const marketingPageQuery = graphql`
           }
         }
       }
-      awards {
+      contentImageSection {
         title
         image {
           src {

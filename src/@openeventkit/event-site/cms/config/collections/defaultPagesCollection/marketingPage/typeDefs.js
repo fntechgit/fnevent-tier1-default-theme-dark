@@ -47,9 +47,9 @@ module.exports = `
   }
   type MarketingPageJson implements Node {
     hero: MarketingPageHero
-    featuring: ImageContentSection
-    attend: MarkertingPageCarouselSection
-    awards: ImageContentSection
+    featuredImageSection: ImageContentSection
+    cardsCarousel: MarkertingPageCarouselSection
+    contentImageSection: ImageContentSection
     callToAction: MarkertingPageCallToAction
   }
 `;
