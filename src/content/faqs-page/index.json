@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "title": "Frequently\nAsked Questions",
+    "lead": "Get all the information you need on topics such as health and safety, registration, accessibility, and much more.",
+    "backgroundImage": {
+      "src": "header_background.png"
+    }
+  },
+  "categories": [
+    {
+      "title": "Registration",
+      "questionsAndAnswers": [
+        {
+          "question": "When and where will the event take place?",
+          "answer": "Please check the event website for dates and location information. Contact the event team for specific details."
+        },
+        {
+          "question": "What is included in the conference in-person pass?",
+          "answer": "The in-person pass is your ticket to the full event experience. This includes keynotes, breakout sessions, networking events, meals, and virtual access to the conference."
+        },
+        {
+          "question": "Is there an age requirement to attend the event?",
+          "answer": "You must be 18 years of age or older to attend."
+        },
+        {
+          "question": "Can I transfer my ticket to someone else?",
+          "answer": "Unfortunately we are not able to accommodate ticket transfers for this event."
+        },
+        {
+          "question": "What is the cost of a ticket to attend the event?",
+          "answer": "Please check the registration page for current ticket pricing and availability."
+        },
+        {
+          "question": "Can I sign-up onsite at the venue?",
+          "answer": "No. You must be a registered attendee to attend the in-person event."
+        },
+        {
+          "question": "I'm a member of the press. How can I get more information?",
+          "answer": "If you're a reporter or analyst interested in learning more about this event, please contact the press team for more information."
+        },
+        {
+          "question": "Who do I contact if I have registration issues?",
+          "answer": "If you have any issues with registration, please contact the registration support team."
+        }
+      ]
+    },
+    {
+      "title": "Health & Safety",
+      "questionsAndAnswers": [
+        {
+          "question": "What health and safety protocols are in place?",
+          "answer": "Our first priority is the safety and health of our attendees, speakers, and staff. We take precautions to ensure a safe gathering environment. Please check with the event team for specific health and safety guidelines."
+        },
+        {
+          "question": "Can I request a refund for health-related matters?",
+          "answer": "Please contact the registration support team to discuss refund options for health-related concerns."
+        }
+      ]
+    },
+    {
+      "title": "Travel",
+      "questionsAndAnswers": [
+        {
+          "question": "What do I need to bring with me to the conference?",
+          "answer": "Please bring a government-issued form of photo ID, such as a driver's license or passport, to be presented when you check in."
+        },
+        {
+          "question": "Are there discounted hotel rates for attendees?",
+          "answer": "We may have secured reduced-rate hotel rooms for attendees. Check the travel page for hotel information and book as early as possible."
+        },
+        {
+          "question": "Will transportation from designated hotels be provided?",
+          "answer": "Please check with the event team regarding transportation options from partnered hotels."
+        }
+      ]
+    },
+    {
+      "title": "Accessibility",
+      "questionsAndAnswers": [
+        {
+          "question": "How do I request accessibility services?",
+          "answer": "If you require special assistance, auxiliary aids, or other reasonable accommodations to fully participate in this event, please contact the registration support team. Information regarding disabilities and special assistance will remain confidential."
+        }
+      ]
+    }
+  ]
+}

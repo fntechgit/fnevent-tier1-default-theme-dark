@@ -1,0 +1,17 @@
+{
+  "centerColumn": {
+    "speakers": {
+      "showTodaySpeakers": false,
+      "showFeatureSpeakers": false
+    }
+  },
+  "hero": {
+    "title": "WELCOME",
+    "subTitle": "VIRTUAL LOBBY",
+    "background": {
+      "src": "lobby-header.png",
+      "alt": "Event Header Image"
+    }
+  },
+  "liveNowFeaturedEventId": ""
+}

@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "title": "Your Event Name",
+    "leadTitle": "When And Where",
+    "lead": "Event Date\nEvent Location",
+    "buttons": {
+      "registerButton": {
+        "display": true,
+        "text": "Register\nNow"
+      },
+      "loginButton": {
+        "display": true,
+        "text": "Login"
+      }
+    },
+    "backgroundMedia": "hero-video.mp4"
+  },
+  "featuredImageSection": {
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "title": "Event Spotlight",
+    "image": {
+      "src": "keynote.png",
+      "alt": "Keynote Presentation Image"
+    }
+  },
+  "cardsCarousel": {
+    "title": "Highlights",
+    "benefits": [
+      {
+        "concept": "Connect",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "backgroundImage": {
+          "src": "card1-background.png"
+        },
+        "foregroundImage": {
+          "src": "card1-foreground.png"
+        }
+      },
+      {
+        "concept": "Learn",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "backgroundImage": {
+          "src": "card2-background.png"
+        },
+        "foregroundImage": {
+          "src": "card2-foreground.png"
+        }
+      },
+      {
+        "concept": "Grow",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "backgroundImage": {
+          "src": "card3-background.png"
+        },
+        "foregroundImage": {
+          "src": "card3-foreground.png"
+        }
+      }
+    ]
+  },
+  "contentImageSection": {
+    "title": "Showcase",
+    "content": "#### Featured\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": {
+      "src": "showcase.png",
+      "alt": "Showcase Image"
+    }
+  },
+  "callToAction": {
+    "buttons": {
+      "loginButton": {
+        "display": true,
+        "text": "Login"
+      },
+      "registerButton": {
+        "display": true,
+        "text": "Register\nNow"
+      }
+    },
+    "display": true,
+    "title": "Call to Action",
+    "backgroundImage": {
+      "src": "cta_background.png"
+    }
+  }
+}

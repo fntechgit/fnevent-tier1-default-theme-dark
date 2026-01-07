@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "title": "Terms &\nConditions",
+    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    "backgroundImage": {
+      "src": "header_background.png"
+    }
+  },
+  "terms": [
+    {
+      "title": "Terms of Registration",
+      "content": "Each individual may purchase only one ticket. Tickets for the event are for the full conference duration and no single-day tickets are available.\n\nEvent tickets must be used by the original registrant and are non-transferable.\n\nTickets may not be sold, bartered, auctioned, or transferred in any way and doing so may result in the ticket being rendered null and void.\n\nAttendees must be at least 18 years of age to attend the event.\n\nAttendees are not permitted to bring guests to the event. If you have someone traveling with you, they will need to purchase an attendee ticket to enter the conference.\n\nPhotographs and/or video taken at the event may include your image or likeness. You agree that such photographs and/or video may be used for promotional purposes without compensation to you.\n\nAll information entered into the registration form must be correct and accurate to the best of your knowledge. All information must be entered in English. Some of the information entered (such as name and company) will be displayed on the attendee badge.\n\nEvent badges may contain NFC, BLE, or other RFID technologies to help serve attendees and determine participation in various sessions and activities.\n\nAll registered attendees agree to allow the event organizers to contact them regarding their registration and attendance. By purchasing a ticket, you agree to receive email communications with information regarding the event."
+    },
+    {
+      "title": "Community Guidelines &\nAnti-Harassment Policy",
+      "content": "We want this event to be a respectful and safe environment where participants can be their authentic selves, so we expect all participants to treat each other with tolerance and civility.\n\nThis event will not allow harassment or any mistreatment of others on the basis of gender, race, color, ethnicity, age, physical appearance, disability, sexual orientation, gender identity or expression. Failure to follow our Community Guidelines may result in removal from the event."
+    },
+    {
+      "title": "Here are a few examples of\nconduct that is not okay:",
+      "content": "* Derogatory or insensitive jokes, pranks, or comments\n* Slurs or epithets\n* Unwelcome sexual advances or invitations\n* Leering or offensive gestures, or unwelcome touching\n* Ridiculing or demeaning comments\n* Harassing photography or recording\n* Heckling, or disrupting speakers\n* Displaying or sharing images that are derogatory or sexually-oriented\n* Making offensive comments about people's bodies or appearance\n* Unauthorized Transfers Prohibited - All wristbands are for the use by the original authorized purchaser and are not transferable.\n\nThis is not a full list of unacceptable conduct. Use your best judgment, and be respectful."
+    }
+  ]
+}

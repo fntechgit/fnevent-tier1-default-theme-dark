@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "Onsite Info",
+    "lead": "Make the most of your time at the event with essential onsite information at your fingertips.",
+    "backgroundImage": {
+      "src": "header_background.png"
+    }
+  },
+  "map": {
+    "content": "",
+    "title": "Venue Map",
+    "image": {
+      "src": "map_attendee.png",
+      "alt": "On-Site Map"
+    }
+  },
+  "info": [
+    {
+      "title": "Event Schedule",
+      "content": "Discover everything taking place each day by visiting the event schedule page. You can also build your own event schedule from there."
+    },
+    {
+      "title": "Event Venue",
+      "content": "Check the travel page for venue location and directions. Parking and rideshare services are typically available in the area."
+    },
+    {
+      "title": "Get Connected",
+      "content": "Wi-Fi credentials will be provided at check-in."
+    },
+    {
+      "title": "Lost & Found",
+      "content": "Please visit the Lost & Found station for any lost belongings. Contact the help desk for more information."
+    },
+    {
+      "title": "Emergencies & Security Issues",
+      "content": "For immediate assistance, please contact event security or visit the Help desk."
+    }
+  ]
+}

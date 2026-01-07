@@ -1,0 +1,52 @@
+{
+  "social": [
+    {
+      "link": "https://twitter.com/",
+      "src": "twitter.png",
+      "hover": "twitter-hover.png"
+    },
+    {
+      "link": "https://www.linkedin.com/",
+      "src": "linkedin.png",
+      "hover": "linkedin-hover.png"
+    },
+    {
+      "link": "https://www.instagram.com/",
+      "src": "instagram.png",
+      "hover": "instagram-hover.png"
+    },
+    {
+      "src": "tiktok.png",
+      "hover": "tiktok-hover.png",
+      "link": "https://www.tiktok.com/"
+    },
+    {
+      "link": "https://www.youtube.com/",
+      "src": "youtube.png",
+      "hover": "youtube-hover.png"
+    }
+  ],
+  "links": [
+    {
+      "text": "TERMS",
+      "link": "/terms/"
+    },
+    {
+      "text": "PRIVACY",
+      "link": "/privacy/"
+    },
+    {
+      "text": "ACCESSIBILITY",
+      "link": "/accessibility/"
+    },
+    {
+      "text": "CONTACT",
+      "link": "/contact/"
+    }
+  ],
+  "logo": {
+    "src": "",
+    "alt": "",
+    "link": ""
+  }
+}

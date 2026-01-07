@@ -1,0 +1,37 @@
+{
+  "ads": [
+    {
+      "section": "lobby",
+      "columnAds": [
+        {
+          "image": {
+            "src": "lobby_space_1.png",
+            "alt": ""
+          },
+          "column": "left",
+          "button": {
+            "link": "/onsite-info"
+          }
+        },
+        {
+          "image": {
+            "src": "lobby_space_2.png"
+          },
+          "column": "left",
+          "button": {
+            "link": "/a/schedule"
+          }
+        },
+        {
+          "image": {
+            "src": "lobby_space_3.png"
+          },
+          "button": {
+            "link": "/a/sponsors"
+          },
+          "column": "left"
+        }
+      ]
+    }
+  ]
+}
