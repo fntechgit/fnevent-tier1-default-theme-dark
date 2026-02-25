@@ -2278,10 +2278,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@openeventkit/event-site@2.1.45":
-  version "2.1.45"
-  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.1.45.tgz#69105bf9d9673cee17f72cb2d149f0f51de8a97a"
-  integrity sha512-kt/Go6wBmovQo0XgMFEKZPzoY4ayhE13W4MMNfI95UQ6Gch4Fq64F1FdzvYiGrLAvNSrSuUKZOZn++HIv/bqwA==
+"@openeventkit/event-site@2.1.48":
+  version "2.1.48"
+  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.1.48.tgz#469edf775b364d16467fa6cf76154ea05f75defc"
+  integrity sha512-aiBD2FUq0guHbMSPYRZFM/988l4bLrVic+LWjsCJyWRACvfCOdZ7LoNcQ9I3mV2PxJViHdYwLSzlv1VgfEki1Q==
   dependencies:
     "@emotion/server" "^11.11.0"
     "@fortawesome/fontawesome-svg-core" "^6.5.2"
@@ -2366,7 +2366,7 @@
     markdown-it "^12.0.0"
     moment "^2.27.0"
     moment-timezone "^0.5.31"
-    my-orders-tickets-widget "1.0.9"
+    my-orders-tickets-widget "1.0.10"
     object.assign "^4.1.5"
     openstack-uicore-foundation "4.2.16"
     path-browserify "^1.0.1"
@@ -2414,7 +2414,7 @@
     stream-browserify "^3.0.0"
     stream-chat "^2.7.2"
     stream-chat-react "3.1.7"
-    summit-registration-lite "6.0.6"
+    summit-registration-lite "6.0.7"
     superagent "8.0.9"
     sweetalert2 "^11.11.1"
     upcoming-events-widget "3.0.7"
@@ -13665,10 +13665,10 @@ mux.js@6.0.1:
     "@babel/runtime" "^7.11.2"
     global "^4.4.0"
 
-my-orders-tickets-widget@1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/my-orders-tickets-widget/-/my-orders-tickets-widget-1.0.9.tgz#c73764c4d172057c8225f7234ff9c200bdb54135"
-  integrity sha512-mfDCzpHqeDGcN64njMmOy+6a2glwqUtMnsZny2fMQAwZ24q0S55NQBm0DlYDdTw/7YiBl5juzLq8D2lKOEi7yA==
+my-orders-tickets-widget@1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/my-orders-tickets-widget/-/my-orders-tickets-widget-1.0.10.tgz#c1a2025ce7ff67f8bf315b3639c16c96eb74e185"
+  integrity sha512-XJvycY5s9AXKmUSX9hCMMu0qAebXrjvqzWgO11MJC7J3ubRbOIjN91fbpF8uNUK4ByGFH4Blb7/G8ROvga1+rw==
   dependencies:
     "@emotion/react" "^11.11.4"
     "@emotion/styled" "^11.11.5"
@@ -18323,10 +18323,10 @@ stylis@^4.3.0:
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.3.6.tgz#7c7b97191cb4f195f03ecab7d52f7902ed378320"
   integrity sha512-yQ3rwFWRfwNUY7H5vpU0wfdkNSnvnJinhF9830Swlaxl03zsOjCfmX0ugac+3LtK0lYSgwL/KXc8oYL3mG4YFQ==
 
-summit-registration-lite@6.0.6:
-  version "6.0.6"
-  resolved "https://registry.yarnpkg.com/summit-registration-lite/-/summit-registration-lite-6.0.6.tgz#b9888fe400dd5878d8cbad21ae8fd214100c76a6"
-  integrity sha512-16bO+0Cs22CeIrPZZMt+EUQKh4SvDJu/huUn3qFwTa7FqbIt7YBNKV0hRY8vX+0hMC55BB7iT/HhOenP8Ie7FQ==
+summit-registration-lite@6.0.7:
+  version "6.0.7"
+  resolved "https://registry.yarnpkg.com/summit-registration-lite/-/summit-registration-lite-6.0.7.tgz#ef75d8b7523bfaa9ab4fb128662cbce8dd3d7aaf"
+  integrity sha512-LvweGG/MJgoPO+Js70F2EpGnpIEti+iod3XMpy/JbetsMqtLCrSULnpvWZ5oHHsivGEVE7o9sal+8ULKXkOD9g==
   dependencies:
     "@emotion/react" "^11.11.4"
     "@emotion/styled" "^11.11.5"
