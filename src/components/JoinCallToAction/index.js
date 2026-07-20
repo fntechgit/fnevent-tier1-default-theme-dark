@@ -6,7 +6,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { Section } from "../Grid";
 import AnimatedTypography from "../AnimatedTypography";
 import { RegisterButton, LoginButton } from "../Button";
-import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
+import RegistrationModalComponent from "@openeventkit/event-site/src/components/RegistrationModalComponent";
 import AuthComponent from "@openeventkit/event-site/src/components/AuthComponent";
 import useMarketingPageData from "../../utils/hooks/useMarketingPageData";
 import Link from "../../../src/components/Link";
@@ -94,7 +94,7 @@ const JoinCallToAction = ({
         }}
       >
         {registerButton.display &&
-        <RegistrationLiteComponent ignoreAutoOpen={true}>
+        <RegistrationModalComponent ignoreAutoOpen={true}>
           <RegisterButton
             sx={{
               flexBasis: {
@@ -105,7 +105,7 @@ const JoinCallToAction = ({
           >
             {registerButton.text}
           </RegisterButton>
-        </RegistrationLiteComponent>
+        </RegistrationModalComponent>
         }
         {loginButton.display &&
         <AuthComponent

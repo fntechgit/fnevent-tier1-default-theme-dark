@@ -18,7 +18,7 @@ import Footer from "../../../../../src/components/Footer";
 
 import Link from "../../../../../src/components/Link";
 import AttendanceTrackerComponent from "@openeventkit/event-site/src/components/AttendanceTrackerComponent";
-import RegistrationLiteComponent from "@openeventkit/event-site/src/components/RegistrationLiteComponent";
+import RegistrationModalComponent from "@openeventkit/event-site/src/components/RegistrationModalComponent";
 import AuthComponent from "@openeventkit/event-site/src/components/AuthComponent";
 
 const pageStyles = {
@@ -81,7 +81,7 @@ const MarketingPageTemplate = ({
     return (
       <>
         {registerButton.display &&
-        <RegistrationLiteComponent>
+        <RegistrationModalComponent>
           <RegisterButton
             sx={{
               flexBasis: {
@@ -92,7 +92,7 @@ const MarketingPageTemplate = ({
           >
             {registerButton.text}
           </RegisterButton>
-        </RegistrationLiteComponent>
+        </RegistrationModalComponent>
         }
         {loginButton.display &&
         <AuthComponent
