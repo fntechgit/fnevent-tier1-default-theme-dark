@@ -2293,10 +2293,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@openeventkit/event-site@2.1.61":
-  version "2.1.61"
-  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.1.61.tgz#48ac607e78b1f94864b025a0a1965b20d212d9f4"
-  integrity sha512-IRRGME5DHfOlWVtWBx1rx9hPgN0V39jP1ayjAskGuCGQvO5EimeNxVcODHTre1r0W+0PSd9mVflg96E+gb3mZw==
+"@openeventkit/event-site@2.1.62":
+  version "2.1.62"
+  resolved "https://registry.yarnpkg.com/@openeventkit/event-site/-/event-site-2.1.62.tgz#8542f0cd88c3889afd6652ba243f5d33da970258"
+  integrity sha512-KdeoycQz1rMTs3l/xDoKjtqSvyN+3dS2x1aEv04RvZXJ0W8CdwEZuZTA4jL6yi56AdRMRJYHmxKAfzR6UFoVwg==
   dependencies:
     "@emotion/server" "^11.11.0"
     "@fortawesome/fontawesome-svg-core" "^6.5.2"
@@ -2430,7 +2430,7 @@
     stream-browserify "^3.0.0"
     stream-chat "^2.7.2"
     stream-chat-react "3.1.7"
-    summit-registration-lite "7.0.9"
+    summit-registration-lite "7.0.10"
     superagent "8.0.9"
     sweetalert2 "^11.11.1"
     upcoming-events-widget "3.0.7"
@@ -18991,10 +18991,10 @@ stylis@^4.3.0:
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.3.6.tgz#7c7b97191cb4f195f03ecab7d52f7902ed378320"
   integrity sha512-yQ3rwFWRfwNUY7H5vpU0wfdkNSnvnJinhF9830Swlaxl03zsOjCfmX0ugac+3LtK0lYSgwL/KXc8oYL3mG4YFQ==
 
-summit-registration-lite@7.0.9:
-  version "7.0.9"
-  resolved "https://registry.yarnpkg.com/summit-registration-lite/-/summit-registration-lite-7.0.9.tgz#c6ba8da15e41bca5536174ea251bdffdcdf52e08"
-  integrity sha512-QsKJ/RB4mHlXfB0a4dz452Wb/J4SYfOvhccVvnHTH2ImBoDX/Z7TAbFb49Iq6nEsplbayRVH6YsNTOV752bfvQ==
+summit-registration-lite@7.0.10:
+  version "7.0.10"
+  resolved "https://registry.yarnpkg.com/summit-registration-lite/-/summit-registration-lite-7.0.10.tgz#4c4229f43e77c582b1125624d2765378cee7687f"
+  integrity sha512-sptnoLUTxGW9awA81S4hoMQNv00ltjI+dNnA1oE2+ILN8+c0Rf8Yx3FR0ZoyPA+sRvaM3lbqi3HkUGkFwFK7dA==
   dependencies:
     "@emotion/react" "^11.11.4"
     "@emotion/styled" "^11.11.5"
